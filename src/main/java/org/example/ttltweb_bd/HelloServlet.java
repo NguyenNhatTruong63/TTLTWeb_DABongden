@@ -1,7 +1,6 @@
-package org.example.ttltweb;
+package org.example.ttltweb_bd;
 
 import java.io.*;
-
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 

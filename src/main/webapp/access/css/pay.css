@@ -61,7 +61,7 @@ ul li a {
     background: #E8ECEE;
     padding-left: 10px;
     margin-bottom: 7px;
-
+    border: solid 1px black;
 }
 
 .input_group_left select {
@@ -127,8 +127,9 @@ ul li .number, .price, .l_total {
 }
 .btn_dathang{
     padding: 10px 10px;
-    margin-top: -23px;
+    /*margin-top: -23px;*/
     float: right;
+    margin-top: -40px;
     background: #FF0000;
     color: white;
     border-radius: 6px;
@@ -189,16 +190,16 @@ ul li .number, .price, .l_total {
 .text_order_tc{
     margin-left: 50px;
 }
+.money{
+    display: inline-flex;
+}
 .text_price_order{
-    float: right;
-    margin-right: 450px;
-    margin-top: -35px;
     color: #FF0000;
 }
+.lscart{
+    margin-top: -20px;
+}
 .lk_order{
-    float: right;
-    margin-right: 430px;
-    margin-top: -2px;
     color: blue;
 }
 .lk_order1{
@@ -207,4 +208,5 @@ ul li .number, .price, .l_total {
 .sdt{
     color: red;
 }
+
 

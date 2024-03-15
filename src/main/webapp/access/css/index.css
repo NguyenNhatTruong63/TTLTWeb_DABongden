@@ -24,7 +24,6 @@ body{
 .img-logo{
     width: 50px;
     height: 50px;
-    /*margin: 20px;*/
     margin-left: 20px;
     margin-top: 5px;
     border-radius: 50px;
@@ -34,23 +33,11 @@ body{
     width: 180px;
     height: 30px;
     margin-top: 13px;
-    /*margin: 30px 40px;*/
     padding-left: 15px;
     border-radius: 20px;
     border: solid 1px black;
 }
-/*.search{*/
-/*    width: 500px;*/
-/*    height: 40px;*/
-/*    margin: 30px 40px;*/
-/*    display: inline-flex;*/
-/*    position: absolute;*/
-/*    padding-left: 15px;*/
-/*    border-radius: 20px;*/
-
-/*}*/
 .fa-magnifying-glass{
-    /*float: left;*/
     padding-top: 20px;
     margin-left: -30px;
     display: inline-flex;
@@ -59,13 +46,9 @@ body{
 }
 .logo1{
     width: auto;
-    /*height: 40px;*/
     display: inline-flex;
     font-size: 20px;
-    /*padding-top: 2px;*/
     font-weight: bolder;
-    /*background-color: aqua;*/
-    /*background-color: black;*/
 }
 .society{
     width: 60px;
@@ -303,10 +286,8 @@ body{
 
 }
 .cart1{
-    /*margin-top: -3px;*/
     width: 40px;
     height: 30px;
-    /*border-radius: 50px;*/
 }
 .user1{
     width: 35px;
@@ -314,30 +295,10 @@ body{
     margin-top: -5px;
     border-radius: 50px;
 }
-
-#image_item {
-    /*width: 1260px;*/
-    /*height: 622px;*/
-    /*margin-top: 28px;*/
-    /*margin-top: 10px;*/
-    /*margin-left: -190px;*/
-    /*margin-left: 20px;*/
-    /*border-bottom: solid 3px rgb(136 136 135);*/
-    /*height: 650px;*/
-    /*margin-top: -28px;*/
-    border-bottom: solid 3px rgb(136 136 135);
-    /*background-color: rgb(211 210 205);*/
-    /*background-color: rgb(234 233 229);*/
-    /*background-color: rgb(182 162 144);*/
-}
-
 .bg_item {
     width: 1260px;
     height: 650px;
-    /*margin-top: 28px;*/
-    /*margin-left: -235px;*/
-    /*padding-left: 130px;*/
-
+    border-bottom: solid 3px rgb(136 136 135);
 }
 
 .text_bg {
@@ -365,7 +326,6 @@ body{
 .table_product {
     margin-left: 20px;
     margin-top: 20px;
-    /*background-color: burlywood;*/
 
 }
 
@@ -403,7 +363,6 @@ body{
     background-color: red;
 }
 .purch_price{
-    /*display: inline-flex;*/
     text-align: center;
     padding-left: 15px;
 }
@@ -462,14 +421,6 @@ body{
 .caret{
     margin-top: 5px;
 }
-
-
-
-
-
-
-
-
 
 #foot {
     width: auto;

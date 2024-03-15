@@ -10,18 +10,18 @@ body{
     width: auto;
     margin-right: auto;
     margin-left: auto;
+
 }
 #login1{
     width: 600px;
     height: 500px;
-    margin-top: 100px;
+    margin-top: 50px;
     /*margin-top: 20px;*/
     margin-left: auto;
     margin-right: auto;
     background-repeat: no-repeat;
     background-image: url("https://img.freepik.com/free-photo/burning-garland-table_23-2147960028.jpg?t=st=1710247788~exp=1710251388~hmac=eca17980c2e901e79b1f758ec0050e0c8dfcaf41eab9167315a20f4d14fbf391&w=900");
     /*background-image: url("https://dadco.com.vn/wp-content/uploads/2019/03/bong-den-soi-dot.jpg");*/
-
 }
 .title{
     font-size: 30px;
@@ -38,8 +38,6 @@ body{
     color: white;
 }
 #name_login{
-    /*display: inline-flex;*/
-    /*position: absolute;*/
     width:300px;
     height: 30px;
     margin: 30px 0 20px 100px;
@@ -121,7 +119,6 @@ body{
     margin-left: 200px;
     margin-bottom: 30px;
     border-radius: 10px;
-    border: solid 1px ;
     background-color: azure;
     padding: 10px;
     box-shadow: 5px 10px 18px white;
