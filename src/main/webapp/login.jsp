@@ -17,7 +17,7 @@
 <body>
 <div id="login">
     <div class="container">
-        <form action="" method="">
+        <form action="./login" method="post">
             <div id="login1" class="">
                 <h1 class="title">Login</h1>
                 <div class="name_login">
@@ -32,7 +32,7 @@
                     <a href="forget.html" style="color: white"><p class="title_forget">Quên mật khẩu</p></a>
                 </div>
                 <div class="submit">
-                    <a href="index.html">Đăng Nhập</a>
+                    <input type="submit" value="Đăng nhập">
                 </div>
                 <!--                 <div class="society">-->
                 <!--                     <a class="society1" href="https://www.facebook.com/"><img src="access/img/logo/fb_icon_30x30.png" alt="" style="width: 30px; height: 30px"></a>-->

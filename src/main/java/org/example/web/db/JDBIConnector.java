@@ -1,6 +1,6 @@
-package org.example.ttltweb_bd.db;
+package org.example.web.db;
 
-import org.example.ttltweb_bd.beans.Product;
+import org.example.web.beans.Product;
 import org.jdbi.v3.core.Jdbi;
 
 import java.sql.*;
@@ -60,6 +60,35 @@ public class JDBIConnector {
             // Đóng tài nguyên ở đây
         }
         return list;
+    }
+    public Product getById(int proid) {
+        String query = "SELECT * FROM products WHERE id =?";
+        try {
+            conn = new JDBIConnector().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, proid);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                Product p = new Product(
+                        rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getDouble(6),
+                        rs.getDouble(7),
+                        rs.getInt(8),
+                        rs.getInt(9)
+
+                );
+                return p;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return null;
     }
 
 

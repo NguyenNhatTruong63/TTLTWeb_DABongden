@@ -1,16 +1,8 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: DELL
-  Date: 14/03/2024
-  Time: 14:57 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>cart</title>
+    <title>brand</title>
     <link rel="stylesheet" href="access/css/index.css">
     <link rel="stylesheet" href="access/css/cart.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
@@ -126,30 +118,31 @@
             </div>
         </div>
 
-        <div id="section_cart" class="#">
+        <div id="section_body_table" class="">
             <div class="container">
-                <div id="cart1">
-                    <div class="cart_product1">
-                        <a class=order_history" href="#"><p class="text_order"> Lịch sử đơn hàng</p></a>
-                        <ul class="product1">
-                            <li class="cart_product_image1">
-                                <p class="text_dicount">30% <br>Giảm </p>
-                                <img class="cart_image1" src="access/img/2-A70N1-12W-H.jpg" alt="">
-                            </li>
-                            <li class="text_cart">
-                                <h1 class="text_cart1"> Bóng Đèn Led Ốp Trần Panasonic 18W</h1>
-                                <p class="price_cart1">Giá: <del>150.000đ</del> 105.000đ</p>
-                                <span class="delete"><i class="fa-solid fa-trash"></i></span>
-                                <p class="delivery">Dự kiến giao ngày: 10/11/20023 - 12/11/2023</p>
-                                <div class="add_quantity">
-                                    <p class="quantity">Số Lượng</p>
-                                    <button id="minus" onclick="minus()">-</button>
-                                    <p id="numbera">0</p>
-                                    <button id="plus" onclick="plus()">+</button>
-                                </div>
-                                <button class="pay_cart"><a class="card" href="pay_page.html">Thanh Toán</a></button>
-                            </li>
-                        </ul>
+                <div class="box_product">
+                    <div class="box_table">
+                        <table class="table_product" border="0px" cellspacing="20px" cellpadding="1px" >
+                            <caption class="caption"> Sản Phẩm:<p class="product_title">Bóng đèn Rạng Đông</p></caption>
+                            <tr id="section_product" class="products" >
+                                <td class="table_image1" style="height: 300px; width: 300px; border: solid 1px black">
+                                    <a href=""><img class="image_sp1" src="access/img/2-A70N1-12W-H.jpg" style="width: 300px; height: 300px" alt="sp1">
+                                        <p class="text_dicount">30% <br>Giảm </p></a>
+                                    <p class="text_sp1"> Bóng Đèn Led Rạng Đông 12W</p>
+                                    <div class="purch_price">
+                                        <p class="price_sp1"><del>150.000đ</del> 105.000đ</p>
+                                        <button class="purche"><a href="#" onclick="openPopup()"> Thêm vào giỏ hàng</a></button>
+                                        <div class="popup-wrapper" id="popup-wrapper">
+                                            <div class="popup">
+                                                <span class="close" onclick="closePopup()">&times;</span>
+                                                <img class="order_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8f2KuwLvTAb00OQQc2HnhMzfGatxp54czdA&usqp=CAU" alt="">
+                                                <p>Đã thêm vào giỏ hàng thành công</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -187,46 +180,13 @@
         </div>
     </div>
 </div>
-
 </body>
 <script>
-    function plus(){
-        let number = document.getElementById("numbera").innerHTML
-        if (document.getElementById("plus")){
-            number ++;
-            document.getElementById("numbera").innerHTML = number
-        }
-
+    function  openPopup(){
+        document.getElementById("popup-wrapper").style.display = "block";
     }
-    function minus(){
-        let number = document.getElementById("numbera").innerHTML
-        if (document.getElementById("minus")){
-            number --;
-            document.getElementById("numbera").innerHTML = number
-            if(number < 0){
-                document.getElementById("numbera").innerHTML = 0;
-            }
-        }
-
-    }
-    function plus1(){
-        let number = document.getElementById("numberb").innerHTML
-        if (document.getElementById("plus1")){
-            number ++;
-            document.getElementById("numberb").innerHTML = number
-        }
-
-    }
-    function minus1(){
-        let number = document.getElementById("numberb").innerHTML
-        if (document.getElementById("minus1")){
-            number --;
-            document.getElementById("numberb").innerHTML = number
-            if(number < 0){
-                document.getElementById("numberb").innerHTML = 0;
-            }
-        }
-
+    function  closePopup(){
+        document.getElementById("popup-wrapper").style.display = "none";
     }
 </script>
 </html>

@@ -1,5 +1,4 @@
-package org.example.ttltweb_bd.beans;
-
+package org.example.web.beans;
 import java.io.Serializable;
 
 public class Product implements Serializable {

@@ -1,4 +1,4 @@
-package org.example.ttltweb_bd.db;
+package org.example.web.db;
 
 import java.io.IOException;
 import java.util.Properties;

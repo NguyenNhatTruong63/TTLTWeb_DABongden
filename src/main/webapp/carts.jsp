@@ -1,16 +1,21 @@
-<%--
-Created by IntelliJ IDEA.
-User: DELL
-Date: 14/03/2024
-Time: 14:58 PM
-To change this template use File | Settings | File Templates.
+<%@ page import="org.example.web.carts.Carts" %>
+<%@ page import="java.util.Locale" %>
+<%@ page import="org.example.web.carts.CartsProduct" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="java.text.NumberFormat" %>
+<%@ page import="org.example.web.beans.Product" %><%--
+  Created by IntelliJ IDEA.
+  User: DELL
+  Date: 14/03/2024
+  Time: 14:57 PM
+  To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>brand</title>
+    <title>cart</title>
     <link rel="stylesheet" href="access/css/index.css">
     <link rel="stylesheet" href="access/css/cart.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
@@ -31,7 +36,7 @@ To change this template use File | Settings | File Templates.
                 <div id="nanavbar-collapse-01" class="collapse">
                     <nav id="navbar" class="navbar">
                         <ul>
-                            <li><a href="index.html">Trang Chủ </a></li>
+                            <li><a href="index.jsp">Trang Chủ </a></li>
                             <li class="dropdown1"><a href="#"><span>Thương Hiệu</span><i class="fa-solid fa-caret-down"
                                                                                          style="color: white"></i>
                                 <!--                                <img class="caret" src="assart/image/icon_button/caret-down.svg">-->
@@ -95,11 +100,12 @@ To change this template use File | Settings | File Templates.
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="cart.html">
-                                <!--                                <img class="icon_cart" src="assart/image/icon_button/cart.svg">-->
+                            <li><a href="./AddCartController">
+                                <%Carts carts = (Carts) session.getAttribute("cart");
+                                    if (carts == null) carts = new Carts();
+                                %>
                                 <img class="cart1" src="https://cdn-icons-png.freepik.com/256/2838/2838895.png?ga=GA1.1.2079026882.1697034920&" alt="">
-                                <p class="text_cart">2</p>
-                                <!--                                <span ><i class="fa-solid fa-cart-shopping fa-sm" style="color: white"></i></span>-->
+                                <p class="text_cart"><%=carts.getTotal()%></p>
                             </a></li>
 
                             <li class="dropdown2"><a class="resume" href="#"><span class="text_resume">
@@ -126,31 +132,57 @@ To change this template use File | Settings | File Templates.
             </div>
         </div>
 
-        <div id="section_body_table" class="">
+        <div id="section_cart" class="#">
             <div class="container">
-                <div class="box_product">
-                    <div class="box_table">
-                        <table class="table_product" border="0px" cellspacing="20px" cellpadding="1px" >
-                            <caption class="caption"> Sản Phẩm:<p class="product_title">Bóng đèn Rạng Đông</p></caption>
-                            <tr id="section_product" class="products" >
-                                <td class="table_image1" style="height: 300px; width: 300px; border: solid 1px black">
-                                    <a href=""><img class="image_sp1" src="access/img/2-A70N1-12W-H.jpg" style="width: 300px; height: 300px" alt="sp1">
-                                        <p class="text_dicount">30% <br>Giảm </p></a>
-                                    <p class="text_sp1"> Bóng Đèn Led Rạng Đông 12W</p>
-                                    <div class="purch_price">
-                                        <p class="price_sp1"><del>150.000đ</del> 105.000đ</p>
-                                        <button class="purche"><a href="#" onclick="openPopup()"> Thêm vào giỏ hàng</a></button>
-                                        <div class="popup-wrapper" id="popup-wrapper">
-                                            <div class="popup">
-                                                <span class="close" onclick="closePopup()">&times;</span>
-                                                <img class="order_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8f2KuwLvTAb00OQQc2HnhMzfGatxp54czdA&usqp=CAU" alt="">
-                                                <p>Đã thêm vào giỏ hàng thành công</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
+                <div id="cart1">
+                    <div class="cart_product1">
+                        <a class=order_history" href="#"><p class="text_order"> Lịch sử đơn hàng</p></a>
+                        <%
+                            Carts cart = (Carts) session.getAttribute("cart");
+                            if (cart == null)
+                                cart = new Carts();
+
+                            Map<Integer, CartsProduct> cartItems = cart.getData();
+                        %>
+
+                        <%
+                            Locale locale = new Locale("vi", "VN");
+                            NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(locale);%>
+                        <%
+                            if (cartItems.isEmpty()) {
+                        %>
+                        <p>Giỏ hàng của bạn trống. Vui lòng thêm sản phẩm vào giỏ hàng</p>
+                        <%
+                        } else {
+//                                    int totalPriceForAllProducts = 0;
+                            for (Map.Entry<Integer, CartsProduct> entry : cartItems.entrySet()) {
+                                CartsProduct cartProduct = entry.getValue();
+                                Product product = cartProduct.getProduct();
+                        %>
+
+                        <ul class="product1">
+                            <li class="cart_product_image1">
+                                <p class="text_dicount"><%=product.getDiscount()%> <br>Giảm </p>
+                                <img class="cart_image1" src="<%=product.getImg()%>" alt="">
+                            </li>
+                            <li class="text_cart">
+                                <h1 class="text_cart1"> <%=product.getName()%></h1>
+                                <p class="price_cart1">Giá: <del><%=product.getPrice()%>đ</del> 105.000đ</p>
+                                <span class="delete"><i class="fa-solid fa-trash"></i></span>
+                                <p class="delivery">Dự kiến giao ngày: 10/11/20023 - 12/11/2023</p>
+                                <div class="add_quantity">
+                                    <p class="quantity">Số Lượng</p>
+                                    <button id="minus" onclick="minus()">-</button>
+                                    <p id="numbera">0</p>
+                                    <button id="plus" onclick="plus()">+</button>
+                                </div>
+                                <button class="pay_cart"><a class="card" href="pay_page.html">Thanh Toán</a></button>
+                            </li>
+                        </ul>
+                        <%
+                                }
+                            }
+                        %>
                     </div>
                 </div>
             </div>
@@ -188,13 +220,46 @@ To change this template use File | Settings | File Templates.
         </div>
     </div>
 </div>
+
 </body>
 <script>
-    function  openPopup(){
-        document.getElementById("popup-wrapper").style.display = "block";
+    function plus(){
+        let number = document.getElementById("numbera").innerHTML
+        if (document.getElementById("plus")){
+            number ++;
+            document.getElementById("numbera").innerHTML = number
+        }
+
     }
-    function  closePopup(){
-        document.getElementById("popup-wrapper").style.display = "none";
+    function minus(){
+        let number = document.getElementById("numbera").innerHTML
+        if (document.getElementById("minus")){
+            number --;
+            document.getElementById("numbera").innerHTML = number
+            if(number < 0){
+                document.getElementById("numbera").innerHTML = 0;
+            }
+        }
+
+    }
+    function plus1(){
+        let number = document.getElementById("numberb").innerHTML
+        if (document.getElementById("plus1")){
+            number ++;
+            document.getElementById("numberb").innerHTML = number
+        }
+
+    }
+    function minus1(){
+        let number = document.getElementById("numberb").innerHTML
+        if (document.getElementById("minus1")){
+            number --;
+            document.getElementById("numberb").innerHTML = number
+            if(number < 0){
+                document.getElementById("numberb").innerHTML = 0;
+            }
+        }
+
     }
 </script>
 </html>
