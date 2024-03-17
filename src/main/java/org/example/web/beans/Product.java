@@ -114,6 +114,11 @@ public class Product implements Serializable {
                 ", status=" + status +
                 '}';
     }
+    public double salePrice() {
+        double sale = price - (price * discount);
+        return sale;
+    }
+
 
 
 }

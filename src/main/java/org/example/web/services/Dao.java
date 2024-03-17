@@ -1,12 +1,15 @@
 package org.example.web.services;
 
 import org.example.web.beans.Account;
+import org.example.web.beans.Product;
 import org.example.web.db.JDBIConnector;
 import org.jdbi.v3.core.Jdbi;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Dao {
     private static Jdbi jdbi;
@@ -119,5 +122,48 @@ public class Dao {
 
         }
         return null;
+    }
+    public List<Product> searchbyname(String search) {
+        List<Product> list = new ArrayList<>();
+        String query = "select * from products where name like ?";
+        try {
+            conn = new JDBIConnector().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, "%" + search + "%");
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(new Product(
+                        rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getDouble(6),
+                        rs.getDouble(7),
+                        rs.getInt(8),
+                        rs.getInt(9)
+
+
+                ));
+            }
+        } catch (Exception e) {
+
+        }
+        return list;
+    }
+    public int getTotalPage() {
+        String query = "select count(*) from products";
+        try {
+            conn = new JDBIConnector().getConnection();
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return rs.getInt(1);
+            }
+        } catch (Exception e) {
+
+        }
+
+        return 0;
     }
 }
