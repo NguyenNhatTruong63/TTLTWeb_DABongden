@@ -139,19 +139,19 @@ body{
     /*background-color: #436799;*/
 
 }
-.text_dicount{
-    width: 40px;
-    height: auto;
-    padding-left: 6px;
-    padding-top: 5px;
-    display: inline-flex;
-    position: absolute;
-    font-size: 15px;
-    text-align: center;
-    margin-left: -300px;
-    margin-top: 1px;
-    border-radius: 15%;
-    color: white;
-    background-color: red;
-}
+/*.text_dicount{*/
+/*    width: 40px;*/
+/*    height: auto;*/
+/*    padding-left: 6px;*/
+/*    padding-top: 5px;*/
+/*    display: inline-flex;*/
+/*    position: absolute;*/
+/*    font-size: 15px;*/
+/*    text-align: center;*/
+/*    margin-left: -300px;*/
+/*    margin-top: 1px;*/
+/*    border-radius: 15%;*/
+/*    color: white;*/
+/*    background-color: red;*/
+/*}*/
 

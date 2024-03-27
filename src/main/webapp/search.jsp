@@ -49,23 +49,15 @@
                 <img class="img-logo" src="https://img.freepik.com/premium-psd/3d-business-pack-creative-idea_505787-314.jpg?w=740" alt="">
                 <p class="sub-title">Led Tâm Quang</p>
                 <div class="search">
-<%--                    <form action="./search" method="get">--%>
-<%--                        <input type="search" name="keyword" id="search1" placeholder="Tìm Sản Phẩm"--%>
-<%--                               class="text_search">--%>
-<%--                        <button type="submit" value="" class="icon_search"><i--%>
-<%--                                class="fa-solid fa-magnifying-glass"></i></button>--%>
-<%--                    </form>--%>
                     <form action="./search" method="get">
-                        <input class="search1" type="search" name="keyword" id="search-input" placeholder="Tìm kiếm sản phẩm">
-                        <button type="submit" value="" class="icon_search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <div><input class="search1" type="search" name="keyword" id="search-input" placeholder="Tìm kiếm sản phẩm"></div>
+                        <div><button type="submit" value="" class="icon_search"><i class="fa-solid fa-magnifying-glass"></i></button></div>
                     </form>
-
                 </div>
-
                 <div id="nanavbar-collapse-01" class="collapse">
                     <nav id="navbar" class="navbar">
                         <ul>
-                            <li><a href="index.html">Trang Chủ </a></li>
+                            <li><a href="index.jsp">Trang Chủ </a></li>
                             <li class="dropdown1"><a href="#"><span>Thương Hiệu</span><i class="fa-solid fa-caret-down"
                                                                                          style="color: white"></i>
                                 <!--                                <img class="caret" src="assart/image/icon_button/caret-down.svg">-->
@@ -165,11 +157,11 @@
             </div>
         </div>
 
-        <div id="section_body" class="">
+        <div id="section_body_table" class="">
             <div class="container">
                 <div class="box_product">
                     <div class="box_table">
-                        <table class="table_product" border="0px" cellspacing="20px" cellpadding="1px">
+                        <table class="table_product" border="0px" cellspacing="20px" cellpadding="1px" >
                             <%--      định dạng số tiền--%>
                             <%
                                 Locale locale = new Locale("vi", "VN");
@@ -180,38 +172,27 @@
 
 
                             <%--lấy từ khóa tìm kiếm hiển thị h2--%>
-                            <h2 class="h2title"
-                                style="text-align: center; color: red; margin-left: -120px ">Từ khóa tìm kiếm: <%=request.getParameter("keyword") %>
-                            </h2>
+                                <h2 class="h2title"
+                                    style="text-align: center; color: red; margin-left: -120px ">Từ khóa tìm kiếm: <%=request.getParameter("keyword") %>
+                                </h2>
 
-                            <%--  hiển thị danh sách sản phẩm--%>
-                            <%
-                                for (Product listProduct : dao.searchbyname(request.getParameter("keyword"))) { %>
-                            <tr id="section_product" class="products" style="float: left; margin-left: -10px" >
-                                <td class="table_image1"
-                                    style="height: 300px; width: 270px; border: solid 1px black">
-                                    <a href="productDetail.jsp?id_product=<%=listProduct.getId()%>"><img class="image_sp1" src="<%=listProduct.getImg()%>" width="270px" height="270px">
-                                        <p class="text_dicount"><%=(int) (listProduct.getDiscount() * 100)%>%<br>Giảm</p></a>
-                                    <p class="text_sp1"><%=listProduct.getName()%>
-                                    </p>
+                                <%--  hiển thị danh sách sản phẩm--%>
+                                <%
+                                    for (Product listProduct : dao.searchbyname(request.getParameter("keyword"))) { %>
+
+<%--                            <caption class="caption"> Sản Phẩm Bán Chạy Nhất</caption>--%>
+                            <tr id="section_product" class="products" style="float: left">
+                                <td class="table_image1" style="height: 300px; width: 300px; border: solid 1px black">
+                                    <a href=""><img class="image_sp1" src="<%=listProduct.getImg()%>" style="width: 300px; height: 300px" alt="sp1">
+                                        <p class="text_dicount"><%=listProduct.getDiscount()%> <br>Giảm </p></a>
+                                    <p class="text_sp1"><%=listProduct.getName()%></p>
                                     <div class="purch_price">
-                                        <%--                                                <p class="price_sp1"><del><%=numberFormat.format(product.getPrice())%></del><%=numberFormat.format(product.salePrice())%>--%>
-                                        <%--                                                </p>--%>
-                                        <%--                                                <button class="purche"><a href="./addcart" onclick="openPopup()"> Thêm vào giỏ hàng</a></button>--%>
-
-                                        <p class="price_sp1"><del><%= currencyFormatter.format(listProduct.getPrice())%></del>  <%= currencyFormatter.format(listProduct.salePrice()) %></p>
-                                        <%--                                                <button class="purche"><a href="/AddCartController ?id=<%= product.getId()%>" onclick="openPopup()"> Thêm vào giỏ hàng</a></button>--%>
+                                        <p class="price_sp1"><del><%=listProduct.getPrice()%></del> <%=listProduct.salePrice()%></p>
                                         <button class="purche"><a href="AddCartController?id=<%= listProduct.getId()%>" onclick="openPopup()"> Thêm vào giỏ hàng</a></button>
-                                        <%--                                                <p class="price_sp1"><del><%=numberFormat.format(product.getPrice())%></del><%=numberFormat.format(product.salePrice())%>--%>
-                                        <%--                                                </p>--%>
-                                        <%--                                                <button class="purche"><a--%>
-                                        <%--                                                        href="/AddCartController ?id=<%= product.getId()%>"--%>
-                                        <%--                                                        onclick="openPopup()"> Thêm vào giỏ hàng</a></button>--%>
-
                                         <div class="popup-wrapper" id="popup-wrapper">
                                             <div class="popup">
                                                 <span class="close" onclick="closePopup()">&times;</span>
-                                                <img class="order_image" src="assart/image/logo/order_tc.jpg">
+                                                <img class="order_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8f2KuwLvTAb00OQQc2HnhMzfGatxp54czdA&usqp=CAU" alt="">
                                                 <p>Đã thêm vào giỏ hàng thành công</p>
                                             </div>
                                         </div>
@@ -224,6 +205,56 @@
                 </div>
             </div>
         </div>
+
+
+<%--        <div id="section_body" class="">--%>
+<%--            <div class="container">--%>
+<%--                <div class="box_product">--%>
+<%--                    <div class="box_table">--%>
+<%--                        <table class="table_product" border="0px" cellspacing="20px" cellpadding="1px">--%>
+<%--                            &lt;%&ndash;      định dạng số tiền&ndash;%&gt;--%>
+<%--                            <%--%>
+<%--                                Locale locale = new Locale("vi", "VN");--%>
+<%--                                NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(locale);--%>
+
+<%--                            %>--%>
+<%--                            &lt;%&ndash;      dựa vào mã danh mục để gọi sản phẩm&ndash;%&gt;--%>
+
+
+<%--                            &lt;%&ndash;lấy từ khóa tìm kiếm hiển thị h2&ndash;%&gt;--%>
+<%--                            <h2 class="h2title"--%>
+<%--                                style="text-align: center; color: red; margin-left: -120px ">Từ khóa tìm kiếm: <%=request.getParameter("keyword") %>--%>
+<%--                            </h2>--%>
+
+<%--                            &lt;%&ndash;  hiển thị danh sách sản phẩm&ndash;%&gt;--%>
+<%--                            <%--%>
+<%--                                for (Product listProduct : dao.searchbyname(request.getParameter("keyword"))) { %>--%>
+<%--                            <tr id="section_product" class="products" style="float: left; margin-left: -10px" >--%>
+<%--                                <td class="table_image1"--%>
+<%--                                    style="height: 300px; width: 270px; border: solid 1px black">--%>
+<%--                                    <a href="productDetail.jsp?id_product=<%=listProduct.getId()%>"><img class="image_sp1" src="<%=listProduct.getImg()%>" width="270px" height="270px">--%>
+<%--                                        <p class="text_dicount"><%=(int) (listProduct.getDiscount() * 100)%>%<br>Giảm</p></a>--%>
+<%--                                    <p class="text_sp1"><%=listProduct.getName()%>--%>
+<%--                                    </p>--%>
+<%--                                    <div class="purch_price">--%>
+<%--                                        <p class="price_sp1"><del><%= currencyFormatter.format(listProduct.getPrice())%></del>  <%= currencyFormatter.format(listProduct.salePrice()) %></p>--%>
+<%--                                        <button class="purche"><a href="AddCartController?id=<%= listProduct.getId()%>" onclick="openPopup()"> Thêm vào giỏ hàng</a></button>--%>
+<%--                                        <div class="popup-wrapper" id="popup-wrapper">--%>
+<%--                                            <div class="popup">--%>
+<%--                                                <span class="close" onclick="closePopup()">&times;</span>--%>
+<%--                                                <img class="order_image" src="assart/image/logo/order_tc.jpg">--%>
+<%--                                                <p>Đã thêm vào giỏ hàng thành công</p>--%>
+<%--                                            </div>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </td>--%>
+<%--                            </tr>--%>
+<%--                            <% } %>--%>
+<%--                        </table>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
 
 
 

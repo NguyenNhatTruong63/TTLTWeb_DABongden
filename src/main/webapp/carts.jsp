@@ -28,9 +28,10 @@
                 <img class="img-logo" src="https://img.freepik.com/premium-psd/3d-business-pack-creative-idea_505787-314.jpg?w=740" alt="">
                 <p class="sub-title">Led Tâm Quang</p>
                 <div class="search">
-                    <input class="search1" type="search" name="search" id="search-input"
-                           placeholder="Tìm kiếm sản phẩm">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <form action="./search" method="get">
+                        <div><input class="search1" type="search" name="keyword" id="search-input" placeholder="Tìm kiếm sản phẩm"></div>
+                        <div><button type="submit" value="" class="icon_search"><i class="fa-solid fa-magnifying-glass"></i></button></div>
+                    </form>
                 </div>
 
                 <div id="nanavbar-collapse-01" class="collapse">
@@ -176,7 +177,7 @@
                                     <p id="numbera">0</p>
                                     <button id="plus" onclick="plus()">+</button>
                                 </div>
-                                <button class="pay_cart"><a class="card" href="pay_page.html">Thanh Toán</a></button>
+                                <button class="pay_cart"><a class="card" href="pay_page.jsp">Thanh Toán</a></button>
                             </li>
                         </ul>
                         <%

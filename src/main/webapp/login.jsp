@@ -29,7 +29,7 @@
                     <input type="password" name="password" id="pass" placeholder="Nhập mật khẩu" class="">
                 </div>
                 <div class="forget">
-                    <a href="forget.html" style="color: white"><p class="title_forget">Quên mật khẩu</p></a>
+                    <a href="forget.jsp" style="color: white"><p class="title_forget">Quên mật khẩu</p></a>
                 </div>
                 <div class="submit">
                     <input type="submit" value="Đăng nhập">

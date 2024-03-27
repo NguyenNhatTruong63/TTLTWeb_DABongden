@@ -2,6 +2,7 @@ package org.example.web.services;
 
 import org.example.web.beans.Account;
 import org.example.web.beans.Product;
+import org.example.web.beans.brandProduct;
 import org.example.web.db.JDBIConnector;
 import org.jdbi.v3.core.Jdbi;
 
@@ -123,6 +124,31 @@ public class Dao {
         }
         return null;
     }
+
+    public Account checkAccountExist(String user, String email) {
+        String query = "select * from user where userName = ? or email = ?";
+        try {
+            conn = new JDBIConnector().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, user);
+            ps.setString(2, email);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new Account(rs.getString(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getString(6)
+                );
+            }
+
+
+        } catch (Exception e) {
+
+        }
+        return null;
+    }
     public List<Product> searchbyname(String search) {
         List<Product> list = new ArrayList<>();
         String query = "select * from products where name like ?";
@@ -165,5 +191,22 @@ public class Dao {
         }
 
         return 0;
+    }
+
+    public brandProduct getBrandProduct(String id) {
+        String query = "SELECT products.name, brands.name from products, brands WHERE products.idBrand = brands.id and products.id = ?";
+        try {
+            conn = new JDBIConnector().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, id);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new brandProduct(rs.getString(1),
+                        rs.getString(2));
+            }
+        } catch (Exception e) {
+
+        }
+        return null;
     }
 }

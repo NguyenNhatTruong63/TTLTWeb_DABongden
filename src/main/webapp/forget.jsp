@@ -33,7 +33,7 @@
                     <label for="pass1"></label><input type="password" name="password" id="pass1" placeholder="Nhập lại mật khẩu" class="">
                 </div>
                 <div class="submit">
-                    <a href="index.html">Đăng Nhập</a>
+                    <a href="index.jsp">Đăng Nhập</a>
                 </div>
             </div>
         </form>

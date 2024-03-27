@@ -2,6 +2,8 @@
 <%@ page import="org.example.web.db.JDBIConnector" %>
 <%@ page import="org.example.web.beans.Product" %>
 <%@ page import="org.example.web.carts.Carts" %>
+<%@ page import="org.example.web.services.Dao" %>
+<%@ page import="org.example.web.beans.Account" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
@@ -29,7 +31,7 @@
                 <div id="nanavbar-collapse-01" class="collapse">
                     <nav id="navbar" class="navbar">
                         <ul>
-                            <li><a href="index.html">Trang Chủ </a></li>
+                            <li><a href="index.jsp">Trang Chủ </a></li>
                             <li class="dropdown1"><a href="#"><span>Thương Hiệu</span><i class="fa-solid fa-caret-down"
                                                                                          style="color: white"></i>
                                 <!--                                <img class="caret" src="assart/image/icon_button/caret-down.svg">-->
@@ -100,18 +102,31 @@
                                 <img class="cart1" src="https://cdn-icons-png.freepik.com/256/2838/2838895.png?ga=GA1.1.2079026882.1697034920&" alt="">
                                 <p class="text_cart"><%=carts.getTotal()%></p>
                             </a></li>
+                            <% Dao dao = new Dao();
+                                Account account = (Account) session.getAttribute("account");
+                                if (account == null) account = new Account();
+                            %>
+
 
                             <li class="dropdown2"><a class="resume" href="#"><span class="text_resume"><img
-                                    class="user1" src="https://img.freepik.com/premium-psd/user-3d-icon_642950-57.jpg?w=740">Hello</span></a>
-                                <!--                            <img class="caret" src="assart/image/icon_button/caret-down.svg"></a>-->
-
+                                    class="user1" src="https://img.freepik.com/premium-psd/user-3d-icon_642950-57.jpg?w=740">Hello  <% if (session.getAttribute("account") != null) { %>
+                                <%=account.getUserName() %>
+                                <% } %> </span></a>
                                 <ul>
-                                    <li><a href="#">Thông tin cá nhân</a></li>
+                                    <% if (session.getAttribute("account") != null) { %>
+                                    <li><a href="ttcn.jsp?id_user=<%= account.getId() %>">Thông tin cá nhân</a></li>
                                     <li><a href="#">Lịch sử đơn hàng</a></li>
-                                    <li><a href="policy.html">Chính Sách</a></li>
+                                    <% } %>
+
+                                    <% if (session.getAttribute("account") == null) {%>
                                     <li><a href="login.jsp"> Đăng Nhập</a></li>
-                                    <li><a href="signup.jsp">Đăng ký</a></li>
+                                    <li><a href="signup.jsp">Đăng Ký</a></li>
+                                    <% } %>
+                                    <li><a href="policy.jsp">Chính Sách</a></li>
+                                    <% if (session.getAttribute("account") != null) { %>
                                     <li><a href="logout">Đăng Xuất</a></li>
+                                    <% } %>
+
                                 </ul>
                             </li>
 
@@ -124,13 +139,44 @@
                 </div>
             </div>
         </div>
-        <div id="image_item" class="">
-            <div class="item_bg">
-                <img class="bg_item" src="https://img.freepik.com/free-photo/glowing-light-bulb-fuels-ideas-innovation-generated-by-ai_188544-15498.jpg?t=st=1710248163~exp=1710251763~hmac=33a0ade607a80b139140ada81072fb35fabbc974a25bcf490b35dac3d7a9e90b&w=1060" alt="">
-                <!--                <img class="bg_item" src="https://img.freepik.com/free-photo/glowing-filament-ignites-ideas-innovative-solutions-generated-by-ai_188544-9614.jpg?t=st=1710247215~exp=1710250815~hmac=fa254d0cbf0306e1058a5e6b553c8dcf9e1f85e8e85e53d97929d61cbb58d77a&w=1060" alt="">-->
-                <!--                                <p class="text_bg"> Thắp sáng mọi nơi - Sưởi ấm mọi ngôi nhà</p>-->
+<%--        <div id="image_item" class="">--%>
+<%--            <div class="item_bg">--%>
+<%--                <img class="bg_item" src="https://img.freepik.com/free-photo/glowing-light-bulb-fuels-ideas-innovation-generated-by-ai_188544-15498.jpg?t=st=1710248163~exp=1710251763~hmac=33a0ade607a80b139140ada81072fb35fabbc974a25bcf490b35dac3d7a9e90b&w=1060" alt="">--%>
+<%--                <!--                <img class="bg_item" src="https://img.freepik.com/free-photo/glowing-filament-ignites-ideas-innovative-solutions-generated-by-ai_188544-9614.jpg?t=st=1710247215~exp=1710250815~hmac=fa254d0cbf0306e1058a5e6b553c8dcf9e1f85e8e85e53d97929d61cbb58d77a&w=1060" alt="">-->--%>
+<%--                <!--                                <p class="text_bg"> Thắp sáng mọi nơi - Sưởi ấm mọi ngôi nhà</p>-->--%>
+<%--            </div>--%>
+<%--        </div>--%>
+
+        <div id="image_item">
+            <div class="bg_item">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="https://img.freepik.com/free-photo/glowing-light-bulb-fuels-ideas-innovation-generated-by-ai_188544-15498.jpg?t=st=1711544827~exp=1711548427~hmac=7e94cbe592aed7caec24d870697e1bea64b13ae9cc51ba73133b9f849bf14004&w=1060" style="width:100%; height: 500px" alt="slide 1">
+                        <div class="text">Tia Sáng Rực Rỡ </div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="https://png.pngtree.com/thumb_back/fw800/background/20230718/pngtree-title-1-illuminated-light-bulb-shines-among-dim-incandescent-lamps-as-image_3910807.jpg" style="width:100%; height: 500px;" alt="slide 2">
+                        <div class="text">Góc Nhìn Chiếu Sáng</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="access/img/slide3.png" style="width:100%; height: 500px;" alt="slide 3">
+                        <div class="text">Chiếu Sáng Bền Vững</div>
+                    </div>
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
             </div>
         </div>
+
 
         <div id="section_body_table" class="">
             <div class="container">
@@ -142,8 +188,8 @@
                             <%List<Product> list = Dao.getAllProduct();%>
                             <%for (Product product:list){%>
                             <tr id="section_product" class="products" style="float: left">
-                                <td class="table_image1" style="height: 300px; width: 300px; border: solid 1px black">
-                                    <a href=""><img class="image_sp1" src="<%=product.getImg()%>" style="width: 300px; height: 300px" alt="sp1">
+                                <td class="table_image1">
+                                    <a href=""><img class="image_sp1" src="<%=product.getImg()%>" alt="sp1">
                                         <p class="text_dicount"><%=product.getDiscount()%> <br>Giảm </p></a>
                                     <p class="text_sp1"><%=product.getName()%></p>
                                     <div class="purch_price">
@@ -207,5 +253,28 @@
     function  closePopup(){
         document.getElementById("popup-wrapper").style.display = "none";
     }
+
 </script>
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+</script>
+
 </html>

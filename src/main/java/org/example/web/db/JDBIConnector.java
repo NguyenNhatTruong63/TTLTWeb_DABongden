@@ -15,7 +15,7 @@ public class JDBIConnector {
     private final String instance="";
 
     private String connectionURL="jdbc:mysql://"+hostName+"/"+dbName;
-    private static Jdbi jdbi;
+    public static Jdbi jdbi;
     Connection conn=null;
     PreparedStatement ps =null;
     ResultSet rs= null;
@@ -23,9 +23,10 @@ public class JDBIConnector {
     public JDBIConnector() {
     }
     public static Jdbi get() {
-        if(jdbi == null);
+        if (jdbi == null) ;
         return jdbi;
     }
+
 
     public Connection getConnection() throws Exception {
         String url="jdbc:mysql://"+hostName+"/"+dbName;
