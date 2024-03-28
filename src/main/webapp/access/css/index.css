@@ -12,8 +12,10 @@ body{
 }
 #logo{
     width: auto;
-    background-color: aqua;
+    /*background-color: aqua;*/
     border-bottom: solid 2px azure;
+    box-shadow: 3px 3px 10px rgba(127, 137, 161, 0.25);
+
 
 }
 .sub-title{

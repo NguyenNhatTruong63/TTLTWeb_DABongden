@@ -49,7 +49,7 @@ public class Dao {
     }
 
     public Account checkAccountExit(String user) {
-        String query = "select * from users where userName = ?";
+        String query = "select * from user where userName = ?";
 
 //        public Account checkAccountExist (String user){
 //            String query = "select * from user where userName = ?";
@@ -75,18 +75,11 @@ public class Dao {
         return null;
     }
     public void signup (String userName, String password, String repassword, String email, String phoneNumber){
-        String query = "insert into user VALUES (7, ?, ?, ?, ?, 0)";
-//        String query = "insert into user VALUES (0, ?, ?, ?, 0, 0 )";
+//        String query = "insert into user VALUES (7, ?, ?, ?, ?, 0)";
+        String query = "insert into user VALUES (0, ?, ?, ?, 0, 0 )";
         try {
             conn = new JDBIConnector().getConnection();
             ps = conn.prepareStatement(query);
-
-//                public Account signup (String userName, String password, String repassword, String email, String phoneNumber){
-//                    String query = "insert into user VALUES (0, ?, ?, ?, ?, 0 )";
-//                    try {
-//                        conn = new DBText().getConnection();
-//                        ps = conn.prepareStatement(query);
-//            ps.setInt(1, id);
             ps.setString(1, userName);
             ps.setString(2, password);
             ps.setString(3, email);
@@ -125,30 +118,30 @@ public class Dao {
         return null;
     }
 
-    public Account checkAccountExist(String user, String email) {
-        String query = "select * from user where userName = ? or email = ?";
-        try {
-            conn = new JDBIConnector().getConnection();
-            ps = conn.prepareStatement(query);
-            ps.setString(1, user);
-            ps.setString(2, email);
-            rs = ps.executeQuery();
-            while (rs.next()) {
-                return new Account(rs.getString(1),
-                        rs.getString(2),
-                        rs.getString(3),
-                        rs.getString(4),
-                        rs.getString(5),
-                        rs.getString(6)
-                );
-            }
-
-
-        } catch (Exception e) {
-
-        }
-        return null;
-    }
+//    public Account checkAccountExist(String user, String email) {
+//        String query = "select * from user where userName = ? or email = ?";
+//        try {
+//            conn = new JDBIConnector().getConnection();
+//            ps = conn.prepareStatement(query);
+//            ps.setString(1, user);
+//            ps.setString(2, email);
+//            rs = ps.executeQuery();
+//            while (rs.next()) {
+//                return new Account(rs.getString(1),
+//                        rs.getString(2),
+//                        rs.getString(3),
+//                        rs.getString(4),
+//                        rs.getString(5),
+//                        rs.getString(6)
+//                );
+//            }
+//
+//
+//        } catch (Exception e) {
+//
+//        }
+//        return null;
+//    }
     public List<Product> searchbyname(String search) {
         List<Product> list = new ArrayList<>();
         String query = "select * from products where name like ?";
