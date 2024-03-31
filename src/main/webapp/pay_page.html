@@ -142,90 +142,144 @@
             <p class="check_info">Vui lòng kiểm tra thông tin khách hàng, thông tin Giỏ hàng trước khi Thanh Toán</p>
         </div>
 
-        <div class="input_group_left">
-            <h4>ThÔNG TIN KHÁCH HÀNG</h4>
-            <div class="name">
-                <label >Họ tên <br><input type="text" placeholder="Họ và tên"></label>
-            </div>
-            <div class="gtinh">
-                <label>Giới tính <br>
-                    <select name="gioiTinh">
-                        <option value="nam"> Nam</option>
-                        <option value="nu"> Nữ</option>
-                    </select>
-                </label>
-            </div>
-            <div class="address">
-                <label>Địa chỉ <br>
-                    <input type="text" placeholder="Địa chỉ người nhận">
-                </label>
-            </div>
-            <div class="phone">
-                <label> Điện thoại <br>
-                    <input type="text" placeholder="Số điên thoại người nhận">
-                </label>
-            </div>
-            <div class="email">
-                <label> Email <br>
-                    <input type="email" placeholder="Email">
-                </label>
-            </div>
-        </div>
 
-        <div class="cart_check_right">
-            <h4>ĐƠN HÀNG CỦA BẠN</h4>
-            <div class="info_cart">
-                <div class="iii">
-                    <span>SẢN PHẨM</span>
-                    <span class="tong">TỔNG</span>
+        <div class="content">
+            <div class="step1">
+                <h4>Bước 1: Chi tiết thanh toán </h4>
+                <div class="user">
+                    <label class="name">Họ và tên <br><input type="text" name="name" class="name1" placeholder="Họ và tên"></label>
                 </div>
-                <ul>
-                    <li class="sp1">
+                <div class="phone">
+                    <label class="phone"> Số Điện thoại <br>
+                        <input type="text" placeholder="Số điên thoại người nhận" name="phone" class="phone1">
+                    </label>
+                </div>
+                <div class="gtinh">
+                    <label class="sex">Giới tính <br>
+                        <select class="sex1" name="gioiTinh">
+                            <option value="nam"> Nam</option>
+                            <option value="nu"> Nữ</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Tỉnh/TP</label>
+                    <div class="col-sm-10">
+                        <select class="form-select form-select-sm mb-3 form-control"
+                                id="city" aria-label=".form-select-sm" name="tinhthanh" required>
+                            <option value="" selected>Chọn tỉnh thành</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group required">
+                    <label class="col-sm-2 control-label">Quận/Huyện</label>
+                    <div class="col-sm-10">
+                        <select class="form-select form-select-sm mb-3 form-control"
+                                id="district" aria-label=".form-select-sm" name="quanhuyen" required>
+                            <option value=""  selected>Chọn quận huyện</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group required">
+                    <label class="col-sm-2 control-label">Phường/Xã</label>
+                    <div class="col-sm-10">
+                        <select class="form-select form-select-sm form-control" id="ward"
+                                aria-label=".form-select-sm" name="phuongxa" required>
+                            <option value="" selected>Chọn phường xã</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="address">
+                    <label class="address1">Địa chỉ cụ thể<br>
+                        <input type="text" placeholder="Địa chỉ" name="address" class="address2">
+                    </label>
+                </div>
+
+                <div class="email">
+                    <label class="email1"> Email <br>
+                        <input type="email" placeholder="Email">
+                    </label>
+                </div>
+            </div>
+            <div class="step2">
+                <h4>Bước 2: Vui lòng chọn phương thức thanh toán</h4>
+                <div class="content_step2">
+                    <div class="text_title_step2"><p>Vui lòng chọn phương thức vận chuyển thích hợp để sử dụng cho đơn đặt hàng này.</p></div>
+                    <div class="expense">
+                        <p class="text_step2">Phí cố định</p>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="shipping_method" class="" value="0" checked ="checked"> Giao hàng tiết kiệm: 25.000đ
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="shipping_method"  class="" value="1"> Viettel Post: 30.000đ
+                            </label>
+                        </div>
+                        <div class="payment">
+                            <p>Vui lòng chọn phương thức thanh toán để sử dụng cho đơn đặt hàng này.</p>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="payment_method" class="" value="Cod" checked ="checked"> Thanh toán khi nhận hàng
+                                </label>
+                            </div>
+                        </div>
+                        <div class="note_order">
+                            <p class="text_note">Thêm ghi chú đơn hàng của bạn</p>
+                            <p><textarea name="comment" rows="8" class="form-control"></textarea></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="step3">
+                <h4>Bước 3: Xác nhận đơn hàng</h4>
+                <div class="info_cart">
+                    <div class="img_product">
+                        <img class="img_product1" src="access/" alt="anh">
+                    </div>
+                    <div class="info_pay">
                         <span>Bóng Đèn Led Ốp Trần Panasonic 18W</span>
                         <span class="number">x 1</span><br>
                         <span>Giá:</span>
-                        <span class="price">150.000đ</span>
-                        <span class="total_price">150.000đ</span>
-                    </li>
-                    <li class="sp2">
-                        <span>Đèn led âm trần Rạng Đông 16w D AT04L 155/16W </span>
-                        <span class="number">x 2</span><br>
-                        <span>Giá:</span>
-                        <span class="price">240.000đ</span>
-                        <span class="total_price">480.000đ</span>
-                    </li>
-                </ul>
-                <span class="l_total"> TỔNG THANH TOÁN</span>
-                <span class="total">630.000đ</span>
-            </div>
-        </div>
-
-        <button class="btn_dathang"><a href="#" onclick="openPopup()"> Đặt Hàng</a></button>
-        <div class="popup-wrapper_pay" id="popup-wrapper_pay">
-            <div class="popup_pay">
-                <div class="header1">
-                    <span class="close" onclick="closePopup()">&times;</span>
-                    <img class="order_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8f2KuwLvTAb00OQQc2HnhMzfGatxp54czdA&usqp=CAU" alt="logo cart">
-                    <h1 class="order_text">Đặt Hàng Thành Công</h1>
+                        <span class="price">150.000đ</span><br>
+                        <span class="total_price">Tổng giá sản phẩm:<span>150.000đ</span> </span><br>
+                        <span class="text_cost">Phí giao hàng: <span>25.000đ</span> </span>
+                    </div>
                 </div>
-                <div class="thankorder">
-                    <p class="text_order_tc"> Cảm ơn bạn đã đặt hàng tại <span class="text_shop" style="color: red"> Led Tâm Quang</span></p>
-                </div>
-                <div class="money">
-                    <p class="text_order_tc"> Bạn cần chuẩn bị số tiền tương ứng:</p>
-                    <p class="text_price_order">630.000</p>
-                </div>
-                <div class="lscart">
-                    <p class="text_order_tc"> Để xem lịch sử giỏi hàng vui lòng: <a class="lk_order" href="#">xem tại đây</a></p>
-                </div>
-                <div class="support">
-                    <p class="text_order_tc"> Để được hỗ trợ vui lòng gọi vào: <span class="sdt">0245730926 hoặc 0257190589</span></p>
-                </div>
-                <div class="home">
-                    <p class="text_order_tc">Quay về trang chủ: <a class="lk_order1" href="index.html">Tại đây</a></p>
+                <div class="total">
+                    <span class="l_total"> TỔNG THANH TOÁN:</span>
+                    <span class="total_number">630.000đ</span>
                 </div>
             </div>
+            <button class="btn_dathang"><a href="#" onclick="openPopup()"> Đặt Hàng</a></button>
         </div>
+<!--        <div class="popup-wrapper_pay" id="popup-wrapper_pay">-->
+<!--            <div class="popup_pay">-->
+<!--                <div class="header1">-->
+<!--                    <span class="close" onclick="closePopup()">&times;</span>-->
+<!--                    <img class="order_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8f2KuwLvTAb00OQQc2HnhMzfGatxp54czdA&usqp=CAU" alt="logo cart">-->
+<!--                    <h1 class="order_text">Đặt Hàng Thành Công</h1>-->
+<!--                </div>-->
+<!--                <div class="thankorder">-->
+<!--                    <p class="text_order_tc"> Cảm ơn bạn đã đặt hàng tại <span class="text_shop" style="color: red"> Led Tâm Quang</span></p>-->
+<!--                </div>-->
+<!--                <div class="money">-->
+<!--                    <p class="text_order_tc"> Bạn cần chuẩn bị số tiền tương ứng:</p>-->
+<!--                    <p class="text_price_order">630.000</p>-->
+<!--                </div>-->
+<!--                <div class="lscart">-->
+<!--                    <p class="text_order_tc"> Để xem lịch sử giỏi hàng vui lòng: <a class="lk_order" href="#">xem tại đây</a></p>-->
+<!--                </div>-->
+<!--                <div class="support">-->
+<!--                    <p class="text_order_tc"> Để được hỗ trợ vui lòng gọi vào: <span class="sdt">0245730926 hoặc 0257190589</span></p>-->
+<!--                </div>-->
+<!--                <div class="home">-->
+<!--                    <p class="text_order_tc">Quay về trang chủ: <a class="lk_order1" href="index.html">Tại đây</a></p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
         <!--footer-->
         <div id="foot" class="">

@@ -17,6 +17,8 @@
 <head>
     <title>Led Tâm Quang</title>
     <link rel="stylesheet" href="access/css/index.css">
+    <link rel="stylesheet" href="Layout/header.css">
+    <link rel="stylesheet" href="Layout/footer.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
 </head>
 <body>

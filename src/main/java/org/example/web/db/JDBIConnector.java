@@ -120,6 +120,37 @@ public class JDBIConnector {
         return listc;
     }
 
+
+    public List<Product> getAllBrand() {
+        List<Product> listc = new ArrayList<>();
+        String query = "SELECT * FROM products where idBrand = 1";
+        try {
+            conn = new JDBIConnector().getConnection();
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                listc.add(new Product(
+                        rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getDouble(6),
+                        rs.getDouble(7),
+                        rs.getDouble(8),
+                        rs.getDouble(9)
+                ));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        } finally {
+            // Đóng tài nguyên ở đây
+        }
+        return listc;
+    }
+
     public Product getById(int proid) {
         String query = "SELECT * FROM products WHERE id =?";
         try {

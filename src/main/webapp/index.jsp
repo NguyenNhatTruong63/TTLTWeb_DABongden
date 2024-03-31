@@ -9,6 +9,8 @@
     <meta charset="UTF-8">
     <title>Led Tâm Quang</title>
     <link rel="stylesheet" href="access/css/index.css">
+    <link rel="stylesheet" href="Layout/header.css">
+    <link rel="stylesheet" href="Layout/footer.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
 </head>
 <body>
@@ -57,7 +59,7 @@
                             <%for (Product product:list){%>
                             <tr id="section_product" class="products" style="float: left">
                                 <td class="table_image1">
-                                    <a href=""><img class="image_sp1" src="<%=product.getImg()%>" alt="sp1">
+                                    <a href="productDetail.jsp"><img class="image_sp1" src="<%=product.getImg()%>" alt="sp1">
                                         <p class="text_dicount"><%=product.getDiscount()%> <br>Giảm </p></a>
                                     <p class="text_sp1"><%=product.getName()%></p>
                                     <div class="purch_price">
@@ -83,6 +85,13 @@
     </div>
 </div>
 </body>
-<script src="JS/popup-wrapper.js"></script>
 <script src="JS/slideShow.js"></script>
+<script>
+    function  openPopup(){
+        document.getElementById("popup-wrapper").style.display = "block";
+    }
+    function  closePopup(){
+        document.getElementById("popup-wrapper").style.display = "none";
+    }
+</script>
 </html>

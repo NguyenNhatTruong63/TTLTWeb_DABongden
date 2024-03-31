@@ -30,10 +30,6 @@ public class ProductByCategoryServices {
         }
         return instance;
     }
-//    public List<Product> getListProductByCategory(String id){
-//
-//    }
-
     public List<Product> getListProductByCategory(String id) {
         List<Product> productList = new ArrayList<>();
 

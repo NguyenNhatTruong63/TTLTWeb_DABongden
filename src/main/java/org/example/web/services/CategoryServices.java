@@ -48,7 +48,7 @@ public class CategoryServices {
 
     public static void main(String[] args) throws SQLException {
         CategoryServices categoryServices = new CategoryServices();
-//        System.out.println(categoryServices.getCategoryList());
+        System.out.println(categoryServices.getCategoryList());
         System.out.println(categoryServices.nameCategory(" "));
 
     }

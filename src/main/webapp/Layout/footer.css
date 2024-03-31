@@ -1,0 +1,111 @@
+body{
+    margin: auto;
+    font-size: 15px;
+    font-family: Tahoma, sans-serif;
+    color: black;
+    background: #FF0000;
+
+}
+.container{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#foot {
+    width: auto;
+    height: 220px;
+    color: white;
+    background-color: lightseagreen;
+}
+
+li{
+    list-style: none;
+}
+
+
+.logo_flash_foot{
+    position: absolute;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+.text_foot{
+    margin-left: 150px;
+    padding-top: 50px;
+    font-size: 30px;
+    font-weight: bolder;
+
+}
+.text_contact{
+    margin-left: 400px;
+    margin-top: -100px;
+    font-size: 20px;
+    font-weight: bolder;
+    /*color: black;*/
+}
+.text_contact_email{
+    margin-left: 400px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+.email_contact{
+    display: inline;
+    margin-left: 10px;
+}
+.text_contact_telephone{
+    margin-left: 400px;
+    margin-top: 15px;
+    font-size: 16px;
+}
+.telephone_contact{
+    display: inline;
+    margin-left: 10px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.text_policy{
+    margin-left: 400px;
+    margin-top: 15px;
+    font-size: 16px;
+}
+.foot_address{
+    display: block;
+    float: right;
+    font-size: 16px;
+    margin-right: 50px;
+    margin-top: -150px;
+}
+.text_address1{
+    display: block;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.social{
+    display: inline-flex;
+    float: right;
+    margin-right: 90px;
+}
+.social{
+    display: inline;
+    float: right;
+    margin-right: 270px;
+    margin-top: -40px;
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.icon_foot{
+    padding-left: 10px;
+}
+.social_icon{
+    display: inline-flex;
+}
+.icon_foot{
+    padding-top: 10px;
+}

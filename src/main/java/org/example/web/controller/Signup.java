@@ -29,7 +29,8 @@ public class Signup extends HttpServlet {
 //        Account accountExist = dao.checkAccountExit(username);
         Account accountExist = dao.checkAccountExit(username);
 
-        if (username.equals("") || password.equals("") || email.equals("") || phoneNumber.equals("") || repassword.equals("")) {
+        if (username == null || password == null || email == null || phoneNumber == null || repassword == null ||
+                username.isEmpty() || password.isEmpty() || email.isEmpty() || phoneNumber.isEmpty() || repassword.isEmpty()) {
             request.setAttribute("error", "Vui lòng nhập đầy đủ thông tin");
             request.getRequestDispatcher("signup.jsp").forward(request, response);
 
@@ -53,13 +54,13 @@ public class Signup extends HttpServlet {
 //            password = MaHoa.toSHA1(password);
             dao.signup(username, password, repassword, email, phoneNumber);
             request.setAttribute("error", "Đăng ký thành công");
-            request.getRequestDispatcher("formdn.jsp").forward(request, response);
+            request.getRequestDispatcher("login.jsp").forward(request, response);
 //        String phone = request.getParameter("phone");
 //        String address = request.getParameter("address");
             if (!password.equals(repassword)) {
 //            response.sendRedirect("signup.jsp");
                 request.setAttribute("error", "Vui lòng nhập lại password");
-                request.getRequestDispatcher("formdn.jsp").forward(request, response);
+                request.getRequestDispatcher("login.jsp").forward(request, response);
 //            response.sendRedirect("formdn.jsp");
             } else {
 //                password = MaHoa.toSHA1(password);
@@ -87,7 +88,7 @@ public class Signup extends HttpServlet {
                 } else {
                     dao.signup(username, password, repassword, email, phoneNumber);
                     request.setAttribute("error", "Đăng ký thành công");
-                    request.getRequestDispatcher("formdn.jsp").forward(request, response);
+                    request.getRequestDispatcher("login.jsp").forward(request, response);
 
                 }
 

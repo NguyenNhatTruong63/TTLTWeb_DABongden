@@ -14,82 +14,35 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Thanh Toán</title>
-    <link rel="stylesheet" href="access/css/pay.css">
+    <link href="access/css/pay1.css" rel="stylesheet">
     <link href="access/css/index.css" rel="stylesheet">
+    <link href="Layout/header.css" rel="stylesheet">
+    <link href="Layout/footer.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
     <!--  <link href="assart/order.css" rel="stylesheet">-->
-    <script>
-        function openPopup() {
-            document.getElementById("popup-wrapper_pay").style.display = "block";
-        }
+<%--    <script>--%>
+<%--        function openPopup() {--%>
+<%--            document.getElementById("popup-wrapper_pay").style.display = "block";--%>
+<%--        }--%>
 
-        function closePopup() {
-            document.getElementById("popup-wrapper_pay").style.display = "none";
-        }
-    </script>
-    <style>
-        #search1 {
-            margin-top: 0px;
-        }
-
-        .button_icon {
-            display: inline-block;
-            float: right;
-            padding-right: 30px;
-            margin-top: -52px;
-        }
-
-        .fa-trash:before {
-            color: black;
-            margin-left: 418px;
-        }
-
-        .fa-trash {
-            font-weight: 900;
-            margin-top: -40px;
-        }
-
-        .cart_check_right {
-
-            margin-top: -466px;
-
-        }
-
-        .btn_dathang {
-            padding: 10px 10px;
-            margin-top: -23px;
-            float: right;
-            background: #FF0000;
-            color: white;
-            border-radius: 6px;
-            border: 2px solid #FF0000;
-            margin-right: 193px;
-            font-size: 25px;
-
-        }
-
-        .btn_dathang a {
-            text-decoration: none;
-            color: white;
-        }
-
-        #foot .cart_check_right {
-            margin-top: 100px;
-        }
-    </style>
+<%--        function closePopup() {--%>
+<%--            document.getElementById("popup-wrapper_pay").style.display = "none";--%>
+<%--        }--%>
+<%--    </script>--%>
 </head>
-<%
-    String error = (String) (request.getAttribute("error"));
-    if (error != null) {
-        request.getAttribute("error");
-    } else {
-        error = "";
-    }
-%>
+<%--<%--%>
+<%--    String error = (String) (request.getAttribute("error"));--%>
+<%--    if (error != null) {--%>
+<%--        request.getAttribute("error");--%>
+<%--    } else {--%>
+<%--        error = "";--%>
+<%--    }--%>
+<%--%>--%>
 <body>
 
 
@@ -104,139 +57,169 @@
             <p class="check_info">Vui lòng kiểm tra thông tin khách hàng, thông tin Giỏ hàng trước khi Thanh Toán</p>
         </div>
 
-        <div class="input_group_left">
-            <form action="" method="post">
-            <p style="color: red"><%=error %></p>
-            <h4>ThÔNG TIN KHÁCH HÀNG</h4>
-            <div class="name">
-                <label >Họ tên <br><input type="text" placeholder="Họ và tên"></label>
-            </div>
-            <div class="gtinh">
-                <label>Giới tính <br>
-                    <select name="gioiTinh">
-                        <option value="nam"> Nam</option>
-                        <option value="nu"> Nữ</option>
-                    </select>
-                </label>
-            </div>
-            <div class="address">
-                <label>Địa chỉ <br>
-                    <input type="text" placeholder="Địa chỉ người nhận">
-                </label>
-            </div>
-            <div class="phone">
-                <label> Điện thoại <br>
-                    <input type="text" placeholder="Số điên thoại người nhận">
-                </label>
-            </div>
-            <div class="email">
-                <label> Email <br>
-                    <input type="email" placeholder="Email">
-                </label>
-            </div>
-            </form>
-        </div>
 
-        <%
-            Carts cart = (Carts) session.getAttribute("cart");
-            if (cart == null)
-                cart = new Carts();
-
-            Map<Integer, CartsProduct> cartItems = cart.getData();
-        %>
-        <%
-            Locale locale = new Locale("vi", "VN");
-            NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(locale);
-        %>
-
-        <div class="cart_check_right">
-            <h4>ĐƠN HÀNG CỦA BẠN</h4>
-            <div class="info_cart">
-                <div class="iii">
-                    <span>SẢN PHẨM</span>
-                    <span class="tong">TỔNG</span>
+        <div class="content">
+            <div class="step1">
+                <h4>Bước 1: Chi tiết thanh toán </h4>
+                <div class="user">
+                    <label class="name">Họ và tên <br><input type="text" name="name" class="name1" placeholder="Họ và tên"></label>
+                </div>
+                <div class="phone">
+                    <label class="phone"> Số Điện thoại <br>
+                        <input type="text" placeholder="Số điên thoại người nhận" name="phone" class="phone1">
+                    </label>
+                </div>
+                <div class="gtinh">
+                    <label class="sex">Giới tính <br>
+                        <select class="sex1" name="gioiTinh">
+                            <option value="nam"> Nam</option>
+                            <option value="nu"> Nữ</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Tỉnh/TP</label>
+                    <div class="col-sm-10">
+                        <select class="form-select form-select-sm mb-3 form-control"
+                                id="city" aria-label=".form-select-sm" name="tinhthanh" required>
+                            <option value="" selected>Chọn tỉnh thành</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group required">
+                    <label class="col-sm-2 control-label">Quận/Huyện</label>
+                    <div class="col-sm-10">
+                        <select class="form-select form-select-sm mb-3 form-control"
+                                id="district" aria-label=".form-select-sm" name="quanhuyen" required>
+                            <option value=""  selected>Chọn quận huyện</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group required">
+                    <label class="col-sm-2 control-label">Phường/Xã</label>
+                    <div class="col-sm-10">
+                        <select class="form-select form-select-sm form-control" id="ward"
+                                aria-label=".form-select-sm" name="phuongxa" required>
+                            <option value="" selected>Chọn phường xã</option>
+                        </select>
+                    </div>
                 </div>
 
-                <ul>
-                    <%
-                        if (cartItems.isEmpty()) {
-                    %>
-                    <p style="width: 400px; text-align: center; margin-left: -80px">Thêm sản phẩm vào giỏ hàng
-                        để tiến hành thanh toán</p>
-                    <%
-                    } else {
-//                                    int totalPriceForAllProducts = 0;
-                        for (Map.Entry<Integer, CartsProduct> entry : cartItems.entrySet()) {
-                            CartsProduct cartProduct = entry.getValue();
-                            Product product = cartProduct.getProduct();
-                    %>
-                    <%
-                        // Lấy giá trị số lượng sản phẩm từ request
-                        String quantity = request.getParameter("quantity");
-                    %>
-                    <li class="sp1">
-                        <span><%=product.getName() %></span>
-                        <span class="number">x <%= quantity %></span><br>
-                        <span class="delete"><a href="./remove?id=<%=product.getId()%>"> <i
-                                class="fa-solid fa-trash"></i></a>
-                                </span>
+                <div class="address">
+                    <label class="address1">Địa chỉ cụ thể<br>
+                        <input type="text" placeholder="Địa chỉ" name="address" class="address2">
+                    </label>
+                </div>
+
+                <div class="email">
+                    <label class="email1"> Email <br>
+                        <input type="email" placeholder="Email">
+                    </label>
+                </div>
+            </div>
+            <div class="step2">
+                <h4>Bước 2: Vui lòng chọn phương thức thanh toán</h4>
+                <div class="content_step2">
+                    <div class="text_title_step2"><p>Vui lòng chọn phương thức vận chuyển thích hợp để sử dụng cho đơn đặt hàng này.</p></div>
+                    <div class="expense">
+                        <p class="text_step2">Phí cố định</p>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="shipping_method" class="" value="0" checked ="checked"> Giao hàng tiết kiệm: 25.000đ
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="shipping_method"  class="viettelPost" value="1"> Viettel Post: 30.000đ
+                            </label>
+                        </div>
+                        <div class="payment">
+                            <p>Vui lòng chọn phương thức thanh toán để sử dụng cho đơn đặt hàng này.</p>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="payment_method" class="" value="Cod" checked ="checked"> Thanh toán khi nhận hàng
+                                </label>
+                            </div>
+                        </div>
+                        <div class="note_order">
+                            <p class="text_note">Thêm ghi chú đơn hàng của bạn</p>
+                            <p><textarea name="comment" rows="8" class="form-control"></textarea></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="step3">
+                <h4>Bước 3: Xác nhận đơn hàng</h4>
+                <div class="info_cart">
+                    <div class="img_product">
+                        <img class="img_product1" src="access/" alt="anh">
+                    </div>
+                    <div class="info_pay">
+                        <span>Bóng Đèn Led Ốp Trần Panasonic 18W</span>
+                        <span class="number">x 1</span><br>
                         <span>Giá:</span>
-                        <span class="price"><%=currencyFormatter.format(product.getPrice())%></span>
-                        <span class="total_price"><%=currencyFormatter.format(product.getPrice())%></span>
-                    </li>
-                    <%
-                            }
-                        }
-                    %>
-
-                </ul>
-                <% if (!cartItems.isEmpty()) {%>
-
-                <span class="l_total"> TỔNG THANH TOÁN</span>
-                <%
-                    for (Map.Entry<Integer, CartsProduct> entry : cartItems.entrySet()) {
-                        CartsProduct cartProduct = entry.getValue();
-                        Product product = cartProduct.getProduct();
-                %>
-                <span class="total"><%=product.getPrice()%></span>
-
-                <% }
-                } %>
-
-            </div>
-        </div>
-        <button class="btn_dathang"><a href="#" onclick="openPopup()"> Đặt Hàng</a></button>
-        <div class="popup-wrapper_pay" id="popup-wrapper_pay">
-            <div class="popup_pay">
-                <div class="header1">
-                    <span class="close" onclick="closePopup()">&times;</span>
-                    <img class="order_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8f2KuwLvTAb00OQQc2HnhMzfGatxp54czdA&usqp=CAU" alt="logo cart">
-                    <h1 class="order_text">Đặt Hàng Thành Công</h1>
+                        <span class="price">150.000đ</span><br>
+                        <span class="total_price">Tổng giá sản phẩm:<span>150.000đ</span> </span><br>
+                        <span class="text_cost">Phí giao hàng: <span>25.000đ</span> </span>
+                    </div>
                 </div>
-                <div class="thankorder">
-                    <p class="text_order_tc"> Cảm ơn bạn đã đặt hàng tại <span class="text_shop" style="color: red"> Led Tâm Quang</span></p>
-                </div>
-                <div class="money">
-                    <p class="text_order_tc"> Bạn cần chuẩn bị số tiền tương ứng:</p>
-                    <p class="text_price_order">630.000</p>
-                </div>
-                <div class="lscart">
-                    <p class="text_order_tc"> Để xem lịch sử giỏi hàng vui lòng: <a class="lk_order" href="#">xem tại đây</a></p>
-                </div>
-                <div class="support">
-                    <p class="text_order_tc"> Để được hỗ trợ vui lòng gọi vào: <span class="sdt">0245730926 hoặc 0257190589</span></p>
-                </div>
-                <div class="home">
-                    <p class="text_order_tc">Quay về trang chủ: <a class="lk_order1" href="index.html">Tại đây</a></p>
+                <div class="total">
+                    <span class="l_total"> TỔNG THANH TOÁN:</span>
+                    <span class="total_number">630.000đ</span>
                 </div>
             </div>
+            <button class="btn_dathang"><a href="#" onclick="openPopup()"> Đặt Hàng</a></button>
         </div>
+
 
         <!--footer-->
         <jsp:include page="Layout/Footer.jsp"/>
     </div>
 </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+<script>
+    var citis = document.getElementById("city");
+    var districts = document.getElementById("district");
+    var wards = document.getElementById("ward");
+    var Parameter = {
+        url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json",
+        method: "GET",
+        responseType: "application/json",
+    };
+    var promise = axios(Parameter);
+    promise.then(function (result) {
+        renderCity(result.data);
+    });
+
+    function renderCity(data) {
+        for (const x of data) {
+            citis.options[citis.options.length] = new Option(x.Name, x.Name);
+        }
+        citis.onchange = function () {
+            district.length = 1;
+            ward.length = 1;
+            if (this.value != "") {
+                const result = data.filter(n => n.Name === this.value);
+
+                for (const k of result[0].Districts) {
+                    district.options[district.options.length] = new Option(k.Name, k.Name);
+                }
+            }
+        };
+        district.onchange = function () {
+            ward.length = 1;
+            const dataCity = data.filter((n) => n.Name === citis.value);
+            if (this.value != "") {
+                const dataWards = dataCity[0].Districts.filter(n => n.Name === this.value)[0].Wards;
+
+                for (const w of dataWards) {
+                    wards.options[wards.options.length] = new Option(w.Name, w.Name);
+                }
+            }
+        };
+    }
+</script>
 </html>
 
 

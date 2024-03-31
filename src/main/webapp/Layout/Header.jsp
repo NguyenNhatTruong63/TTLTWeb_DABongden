@@ -2,7 +2,9 @@
 <%@ page import="org.example.web.services.Dao" %>
 <%@ page import="org.example.web.beans.Account" %>
 <%@ page import="org.example.web.services.CategoryServices" %>
-<%@ page import="org.example.web.beans.Category" %><%--
+<%@ page import="org.example.web.beans.Category" %>
+<%@ page import="org.example.web.services.BrandServices" %>
+<%@ page import="org.example.web.beans.Brand" %><%--
   Created by IntelliJ IDEA.
   User: DELL
   Date: 27/03/2024
@@ -10,32 +12,33 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
 <div id="logo">
     <div class="logo1">
         <img class="img-logo" src="https://img.freepik.com/premium-psd/3d-business-pack-creative-idea_505787-314.jpg?w=740" alt="">
         <p class="sub-title">Led Tâm Quang</p>
         <div class="search">
             <form action="./search" method="get">
-                <div><input class="search1" type="search" name="keyword" id="search-input" placeholder="Tìm kiếm sản phẩm"></div>
+                <div><label for="search-input"></label><input class="search1" type="search" name="keyword" id="search-input" placeholder="Tìm kiếm sản phẩm"></div>
                 <div><button type="submit" value="" class="icon_search"><i class="fa-solid fa-magnifying-glass"></i></button></div>
             </form>
         </div>
-
         <div id="nanavbar-collapse-01" class="collapse">
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a href="index.jsp">Trang Chủ </a></li>
-                    <li class="dropdown1"><a href="#"><span>Thương Hiệu</span><i class="fa-solid fa-caret-down"
-                                                                                 style="color: white"></i>
-                        <!--                                <img class="caret" src="assart/image/icon_button/caret-down.svg">-->
-                    </a>
-                        <ul>
-                            <li><a href="#">Rạng Đông</a></li>
-                            <li><a href="#">PHILIPS</a></li>
-                            <li><a href="#">OSRAM</a></li>
-                            <li><a href="#">Điện Quang</a></li>
-                            <li><a href="#">Duhal</a></li>
-                            <li><a href="#">Panasonic</a></li>
+                    <li class="dropdown1"><a href="#"><span>Thương Hiệu</span><i class="fa-solid fa-caret-down" style="color: white"></i></a>
+                        <% BrandServices brandServices = new BrandServices();%>
+                        <ul><% for (Brand brand : brandServices.getBrandList()) { %>
+                            <li class="dropdown"><a href="brand.jsp?id_brand=<%=brand.getId()%>"><span><%= brand.getName() %></span></a></li>
+                            <% } %>
+<%--                            <li><a href="#">Rạng Đông</a></li>--%>
+<%--                            <li><a href="#">PHILIPS</a></li>--%>
+<%--                            <li><a href="#">OSRAM</a></li>--%>
+<%--                            <li><a href="#">Điện Quang</a></li>--%>
+<%--                            <li><a href="#">Duhal</a></li>--%>
+<%--                            <li><a href="#">Panasonic</a></li>--%>
                         </ul>
                     </li>
 
@@ -44,51 +47,6 @@
                         <ul><% for (Category category : categoryServices.getCategoryList()) { %>
                             <li class="dropdown"><a href="product_Category.jsp?id_caterory=<%=category.getId()%>"><span><%= category.getName() %></span></a></li>
                             <% } %>
-<%--                            <li class="dropdown"><a href="#"><span>Bóng Đèn Buld</span> <i--%>
-<%--                                    class="fa-solid fa-caret-right"></i></a>--%>
-<%--                                <ul>--%>
-<%--                                    <li><a href="#">Bóng Đèn Buld Led Tròn</a></li>--%>
-<%--                                    <li><a href="#">Bóng Đèn Buld Led Trụ</a></li>--%>
-<%--                                </ul>--%>
-<%--                            </li>--%>
-<%--                            <li class="dropdown"><a href="#"><span>Bóng Đèn Led Tuýp</span> <i--%>
-<%--                                    class="fa-solid fa-caret-right"></i></a>--%>
-<%--                                <ul>--%>
-<%--                                    <li><a href="#">Bóng Đèn Tuýp Led T5</a></li>--%>
-<%--                                    <li><a href="#">Bóng Đèn Tuýp Led T8</a></li>--%>
-<%--                                    <li><a href="#">Bóng Đèn Tuýp Led Bán Nguyệt</a></li>--%>
-<%--                                </ul>--%>
-<%--                            </li>--%>
-<%--                            <li class="dropdown"><a href="#"><span>Bóng Đèn Âm Trần</span><i--%>
-<%--                                    class="fa-solid fa-caret-right"></i></a>--%>
-<%--                                <ul>--%>
-<%--                                    <li><a href="#">Bóng Đèn Âm Trần Led Tròn</a></li>--%>
-<%--                                    <li><a href="#">Bóng Đèn Âm Trần Led Vuông</a></li>--%>
-<%--                                    <li><a href="#">Bóng Đèn Âm Trần Led Viền</a></li>--%>
-<%--                                </ul>--%>
-<%--                            </li>--%>
-<%--                            <li class="dropdown"><a href="#"><span>Bóng Đèn Ốp Trần</span><i--%>
-<%--                                    class="fa-solid fa-caret-right"></i></a>--%>
-<%--                                <ul>--%>
-<%--                                    <li><a href="#">Bóng Đèn Ốp Trần Led Tròn</a></li>--%>
-<%--                                    <li><a href="#">Bóng Đèn Ốp Trần Led Vuông</a></li>--%>
-<%--                                </ul>--%>
-<%--                            </li>--%>
-<%--                            <li class="dropdown"><a href="#"><span>Bóng Đèn Led Cảm Ứng</span><i--%>
-<%--                                    class="fa-solid fa-caret-right"></i></a>--%>
-<%--                                <ul>--%>
-<%--                                    <li><a href="#">Bóng Đèn Led Ốp Trần</a></li>--%>
-<%--                                    <li><a href="#">Bóng Đèn Led Âm Trần</a></li>--%>
-<%--                                    <li><a href="#">Bóng Đèn Led Hồng Ngoại</a></li>--%>
-<%--                                    <li><a href="#">Bóng Đèn Led Sân Vườn</a></li>--%>
-<%--                                </ul>--%>
-<%--                            </li>--%>
-<%--                            <li class="dropdown"><a href="#"><span>Bóng Đèn Sợi Đốt</span><i--%>
-<%--                                    class="fa-solid fa-caret-right"></i></a>--%>
-<%--                                <ul>--%>
-<%--                                    <li><a href="#">Bóng Đèn Sợi Đốt Halogen</a></li>--%>
-<%--                                </ul>--%>
-<%--                            </li>--%>
                         </ul>
                     </li>
                     <li><a href="./AddCartController">
