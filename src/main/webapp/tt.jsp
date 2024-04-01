@@ -1,15 +1,8 @@
-<%@ page import="org.example.web.carts.Carts" %>
-<%@ page import="org.example.web.carts.CartsProduct" %>
-<%@ page import="java.util.Locale" %>
-<%@ page import="java.util.Map" %>
-<%@ page import="java.text.NumberFormat" %>
-<%@ page import="org.example.web.beans.Product" %>
-<%@ page import="org.example.web.services.Dao" %>
-<%@ page import="org.example.web.beans.Account" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: DELL
-  Date: 14/03/2024
-  Time: 14:57 PM
+  Date: 01/04/2024
+  Time: 10:23 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -18,7 +11,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="Layout/header.css">
     <link rel="stylesheet" href="Layout/footer.css">
-    <link rel="stylesheet" href="access/css/pay1.css">
+    <link rel="stylesheet" href="access/css/tt.css">
 </head>
 <body>
 <jsp:include page="Layout/Header.jsp"/>

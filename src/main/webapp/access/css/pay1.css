@@ -1,41 +1,244 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-size: 15px;
-    color: black;
-    font-family: Tahoma, serif;
-}
+/*!*body {*!*/
+/*!*    margin: 0;*!*/
+/*!*    padding: 0;*!*/
+/*!*    font-size: 15px;*!*/
+/*!*    color: black;*!*/
+/*!*    font-family: Tahoma, serif;*!*/
+/*!*}*!*/
 
-ul li a {
-    list-style: none;
-    display: block;
-}
+/*!*ul li a {*!*/
+/*!*    list-style: none;*!*/
+/*!*    display: block;*!*/
+/*!*}*!*/
 
-.container {
+/*.container {*/
+/*    width: auto;*/
+/*    height: auto;*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*}*/
+
+/*!*trang thanh toán*!*/
+/*.checkout{*/
+/*    margin-top: 100px;*/
+/*}*/
+/*.checkout .thanhtoan {*/
+/*    text-align: center;*/
+/*    font-size: 25px;*/
+/*}*/
+/*.pay{*/
+/*    margin-left: 570px;*/
+/*    margin-top: -80px;*/
+/*    padding-bottom: 20px;*/
+/*}*/
+/*.checkout p, .checkout .check_info {*/
+/*    text-align: center;*/
+/*    font-size: 16px;*/
+/*    margin-top: -10px;*/
+/*    font-style: italic;*/
+/*}*/
+/*body{*/
+/*    width: auto;*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*    font-size: 15px;*/
+/*    color: black;*/
+/*}*/
+/*.checkout{*/
+/*    margin-left: 500px;*/
+/*    margin-top: 10px;*/
+/*}*/
+/*.check_info{*/
+/*    margin-left: -200px;*/
+/*}*/
+/*.content{*/
+/*    width: 1250px;*/
+/*    height: auto;*/
+
+/*}*/
+/*.step1{*/
+/*    width: 750px;*/
+/*    height: 550px;*/
+/*    padding: 10px 50px;*/
+/*    margin-left: 200px;*/
+/*    border-radius: 10px;*/
+/*    border: solid 1px #999999;*/
+/*    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);*/
+/*}*/
+/*.form-group{*/
+/*    width: 800px;*/
+/*    height: 40px;*/
+/*    margin-top: 20px;*/
+/*    display: inline-flex;*/
+/*    !*background: #1c94c4;*!*/
+
+/*}*/
+/*.control-label {*/
+/*    width: 150px;*/
+/*    height: 30px;*/
+/*    padding-top: 10px;*/
+/*    display: inline-flex;*/
+/*    !*background: #FF0000;*!*/
+/*}*/
+/*.name1{*/
+/*    width: 600px;*/
+/*    height: 30px;*/
+/*    margin-top: 5px;*/
+/*    padding-left: 10px;*/
+/*    border: solid 1px black;*/
+/*    border-radius: 10px;*/
+/*}*/
+/*.phone2 {*/
+/*    width: 600px;*/
+/*    height: 30px;*/
+/*    margin-top: 5px;*/
+/*    padding-left: 10px;*/
+/*    border: solid 1px black;*/
+/*    border-radius: 10px;*/
+/*}*/
+/*.sex1 {*/
+/*    width: 600px;*/
+/*    height: 30px;*/
+/*    margin-top: 5px;*/
+/*    padding-left: 10px;*/
+/*    border: solid 1px black;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*#city{*/
+/*    width: 600px;*/
+/*    height: 30px;*/
+/*    margin-top: 4px;*/
+/*    padding-left: 10px;*/
+/*    border: solid 1px black;*/
+/*    border-radius: 10px;*/
+/*}*/
+/*#district{*/
+/*    width: 600px;*/
+/*    height: 30px;*/
+/*    margin-top: 4px;*/
+/*    padding-left: 10px;*/
+/*    border: solid 1px black;*/
+/*    border-radius: 10px;*/
+/*}*/
+/*#ward{*/
+/*    width: 600px;*/
+/*    height: 30px;*/
+/*    margin-top: 4px;*/
+/*    padding-left: 10px;*/
+/*    border: solid 1px black;*/
+/*    border-radius: 10px;*/
+/*}*/
+/*.address2 {*/
+/*    width: 600px;*/
+/*    height: 30px;*/
+/*    margin-top: 5px;*/
+/*    padding-left: 10px;*/
+/*    border: solid 1px black;*/
+/*    border-radius: 10px;*/
+/*}*/
+/*.email2{*/
+/*    width: 600px;*/
+/*    height: 30px;*/
+/*    margin-top: 5px;*/
+/*    padding-left: 10px;*/
+/*    border: solid 1px black;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*.step2{*/
+/*    width: 550px;*/
+/*    height: 500px;*/
+/*    margin: 20px 0 0 40px;*/
+/*    padding: 10px 0 0 50px;*/
+/*    border-radius: 10px;*/
+/*    border: solid 1px #999999;*/
+/*    !*box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);*!*/
+/*    background: white;*/
+/*}*/
+/*.text_step2{*/
+/*    font-weight: bold;*/
+/*}*/
+/*.phi{*/
+/*    width: auto;*/
+/*    height: 60px;*/
+/*}*/
+/*.viettelPost{*/
+/*    float: left;*/
+
+/*}*/
+/*.note_order{*/
+/*    font-weight: bold;*/
+
+/*}*/
+/*.form-control{*/
+/*    width: 500px;*/
+
+/*}*/
+/*.step3{*/
+/*    width: 500px;*/
+/*    height: auto;*/
+/*    float: right;*/
+/*    margin-top: -515px;*/
+/*    margin-right: 40px;*/
+/*    padding-left: 50px;*/
+/*    border-radius: 10px;*/
+/*    border: solid 1px #999999;*/
+/*    !*box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);*!*/
+/*}*/
+/*.info_cart{*/
+/*    width: auto;*/
+/*    display: inline-flex;*/
+/*    height: auto;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*.img_product{*/
+/*    width: 100px;*/
+/*    height: 90px;*/
+/*    margin-right: 10px;*/
+/*    transition: transform 0.3s ease;*/
+/*}*/
+/*.img_product:hover{*/
+/*    transform: scale(1.1);*/
+
+/*}*/
+/*.info_pay{*/
+/*    width: auto;*/
+/*    height: auto;*/
+/*}*/
+/*.total{*/
+/*    margin-top: 10px;*/
+/*    float: right;*/
+/*    margin-right: 20px;*/
+/*}*/
+/*.btn_dathang{*/
+/*    float: right;*/
+/*    margin: -80px 40px 0 0;*/
+/*    padding: 10px 10px;*/
+/*    font-size: 25px;*/
+/*    color: white;*/
+/*    background: #FF0000;*/
+/*    border-radius: 10px;*/
+/*    border: 2px solid #FF0000;*/
+/*}*/
+/*.btn_dathang a{*/
+/*    text-decoration: none;*/
+/*    color: white;*/
+/*}*/
+body{
     width: auto;
-    height: auto;
     margin-left: auto;
     margin-right: auto;
+    font-size: 15px;
+    color: black;
 }
-
-/*trang thanh toán*/
 .checkout{
-    margin-top: 100px;
+    margin-left: 500px;
+    margin-top: 10px;
 }
-.checkout .thanhtoan {
-    text-align: center;
-    font-size: 25px;
-}
-.pay{
-    margin-left: 570px;
-    margin-top: -80px;
-    padding-bottom: 20px;
-}
-.checkout p, .checkout .check_info {
-    text-align: center;
-    font-size: 16px;
-    margin-top: -10px;
-    font-style: italic;
+.check_info{
+    margin-left: -200px;
 }
 .content{
     width: 1250px;
@@ -50,93 +253,52 @@ ul li a {
     border-radius: 10px;
     border: solid 1px #999999;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
-
-}
-
-.user{
-    width: 800px;
-    height: 40px;
-    margin-bottom: 20px;
-    display: inline-flex;
-
-}
-.name{
-    width: auto;
-    height: 40px;
-    padding-top: 10px;
-    /*padding-right: 20px;*/
-    display: inline-flex;
-
-}
-.name1{
-    width: 600px;
-    height: 30px;
-    margin-top: -6px;
-    margin-left: 100px;
-    border: solid 1px black;
-    border-radius: 10px;
-}
-.phone{
-    width: 800px;
-    height: 40px;
-    margin-bottom: 20px;
-    display: inline-flex;
-
-}
-.phone {
-    width: auto;
-    height: 30px;
-    padding-top: 10px;
-    display: inline-flex;
-
-}
-.phone1 {
-    width: 600px;
-    height: 30px;
-    margin-top: -6px;
-    margin-left: 75px;
-    border: solid 1px black;
-    border-radius: 10px;
-}
-.gtinh{
-    width: 800px;
-    height: 40px;
-    display: inline-flex;
-
-}
-.sex {
-    width: auto;
-    height: 30px;
-    padding-top: 10px;
-    display: inline-flex;
-
-}
-.sex1 {
-    width: 600px;
-    height: 30px;
-    margin-top: -6px;
-    margin-left: 110px;
-    border: solid 1px black;
-    border-radius: 10px;
 }
 .form-group{
     width: 800px;
     height: 40px;
     margin-top: 20px;
     display: inline-flex;
+    /*background: #1c94c4;*/
 
 }
 .control-label {
-    width: auto;
+    width: 150px;
     height: 30px;
     padding-top: 10px;
     display: inline-flex;
+    /*background: #FF0000;*/
 }
+.name1{
+    width: 600px;
+    height: 30px;
+    margin-top: 5px;
+    padding-left: 10px;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+.phone2 {
+    width: 600px;
+    height: 30px;
+    margin-top: 5px;
+    padding-left: 10px;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+.sex1 {
+    width: 600px;
+    height: 30px;
+    margin-top: 5px;
+    padding-left: 10px;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
 #city{
     width: 600px;
     height: 30px;
     margin-top: 4px;
-    margin-left: 115px;
+    padding-left: 10px;
     border: solid 1px black;
     border-radius: 10px;
 }
@@ -144,7 +306,7 @@ ul li a {
     width: 600px;
     height: 30px;
     margin-top: 4px;
-    margin-left: 83px;
+    padding-left: 10px;
     border: solid 1px black;
     border-radius: 10px;
 }
@@ -152,66 +314,36 @@ ul li a {
     width: 600px;
     height: 30px;
     margin-top: 4px;
-    margin-left: 90px;
+    padding-left: 10px;
     border: solid 1px black;
     border-radius: 10px;
-}
-.address{
-    width: 800px;
-    height: 40px;
-    margin-top: 20px;
-    display: inline-flex;
-
-}
-.address1 {
-    width: auto;
-    height: 30px;
-    padding-top: 10px;
-    display: inline-flex;
-
 }
 .address2 {
     width: 600px;
     height: 30px;
-    margin-top: -6px;
-    margin-left: 70px;
+    margin-top: 5px;
+    padding-left: 10px;
     border: solid 1px black;
     border-radius: 10px;
 }
-.email{
-    width: 800px;
-    height: 40px;
-    margin-top: 20px;
-    display: inline-flex;
-
-
-}
-.email1{
-    width: auto;
-    height: 30px;
-    padding-top: 10px;
-    display: inline-flex;
-
-}
-input{
+.email2{
     width: 600px;
     height: 30px;
-    margin-top: -6px;
-    margin-left: 125px;
+    margin-top: 5px;
+    padding-left: 10px;
     border: solid 1px black;
     border-radius: 10px;
 }
-
-
 
 .step2{
     width: 550px;
-    height: 550px;
+    height: 500px;
     margin: 20px 0 0 40px;
     padding: 10px 0 0 50px;
     border-radius: 10px;
     border: solid 1px #999999;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+    /*box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);*/
+    background: white;
 }
 .text_step2{
     font-weight: bold;
@@ -219,25 +351,11 @@ input{
 .phi{
     width: auto;
     height: 60px;
-    background: #FF0000;
 }
-
-
-/*.giaohang{*/
-/*    float: left;*/
-/*    */
-/*}*/
-/*.expense{*/
-/*    float: left;*/
-/*}*/
 .viettelPost{
     float: left;
 
 }
-/*.radio{*/
-/*    float: left;*/
-/*    display: block;*/
-/*}*/
 .note_order{
     font-weight: bold;
 
@@ -250,12 +368,12 @@ input{
     width: 500px;
     height: auto;
     float: right;
-    margin-top: -450px;
+    margin-top: -515px;
     margin-right: 40px;
     padding-left: 50px;
     border-radius: 10px;
     border: solid 1px #999999;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+    /*box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);*/
 }
 .info_cart{
     width: auto;
@@ -297,7 +415,6 @@ input{
     text-decoration: none;
     color: white;
 }
-
 
 
 
