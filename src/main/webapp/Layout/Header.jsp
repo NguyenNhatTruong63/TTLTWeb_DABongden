@@ -68,15 +68,15 @@
                                 <% } %> </span></a>
                         <ul>
                             <% if (session.getAttribute("account") != null) { %>
-                            <li><a href="ttcn.jsp?id_user=<%= account.getId() %>">Thông tin cá nhân</a></li>
-                            <li><a href="#">Lịch sử đơn hàng</a></li>
+                            <li><a href="personal-information.jsp?id_user=<%= account.getId() %>">Thông tin cá nhân</a></li>
+                            <li><a href="order-history.jsp">Lịch sử đơn hàng</a></li>
+                            <li><a href="forgetpass.jsp">Đổi mật khẩu</a></li>
                             <% } %>
 
                             <% if (session.getAttribute("account") == null) {%>
                             <li><a href="login.jsp"> Đăng Nhập</a></li>
                             <li><a href="signup.jsp">Đăng Ký</a></li>
                             <% } %>
-                            <li><a href="policy.jsp">Chính Sách</a></li>
                             <% if (session.getAttribute("account") != null) { %>
                             <li><a href="logout">Đăng Xuất</a></li>
                             <% } %>
