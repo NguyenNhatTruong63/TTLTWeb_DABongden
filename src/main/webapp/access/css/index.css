@@ -116,8 +116,9 @@ img {vertical-align: middle;}
 
 }
 .table_image1{
-    width: 300px;
-    height: 430px;
+    width: 250px;
+    /*width: 300px;*/
+    height: 380px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
     transition: 0.4s;
 }
@@ -126,9 +127,9 @@ img {vertical-align: middle;}
 }
 
 .image_sp1 {
-    width: 300px;
-    height: 300px;
-    margin-top: -15px;
+    width: 250px;
+    height: 250px;
+    margin-top: -20px;
     /*margin-bottom: 10px;*/
 }
 
@@ -155,7 +156,7 @@ img {vertical-align: middle;}
     position: absolute;
     font-size: 15px;
     text-align: center;
-    margin-left: -300px;
+    margin-left: -250px;
     margin-top: -15px;
     border-radius: 15%;
     color: white;

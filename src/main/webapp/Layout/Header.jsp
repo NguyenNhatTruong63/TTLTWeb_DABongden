@@ -70,7 +70,7 @@
                             <% if (session.getAttribute("account") != null) { %>
                             <li><a href="personal-information.jsp?id_user=<%= account.getId() %>">Thông tin cá nhân</a></li>
                             <li><a href="order-history.jsp">Lịch sử đơn hàng</a></li>
-                            <li><a href="forgetpass.jsp">Đổi mật khẩu</a></li>
+                            <li><a href="change_pass.jsp">Đổi mật khẩu</a></li>
                             <% } %>
 
                             <% if (session.getAttribute("account") == null) {%>

@@ -1,4 +1,3 @@
-
 <%--
   Created by IntelliJ IDEA.
   User: DELL
@@ -9,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Quên mật Khẩu</title>
+    <title>Đổi mật Khẩu</title>
     <link rel="stylesheet" href="access/css/forgetpass.css">
     <link rel="stylesheet" href="Layout/header.css">
     <link rel="stylesheet" href="Layout/footer.css">
@@ -23,18 +22,18 @@
         <img style="width: 1250px; height: 650px" src="https://img.freepik.com/free-photo/light-bulb-with-water-inside_1232-2108.jpg?t=st=1712065223~exp=1712068823~hmac=c8a2474167897521e8143b368bc8d312870c43535383163e401510fbd6a58733&w=900">
         <div class="from">
             <form method="" action="">
-                <h1>Quên mật khẩu</h1>
+                <h1>Đổi mật khẩu</h1>
                 <div class="user">
                     <i class="fa-solid fa-user"></i>
                     <input type="text" name="name" class="name" placeholder="Tên đăng nhập">
                 </div>
                 <div class="user">
                     <i class="fa-solid fa-key"></i>
-                    <input type="password" name="password" class="pass" placeholder="Mật khẩu mới ">
+                    <input type="password" name="password" class="pass" placeholder="Nhập mật khẩu cũ ">
                 </div>
                 <div class="user">
                     <i class="fa-solid fa-key"></i>
-                    <input type="password" name="password" class="pass1" placeholder="Nhập lại mật khẩu mới">
+                    <input type="password" name="password" class="pass1" placeholder="Nhập mật khẩu mới">
                 </div>
                 <div class="submit">
                     <button class="submit1" type="submit" value="">Đổi mật khẩu</button>
@@ -46,4 +45,3 @@
 <jsp:include page="Layout/Footer.jsp"/>
 </body>
 </html>
-
