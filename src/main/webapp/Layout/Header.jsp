@@ -18,9 +18,9 @@
     <div class="logo1">
         <img class="img-logo" src="https://img.freepik.com/premium-psd/3d-business-pack-creative-idea_505787-314.jpg?w=740" alt="">
         <p class="sub-title">Led Tâm Quang</p>
-        <div class="search">
+        <div id="search">
             <form action="./search" method="get">
-                <div><label for="search-input"></label><input class="search1" type="search" name="keyword" id="search-input" placeholder="Tìm kiếm sản phẩm"></div>
+                <div><input class="search1" type="search" name="keyword" id="search-input" placeholder="Tìm kiếm sản phẩm"></div>
                 <div><button type="submit" value="" class="icon_search"><i class="fa-solid fa-magnifying-glass"></i></button></div>
             </form>
         </div>
@@ -33,12 +33,12 @@
                         <ul><% for (Brand brand : brandServices.getBrandList()) { %>
                             <li class="dropdown"><a href="brand.jsp?id_brand=<%=brand.getId()%>"><span><%= brand.getName() %></span></a></li>
                             <% } %>
-<%--                            <li><a href="#">Rạng Đông</a></li>--%>
-<%--                            <li><a href="#">PHILIPS</a></li>--%>
-<%--                            <li><a href="#">OSRAM</a></li>--%>
-<%--                            <li><a href="#">Điện Quang</a></li>--%>
-<%--                            <li><a href="#">Duhal</a></li>--%>
-<%--                            <li><a href="#">Panasonic</a></li>--%>
+                            <li><a href="#">Rạng Đông</a></li>
+                            <li><a href="#">PHILIPS</a></li>
+                            <li><a href="#">OSRAM</a></li>
+                            <li><a href="#">Điện Quang</a></li>
+                            <li><a href="#">Duhal</a></li>
+                            <li><a href="#">Panasonic</a></li>
                         </ul>
                     </li>
 
@@ -68,15 +68,15 @@
                                 <% } %> </span></a>
                         <ul>
                             <% if (session.getAttribute("account") != null) { %>
-                            <li><a href="ttcn.jsp?id_user=<%= account.getId() %>">Thông tin cá nhân</a></li>
-                            <li><a href="#">Lịch sử đơn hàng</a></li>
+                            <li><a href="personal-information.jsp?id_user=<%= account.getId() %>">Thông tin cá nhân</a></li>
+                            <li><a href="order-history.jsp">Lịch sử đơn hàng</a></li>
+                            <li><a href="change_pass.jsp">Đổi mật khẩu</a></li>
                             <% } %>
 
                             <% if (session.getAttribute("account") == null) {%>
                             <li><a href="login.jsp"> Đăng Nhập</a></li>
                             <li><a href="signup.jsp">Đăng Ký</a></li>
                             <% } %>
-                            <li><a href="policy.jsp">Chính Sách</a></li>
                             <% if (session.getAttribute("account") != null) { %>
                             <li><a href="logout">Đăng Xuất</a></li>
                             <% } %>

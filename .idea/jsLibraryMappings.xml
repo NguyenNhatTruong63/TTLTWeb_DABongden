@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
+<<<<<<< HEAD
     <file url="file://$PROJECT_DIR$" libraries="{all}" />
+=======
+    <file url="file://$PROJECT_DIR$" libraries="{all, boxicons, font-awesome, jquery, jquery-confirm, sweetalert}" />
+>>>>>>> 321a3fb987973d302c4935d9a440247d0702791e
   </component>
 </project>

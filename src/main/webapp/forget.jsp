@@ -1,45 +1,49 @@
+
 <%--
   Created by IntelliJ IDEA.
   User: DELL
-  Date: 14/03/2024
-  Time: 14:56 PM
+  Date: 02/04/2024
+  Time: 13:47 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Forget</title>
-    <link href="access/css/login.css" rel="stylesheet">
+    <title>Quên mật Khẩu</title>
+    <link rel="stylesheet" href="access/css/forgetpass.css">
+    <link rel="stylesheet" href="Layout/header.css">
+    <link rel="stylesheet" href="Layout/footer.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+
 </head>
 <body>
-<div id="login">
+<jsp:include page="Layout/Header.jsp"/>
+<div id="session" class="">
     <div class="container">
-        <form action="" method="">
-            <div id="login1" class="">
-                <h1 class="title1">Quên mật khẩu</h1>
-                <div class="name_login">
-                    <i class="fa-regular fa-user"></i>
-                    <label for="name_login"></label><input type="text" name="name_login" id="name_login" placeholder="Tên đăng nhập">
+        <img style="width: 1250px; height: 650px" src="https://img.freepik.com/free-photo/light-bulb-with-water-inside_1232-2108.jpg?t=st=1712065223~exp=1712068823~hmac=c8a2474167897521e8143b368bc8d312870c43535383163e401510fbd6a58733&w=900">
+        <div class="from">
+            <form method="" action="">
+                <h1>Quên mật khẩu</h1>
+                <div class="user">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="name" class="name" placeholder="Tên đăng nhập">
                 </div>
-                <div class="password">
+                <div class="user">
                     <i class="fa-solid fa-key"></i>
-                    <label for="pass"></label><input type="password" name="password" id="pass" placeholder="Nhập mật khẩu" class="">
+                    <input type="password" name="password" class="pass" placeholder="Mật khẩu mới ">
                 </div>
-                <div class="password1">
+                <div class="user">
                     <i class="fa-solid fa-key"></i>
-                    <label for="pass1"></label><input type="password" name="password" id="pass1" placeholder="Nhập lại mật khẩu" class="">
+                    <input type="password" name="password" class="pass1" placeholder="Nhập lại mật khẩu mới">
                 </div>
                 <div class="submit">
-                    <a href="index.jsp">Đăng Nhập</a>
+                    <button class="submit1" type="submit" value="">Đổi mật khẩu</button>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
-
 </div>
-
+<jsp:include page="Layout/Footer.jsp"/>
 </body>
 </html>
+
