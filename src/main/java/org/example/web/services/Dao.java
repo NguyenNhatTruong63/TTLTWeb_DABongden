@@ -9,6 +9,7 @@ import org.jdbi.v3.core.Jdbi;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,19 +20,21 @@ public class Dao {
     ResultSet rs = null;
 
     public static Jdbi get() {
-        if (jdbi == null) ;
+        if (jdbi == null) {
+
+        };
         return jdbi;
     }
 
-    public Account login(String user, String pass) {
-        String query = "select * from user where userName = ? and password = ?";
+    public Account login(String users, String pass) {
+        String query = "SELECT * from user where userName = ? and password = ?";
         try {
             conn = new JDBIConnector().getConnection();
             ps = conn.prepareStatement(query);
-            ps.setString(1, user);
+            ps.setString(1, users);
             ps.setString(2, pass);
             rs = ps.executeQuery();
-            while (rs.next()) {
+            if (rs.next()) {
                 return new Account(rs.getString(1),
                         rs.getString(2),
                         rs.getString(3),
@@ -42,9 +45,12 @@ public class Dao {
             }
 
 
-        } catch (Exception e) {
 
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
+
         return null;
     }
 
@@ -70,29 +76,40 @@ public class Dao {
 
 
         } catch (Exception e) {
+            e.printStackTrace();
 
         }
         return null;
     }
     public void signup (String userName, String password, String repassword, String email, String phoneNumber){
+
 //        String query = "insert into user VALUES (7, ?, ?, ?, ?, 0)";
-        String query = "insert into user VALUES (9, ?, ?, ?, 0, 0 )";
+ //       String query = "INSERT INTO user (?, ?, ?, ?, ?, ? )";
+        String query = "INSERT INTO user ( username, password, repassword,email, phoneNumber, idRole) VALUES (?,?,?,?,?,?)";
         try {
             conn = new JDBIConnector().getConnection();
             ps = conn.prepareStatement(query);
+            ps.setString(3, repassword);
             ps.setString(1, userName);
             ps.setString(2, password);
-            ps.setString(3, email);
+            ps.setString(4, email);
+            ps.setString(5,phoneNumber);
+
+
+
+
 //                        ps.setString(4, phoneNumber);
 //            ps.setString(4, phoneNumber);
 //            ps.setString(6, idRole);
 //            ps.setString(4, phone);
 //            ps.setString(5, address);
             ps.executeUpdate();
-            System.out.println("insert thÃ nh cÃ´ng");
+            System.out.println("insert thành công");
         } catch (Exception e) {
+            e.printStackTrace();
 
         }
+
     }
     public Account getAccount(String id) {
         String query = "select * from user where id = ? ";
@@ -101,7 +118,7 @@ public class Dao {
             ps = conn.prepareStatement(query);
             ps.setString(1, id);
             rs = ps.executeQuery();
-            while (rs.next()) {
+            if (rs.next()) {
                 return new Account(rs.getString(1),
                         rs.getString(2),
                         rs.getString(3),
@@ -113,6 +130,7 @@ public class Dao {
 
 
         } catch (Exception e) {
+            System.out.println("lỗi");
 
         }
         return null;

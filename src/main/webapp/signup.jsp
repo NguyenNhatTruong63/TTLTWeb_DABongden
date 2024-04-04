@@ -84,7 +84,7 @@ background: red;
                 <h1 class="title1">SignUP</h1>
                 <div class="name_login">
                     <i class="fa-regular fa-user"></i>
-                    <label for="name_login"></label><input type="text" name="name_login" id="name_login" placeholder="Tên đăng ký">
+                    <label for="name_login"></label><input type="text" name="username" id="name_login" placeholder="Tên đăng ký">
                 </div>
                 <div class="password">
                     <i class="fa-solid fa-key"></i>
@@ -92,7 +92,7 @@ background: red;
                 </div>
                 <div class="password">
                     <i class="fa-solid fa-key"></i>
-                    <label for="pass"></label><input type="password" name="password" id="pas" placeholder="Nhập lại mật khẩu" class="">
+                    <label for="pass"></label><input type="password" name="repassword" id="pas" placeholder="Nhập lại mật khẩu" class="">
                 </div>
                 <div class="email">
                     <i class="fa-regular fa-envelope"></i>

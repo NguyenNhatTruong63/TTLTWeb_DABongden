@@ -12,8 +12,12 @@ import java.io.IOException;
 public class login extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("urf-8");
+        response.setCharacterEncoding("utf-8");
+
 
     }
+
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -23,8 +27,7 @@ public class login extends HttpServlet {
         Dao dao = new Dao();
         Account a = dao.login(userName, password);
 
-
-        if(userName.equals(" ") || password.equals(" ")){
+        if(userName == null|| password == null){
             request.setAttribute("error", "Vui lòng nhập đầy đủ thông tin");
             request.getRequestDispatcher("login.jsp").forward(request, response);
         } else if(a == null) {
@@ -63,5 +66,7 @@ public class login extends HttpServlet {
 //        }
 //        response.getWriter().println("username: " + userName);
 //        response.getWriter().println("password: " + password);
+
     }
+
 }

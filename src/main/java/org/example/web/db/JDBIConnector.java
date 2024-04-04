@@ -15,7 +15,7 @@ public class JDBIConnector {
     private final String password="";
     private final String instance="";
 
-    private String connectionURL="jdbc:mysql://"+hostName+"/"+dbName;
+    private final String connectionURL="jdbc:mysql://"+hostName+"/"+dbName;
     public static Jdbi jdbi;
     Connection conn=null;
     PreparedStatement ps =null;
@@ -38,6 +38,7 @@ public class JDBIConnector {
         jdbi = Jdbi.create(dataSource);
 
     }
+
 
     public JDBIConnector() {
     }
