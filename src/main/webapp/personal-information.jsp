@@ -50,8 +50,7 @@
 <%--                </div>--%>
                 <div class="submit">
                     <button class="submit1" style="background: white; border: solid 1px black" type="submit" value=""><a style="color: black" href="change_pass.jsp">Đổi mật khẩu</a></button>
-                </div>
-            </form>
+                </div>            </form>
         </div>
     </div>
 </div>
