@@ -151,19 +151,19 @@ body{
     width: auto;
     display: inline-flex;
     height: auto;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .img_product{
-    width: 100px;
+    width: 50px;
     height: 90px;
     margin-right: 10px;
     transition: transform 0.3s ease;
 }
-.img_product:hover{
-    transform: scale(1.1);
+/*.img_product:hover{*/
+/*    transform: scale(1.1);*/
 
-}
+/*}*/
 .info_pay{
     width: auto;
     height: auto;

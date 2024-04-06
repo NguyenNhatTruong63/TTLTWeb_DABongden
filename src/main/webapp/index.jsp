@@ -1,6 +1,8 @@
 <%@ page import="java.util.List" %>
 <%@ page import="org.example.web.db.JDBIConnector" %>
 <%@ page import="org.example.web.beans.Product" %>
+<%@ page import="java.text.NumberFormat" %>
+<%@ page import="java.util.Locale" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
@@ -12,7 +14,6 @@
     <link rel="stylesheet" href="Layout/header.css">
     <link rel="stylesheet" href="Layout/footer.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
-
 </head>
 
 <body>
@@ -59,18 +60,21 @@
                             <%JDBIConnector Dao = new JDBIConnector();%>
                             <%List<Product> list = Dao.getAllProduct();%>
                             <%for (Product product:list){%>
+                            <%Locale locale = new Locale("vi", "VN");%>
+                            <%NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(locale);%>
+
                             <tr id="section_product" class="products" style="float: left">
                                 <td class="table_image1">
                                     <a href="productDetail.jsp"><img class="image_sp1" src="<%=product.getImg()%>" alt="sp1">
                                         <p class="text_dicount"><%=product.getDiscount()%> <br>Giảm </p></a>
                                     <p class="text_sp1"><%=product.getName()%></p>
                                     <div class="purch_price">
-                                        <p class="price_sp1"><del><%=product.getPrice()%></del> 105.000đ</p>
+                                        <p class="price_sp1"><del><%=currencyFormatter.format(product.getPrice())%></del> <%=currencyFormatter.format(product.salePrice())%></p>
                                         <button class="purche"><a href="AddCartController?id=<%= product.getId()%>" onclick="openPopup()"> Thêm vào giỏ hàng</a></button>
                                         <div class="popup-wrapper" id="popup-wrapper">
                                             <div class="popup">
                                                 <span class="close" onclick="closePopup()">&times;</span>
-                                                <img class="order_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8f2KuwLvTAb00OQQc2HnhMzfGatxp54czdA&usqp=CAU" alt="">
+                                                <img class="order_image" src="access/imgLogo/cast.jpg" alt="logo_cart">
                                                 <p>Đã thêm vào giỏ hàng thành công</p>
                                             </div>
                                         </div>
