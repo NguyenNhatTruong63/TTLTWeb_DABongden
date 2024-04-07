@@ -8,11 +8,17 @@ public class ProductDetail {
     private String luminousFlux;
     private String longevity;
     private String cri;
+    private String consumption;
+    private String light_color;
+    private int warranty;
+    private String material;
+    private String colorCover;
+    private String size;
 
     public ProductDetail() {
     }
 
-    public ProductDetail(int id, int idProduct, String wattage, String voltage, String luminousFlux, String longevity, String cri) {
+    public ProductDetail(int id, int idProduct, String wattage, String voltage, String luminousFlux, String longevity, String cri, String consumption, String light_color, int warranty, String material, String colorCover, String size) {
         this.id = id;
         this.idProduct = idProduct;
         this.wattage = wattage;
@@ -20,6 +26,12 @@ public class ProductDetail {
         this.luminousFlux = luminousFlux;
         this.longevity = longevity;
         this.cri = cri;
+        this.consumption = consumption;
+        this.light_color = light_color;
+        this.warranty = warranty;
+        this.material = material;
+        this.colorCover = colorCover;
+        this.size = size;
     }
 
     public int getId() {
@@ -78,6 +90,54 @@ public class ProductDetail {
         this.cri = cri;
     }
 
+    public String getConsumption() {
+        return consumption;
+    }
+
+    public void setConsumption(String consumption) {
+        this.consumption = consumption;
+    }
+
+    public String getLight_color() {
+        return light_color;
+    }
+
+    public void setLight_color(String light_color) {
+        this.light_color = light_color;
+    }
+
+    public int getWarranty() {
+        return warranty;
+    }
+
+    public void setWarranty(int warranty) {
+        this.warranty = warranty;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+
+    public String getColorCover() {
+        return colorCover;
+    }
+
+    public void setColorCover(String colorCover) {
+        this.colorCover = colorCover;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
     @Override
     public String toString() {
         return "ProductDetail{" +
@@ -88,6 +148,12 @@ public class ProductDetail {
                 ", luminousFlux='" + luminousFlux + '\'' +
                 ", longevity='" + longevity + '\'' +
                 ", cri='" + cri + '\'' +
+                ", consumption='" + consumption + '\'' +
+                ", light_color='" + light_color + '\'' +
+                ", warranty=" + warranty +
+                ", material='" + material + '\'' +
+                ", colorCover='" + colorCover + '\'' +
+                ", size='" + size + '\'' +
                 '}';
     }
 }

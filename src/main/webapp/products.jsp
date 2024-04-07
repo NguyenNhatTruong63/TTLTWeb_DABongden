@@ -1,4 +1,10 @@
-<%--
+<%@ page import="org.example.web.beans.Product" %>
+<%@ page import="org.example.web.beans.ProductDetail" %>
+<%@ page import="java.util.Locale" %>
+<%@ page import="java.text.NumberFormat" %>
+<%@ page import="org.example.web.beans.Brand" %>
+<%@ page import="org.example.web.services.Dao" %>
+<%@ page import="org.example.web.beans.brandProduct" %><%--
   Created by IntelliJ IDEA.
   User: DELL
   Date: 01/04/2024
@@ -8,7 +14,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Chi tiết sản phẩm</title>
     <link rel="stylesheet" href="Layout/header.css">
     <link rel="stylesheet" href="Layout/footer.css">
     <link rel="stylesheet" href="access/css/product.css">
@@ -16,42 +22,48 @@
 </head>
 <body>
 <jsp:include page="Layout/Header.jsp"/>
+<% Dao dao = new Dao();%>
+<%Product product = dao.getProduct(request.getParameter("id_product")); %>
+<%Locale locale = new Locale("vi", "VN"); %>
+<%NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(locale); %>
+<%brandProduct brandProduct = dao.getBrandProduct(request.getParameter("id_product")); %>
+<%ProductDetail productDetail = dao.getProductDetail(request.getParameter("id_product")); %>
 
 <div id="product_detail" class="">
   <div class="container">
     <div class="detail_product">
       <div class="product_alpha">
-        <a><img class="alpha_img" src="https://rangdong.com.vn/uploads/product/LED/LED_Bulb/A45R-1W/1-%20A45R-1W.jpg" alt=""><p class="text_dicount">30% <br>Giảm </p></a>
+        <a><img class="alpha_img" src="<%=product.getImg()%>" alt=""><p class="text_dicount"><%=product.getDiscount()%> <br>Giảm </p></a>
       </div>
       <div class="product_omega">
         <div class="product_title">
-          <h1 class="text_detail_product">Bóng Đèn Led Ốp Trần Panasonic 18W</h1>
-          <p class="price_detail_product">Giá:<del>150000đ</del> 105.000đ</p>
-          <p class="firm">Hãng: Panasonic</p>
+          <h1 class="text_detail_product"><%=product.getName()%></h1>
+          <p class="price_detail_product">Giá:<del><%=currencyFormatter.format(product.getPrice())%></del> <%=currencyFormatter.format(product.salePrice())%></p>
+          <p class="firm">Hãng: <%=brandProduct.getNameBrand()%></p>
         </div>
         <%--                        <hr>--%>
         <div class="product_content">
           <div class="product_content1">
-            <p class="wattage">Công Suất: <span class="wattage_W">18W</span></p>
-            <p class="voltage">Điện Áp: <span class="voltage1">220V/50HZ</span></p><br>
-            <p class="r1" >Đường Kính lỗ khoét trần:<span>110mm</span></p>
+            <p class="wattage">Công Suất: <%=productDetail.getWattage()%>; <span class="wattage_W"> Điện áp: <%=productDetail.getVoltage()%></span></p>
+            <p class="voltage0">Màu ánh sáng: <%=productDetail.getLight_color()%></p><br>
+            <p class="voltage0" style="margin-top: -20px">Mức tiêu thụ điện năng: <%=productDetail.getConsumption()%></p>
           </div>
           <div class="product_content2">
-            <p class="luminous_flux">Quang Thông: <span
-                    class="luminous_flux"> 1300lm; CRI: 80</span></p>
-            <p class="longevity">Tuổi Thọ: <span class="age">30.000 giờ</span> </p>
-            <p class="longevity">Vật liệu: <span class="age">Nhựa</span></p>
+            <p class="luminous_flux">Quang Thông: <span class="luminous_flux"><%=productDetail.getLuminousFlux()%>lm; CRI: <%=productDetail.getCri()%></span></p>
+            <p class="longevity0">Tuổi Thọ: <%=productDetail.getLongevity()%> Giờ <span class="age">Ánh Sáng: <%=productDetail.getColorCover()%></span> </p>
+            <p class="longevity0">Vật liệu: <%=productDetail.getMaterial()%> <span class="age"> Kích thước: <%=productDetail.getSize()%></span></p>
           </div>
         </div>
+
         <div class="product_content_foot">
-          <p class="warranty_detail">Bảo hành chính hãng <span>24 tháng</span></p>
+          <div class="hv" style="border-top: solid 1px black"></div>
+          <p class="warranty_detail">Bảo hành chính hãng <span style="color: red"><%=productDetail.getWarranty()%> tháng</span></p>
           <p class="contact_detail"> Liên hệ với chúng tôi để biết thêm thông tin: <span class="phone">0245730926 - 0257190589</span></p>
           <div class="told">
             <button id="minus" onclick="minus()">-</button>
             <p id="numbera">0</p>
             <button id="plus" onclick="plus()">+</button>
-            <a href="cart.html"><input type="button" name="button" id="button_cart"
-                                       value="Thêm vào giỏ hàng" class="text_cart_detail"></a>
+            <a href="carts.jsp"><input type="button" name="button" id="button_cart" value="Thêm vào giỏ hàng" class="text_cart_detail"></a>
           </div>
         </div>
 
@@ -61,6 +73,8 @@
     <div id="section_detail" class="">
       <div class="container">
         <div class="detail_infor1">
+          <div class="hv" style="border-top: solid 1px black; margin-top: 10px"></div>
+
           <!--                  <h2 class="text_title">Sản Phẩm Đèn Led ốp trần nổi Panasonic 18W</h2>-->
           <p class="text_infor">
             Mức độ hoàn thiện tỉ mỉ, Sử dụng vật liệu chất lượng cao, mang đến nét sang trọng, hiện đại.<br>
@@ -90,7 +104,6 @@
             <div class="img">
               <img class="icon_detail2" src="https://rangdong.com.vn/uploads/images/Icon/icon_dientutruong.png">
             </div>
-
           </div>
           <div class="detail_icon3">
             <div class="cri">

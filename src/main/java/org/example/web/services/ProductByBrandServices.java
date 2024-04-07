@@ -37,7 +37,6 @@ public class ProductByBrandServices {
 
     public static void main(String[] args) throws SQLException {
         List<Product> all = ProductByBrandServices.getInstance().getListProductByBrand("3");
-
         ProductByBrandServices product = new ProductByBrandServices();
 
         System.out.println(all);
