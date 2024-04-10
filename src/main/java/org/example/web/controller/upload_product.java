@@ -27,16 +27,18 @@ public class upload_product extends HttpServlet {
         protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             request.setCharacterEncoding("UTF-8");
             String productName = request.getParameter("productName");
-            double productPrice = Double.valueOf(request.getParameter("productPrice"));
+            double productPrice = Double.parseDouble(request.getParameter("productPrice"));
             String material = request.getParameter("material");
             String origin = request.getParameter("origin");
             String type = request.getParameter("type");
-            int productDiscount = Integer.valueOf(request.getParameter("productDiscount"));
+            int productDiscount = Integer.parseInt(request.getParameter("productDiscount"));
             String detail = request.getParameter("detail");
-            int quantity = Integer.valueOf(request.getParameter("quantity"));
+            int quantity = Integer.parseInt(request.getParameter("quantity"));
+
 
             ConstraintValidatorFactory ProductServices = null;
 //            List<Product> productId = ProductServices.getInstance().getAll();
+
 
             Product product = new Product();
 //        product.setId(productId);
@@ -57,11 +59,13 @@ public class upload_product extends HttpServlet {
             for (Part part : request.getParts()) {
                 String fileName = part.getSubmittedFileName();
 
-                if (fileName == null)
+                if (fileName == null || fileName.equals("")) {
                     continue;
+                }
 
                 String imagePath = dataPath + "/" + productName + "_" + fileName;
                 part.write(imagePath);
+                product.addImage(imagePath);
 //
 //            Gallery image = new Gallery();
 //            int galleryId = GalleryService.getInstance().getLastGalleryId() + 1;
@@ -74,8 +78,21 @@ public class upload_product extends HttpServlet {
 
             }
 
+
             response.sendRedirect("Admin_product-manager.jsp");
 
 
         }
+    private String extractFileName(Part part) {
+        String contentDisp = part.getHeader("content-disposition");
+        String[] items = contentDisp.split(";");
+
+        for (String s : items) {
+            if (s.trim().startsWith("filename")) {
+                return s.substring(s.indexOf("=") + 2, s.length() - 1);
+            }
+        }
+
+        return null;
+    }
 }

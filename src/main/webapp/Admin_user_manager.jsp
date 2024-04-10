@@ -94,14 +94,14 @@
                         </thead>
                         <tbody>
 
-                        <% List<Account> list = Account.getInstance().getAllUser(); %>
+                        <% List<Account> list = Account.getInstance().getClass(); %>
                         <% for (Account user : list) { %>
                         <tr>
                             <td><%= user.getId() %></td>
                             <td><%= user.getUserName() %></td>
                             <td><%= user.getEmail() %></td>
                             <td><%= user.getPhoneNumber() %></td>
-                            <%--                            <td><%= user.getAddress() %></td>--%>
+<%--                            <td><%= user.getAddress() %></td>--%>
                             <td><%= user.getUserName() %></td>
                             <td><%= user.getIdRole()%></td>
                             <td class="table-td-center"><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"

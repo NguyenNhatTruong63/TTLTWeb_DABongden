@@ -86,5 +86,9 @@ public class Account implements Serializable {
                 ", idRole='" + idRole + '\'' +
                 '}';
     }
+
+    public Object getAddress() {
+        return null;
+    }
 }
 

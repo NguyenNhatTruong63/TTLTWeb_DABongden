@@ -120,5 +120,6 @@ public class Product implements Serializable {
     }
 
 
-
+    public void addImage(String imagePath) {
+    }
 }
