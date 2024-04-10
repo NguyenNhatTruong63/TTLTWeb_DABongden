@@ -11,9 +11,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Signup</title>
-    <link href="access/css/login.css" rel="stylesheet">
+    <link rel="stylesheet" href="access/css/personal.css">
+    <link rel="stylesheet" href="Layout/header.css">
+    <link rel="stylesheet" href="Layout/footer.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
-
     <%
         String error = (String) (request.getAttribute("error"));
         if (error != null) {
@@ -23,90 +24,49 @@
         }
         String userName = request.getParameter("username") != null ? request.getParameter("username") : "";
     %>
-    <style>
-        .btn_dk input {
-            text-decoration: none; /*bỏ gạch chân*/
-            border: 3px solid black;
-            border-radius: 60px;
-            padding: 10px 20px;
-            color: white;
-            font-size: 30px;
-            font-weight: bold;
-            background: black;
-        }
-
-        .btn_dk input:hover {
-            margin-top: 0px;
-            background: white;
-            color: black;
-        }
-
-        h2 {
-            width: 500px;
-            margin-left: -42px;
-        }
-        .back p, .back a {
-            font-size: 20px;
-            text-decoration: none;
-            font-style: italic;
-            margin-top: 18px;
-            text-align: center;
-        }
-        a{
-            padding: 0px 0px 0px 0px;
-            background: none;
-            color: mediumpurple;
-            border-radius: unset;
-            border: unset;
-        }
-    </style>
-    <p style="color: white;
-font-weight: bold;
-font-size: 20px;
-width: 500px;
-height: auto;
-margin-left: -50px;
-margin-top: -8px;
-position: absolute;
-text-align: center;
-border-radius: 5px;
-background: red;
-
-">
-        <%= error %>
-    </p>
 </head>
 <body>
-<div id="login">
+<jsp:include page="Layout/Header.jsp"/>
+<div id="session">
     <div class="container">
         <form method="post" action="./signup">
-            <div id="login1" class="">
-                <h1 class="title1">SignUP</h1>
-                <div class="name_login">
-                    <i class="fa-regular fa-user"></i>
-                    <label for="name_login"></label><input type="text" name="name_login" id="name_login" placeholder="Tên đăng ký">
+            <div id="personal" class="">
+                <h1>SignUP</h1>
+                <div class="content">
+                    <div class="image">
+                        <img class="img" src="https://img.freepik.com/premium-photo/yellow-light-bulb_172429-638.jpg?w=360" alt="ảnh">
+                    </div>
+                    <div class="infor">
+                        <div class="err">
+                            <p class="error1"><%=error%></p>
+                        </div>
+                        <div class="user">
+                            <i class="fa-solid fa-user"></i>
+                            <label for="name_login"></label><input type="text" name="name_login" id="name_login" placeholder="Tên đăng ký">
+                        </div>
+                        <div class="user">
+                            <i class="fa-solid fa-key"></i>
+                            <label for="pass"></label><input type="password" name="password" id="pass" placeholder="Nhập mật khẩu" class="">
+                        </div>
+                        <div class="user">
+                            <i class="fa-solid fa-phone"></i>
+                            <label for="pass"></label><input type="text" name="number" id="phone" placeholder="Nhập số điện thoại" class="">
+                        </div>
+                        <div class="user">
+                            <i class="fa-solid fa-envelope"></i>
+                            <label for="email"></label><input type="email" name="email" id="email" placeholder="Nhập email" class="">
+                        </div>
+                        <div class="submit">
+                            <button class="submit1" type="submit" value="">Đăng ký</button>
+                        </div>
+                        <p>Nếu bạn đã có tài khoản vui lòng <a href="login.jsp" style="color: red">Đăng Nhập</a></p>
+<%--                        <div class="submit"><input type="submit" value="Đăng ký"></div>--%>
+                    </div>
                 </div>
-                <div class="password">
-                    <i class="fa-solid fa-key"></i>
-                    <label for="pass"></label><input type="password" name="password" id="pass" placeholder="Nhập mật khẩu" class="">
-                </div>
-                <div class="password">
-                    <i class="fa-solid fa-key"></i>
-                    <label for="pass"></label><input type="password" name="password" id="pas" placeholder="Nhập lại mật khẩu" class="">
-                </div>
-                <div class="email">
-                    <i class="fa-regular fa-envelope"></i>
-                    <label for="email"></label><input type="email" name="email" id="email" placeholder="Nhập email" class="">
-                </div>
-                <div class="password">
-                    <i class="fa-solid fa-key"></i>
-                    <label for="pass"></label><input type="text" name="number" id="phone" placeholder="phone" class="">
-                </div>
-<%--                <div class="submit"><a href="index.html">Đăng ký</a></div>--%>
-                <div class="submit"><input type="submit" value="Đăng ký"></div>
             </div>
         </form>
     </div>
 </div>
+<jsp:include page="Layout/Footer.jsp"/>
 </body>
 </html>

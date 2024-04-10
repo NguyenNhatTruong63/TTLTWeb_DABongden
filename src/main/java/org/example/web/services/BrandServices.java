@@ -1,6 +1,7 @@
 package org.example.web.services;
 
 import org.example.web.beans.Brand;
+import org.example.web.beans.Category;
 import org.example.web.db.JDBIConnector;
 import org.jdbi.v3.core.Handle;
 import org.jdbi.v3.core.mapper.reflect.BeanMapper;
@@ -21,12 +22,11 @@ public class BrandServices {
         }
         return instance;
     }
-
     public List<Brand> getBrandList() {
         List<Brand> brandList = new ArrayList<>();
         try (Handle handle = JDBIConnector.get().open()) {
-            handle.registerRowMapper(BeanMapper.factory(Brand.class));
-            brandList = handle.createQuery("SELECT * FROM brand")
+            handle.registerRowMapper(BeanMapper.factory(Category.class));
+            brandList = handle.createQuery("SELECT name FROM brand")
                     .mapTo(Brand.class)
                     .list();
         } catch (Exception e) {
@@ -36,21 +36,20 @@ public class BrandServices {
         return brandList;
 
     }
-
-    public String nameBrand(String id) {
-        return JDBIConnector.get().withHandle(handle -> {
-            return handle.createQuery("SELECT name FROM brand where id = ?")
-                    .bind(0, id)
-                    .mapTo(String.class)
-                    .findOne()
-                    .orElse(null);
-        });
-    }
+//    public String nameCategory(String id) {
+//        return JDBIConnector.get().withHandle(handle -> {
+//            return handle.createQuery("SELECT name FROM categories where id = ?")
+//                    .bind(0, id)
+//                    .mapTo(String.class)
+//                    .findOne()
+//                    .orElse(null);
+//        });
+//    }
 
     public static void main(String[] args) throws SQLException {
-        BrandServices brandServices = new BrandServices();
+        BrandServices brandServices= new BrandServices();
         System.out.println(brandServices.getBrandList());
-//        System.out.println(brandServices.nameBrand(" "));
+//        System.out.println(categoryServices.nameCategory(" "));
 
     }
 }

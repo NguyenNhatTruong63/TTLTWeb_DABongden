@@ -5,7 +5,8 @@
 <%@ page import="org.example.web.beans.Product" %>
 <%@ page import="java.util.List" %>
 <%@ page import="org.example.web.services.ProductByBrandServices" %>
-<%@ page import="org.example.web.services.Dao" %><%--
+<%@ page import="org.example.web.services.Dao" %>
+<%@ page import="org.example.web.beans.Category" %><%--
   Created by IntelliJ IDEA.
   User: DELL
   Date: 14/03/2024
@@ -26,23 +27,26 @@
 </head>
 <body>
 <jsp:include page="Layout/Header.jsp"/>
+
 <div id="section_body" class="">
     <div class="container">
         <div class="box_product">
             <div class="box_table">
                 <table class="table_product" border="0px" cellspacing="20px" cellpadding="1px">
-                    <%--      định dạng số tiền--%>
-                    <%
-                        Locale locale = new Locale("vi", "VN");
-                        NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(locale);
-                    %>
+                    <%Dao dao = new Dao();%>
+                    <%Category category = dao.getNameCategory(request.getParameter("id_product"));%>
+                    <%Locale locale = new Locale("vi", "VN"); %>
+                    <%NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(locale); %>
                     <%--      dựa vào mã danh mục để gọi sản phẩm--%>
-
                     <% ProductByBrandServices productByBrandServices = new ProductByBrandServices();%>
+
                     <%--lấy tên danh mục hiển thị h2--%>
                     <h2 class="h2title"
-                        style="text-align: center; color: red; margin-left: -120px "><%=BrandServices.getInstance().nameBrand(request.getParameter("id_namebrand")) %>
+                        style="text-align: center; color: black; margin-left: -120px "><%=category.getName()%>
                     </h2>
+<%--                        <h2 class="h2title"--%>
+<%--                        style="text-align: center; color: red; margin-left: -120px "><%=BrandServices.getInstance().nameBrand(request.getParameter("id_name brand")) %>--%>
+<%--                    </h2>--%>
                     <%--  hiển thị danh sách sản phẩm--%>
                     <%for (Product product : productByBrandServices.getListProductByBrand(request.getParameter("id_namebrand"))) { %>
                     <tr id="section_product" class="products" style="float: left; ">

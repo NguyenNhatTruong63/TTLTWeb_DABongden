@@ -348,3 +348,151 @@
 /*!*}*!*/
 
 
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    color: black;
+    font-family: Tahoma, serif;
+}
+
+ul li a {
+    list-style: none;
+    display: block;
+}
+h4{
+    margin-left: 20px;
+}
+
+.container {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.paymeny1{
+    width: 1000px;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 130px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: solid 1px #999999;
+    /*background: bisque;*/
+    display: inline-flex;
+}
+
+.step1{
+    width: 500px;
+    /*height: 550px;*/
+    /*padding: 10px 50px;*/
+    /*margin-left: 100px;*/
+    border-right: solid 1px #999999;
+    /*border-radius: 10px;*/
+    /*border: solid 1px #999999;*/
+    /*box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);*/
+
+}
+.pay{
+    width: 500px;
+    height: 350px;
+    border-top-left-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+}
+.form-group{
+    width: 350px;
+    height: 30px;
+    margin-left: 40px;
+    display: inline-flex;
+    margin-top: 10px;
+}
+.control-label{
+    float: left;
+    width: 100px;
+    margin-top: 5px;
+}
+.form-group input{
+    width: 250px;
+    height: 25px;
+    border-radius: 5px;
+    border:  solid 1px black;
+}
+.sex1{
+    width: 250px;
+    height: 25px;
+    border-radius: 5px;
+    border:  solid 1px black;
+}
+#city{
+    width: 250px;
+    height: 25px;
+    border-radius: 5px;
+    border:  solid 1px black;
+}
+#district{
+    width: 250px;
+    height: 25px;
+    border-radius: 5px;
+    border:  solid 1px black;
+}
+#ward{
+    width: 250px;
+    height: 25px;
+    border-radius: 5px;
+    border:  solid 1px black;
+}
+.step2{
+    width: 500px;
+    height: auto;
+    /*border-radius: 10px;*/
+    /*border: solid 1px #999999;*/
+}
+.content_step2{
+    margin-left: 20px;
+}
+.form-control{
+    margin-left: 10px;
+    width: 450px;
+    padding-left: 10px;
+}
+.step3{
+    width: 500px;
+    height: auto;
+}
+.info_cart{
+    width: 450px;
+    height: auto;
+    margin-left: 20px;
+    border-radius: 10px;
+    display: flex;
+    background: #E8ECEE;
+}
+.img_product{
+    width: 102px;
+    height: 102px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border: solid 1px black;
+}
+.img_product1{
+    width: 100px;
+    height: 100px;
+}
+.info_pay{
+    margin: 10px;
+}
+.total{
+    width: 200px;
+    float: right;
+    margin: 10px;
+}
+.btn_dathang{
+    float: right;
+    width: 100px;
+    height: 30px;
+    margin: 20px;
+    border: solid 1px black;
+    border-radius: 8px;
+    background: #FF0000;
+}
+

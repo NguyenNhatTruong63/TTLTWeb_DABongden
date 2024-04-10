@@ -1,8 +1,6 @@
 package org.example.web.services;
 
-import org.example.web.beans.Account;
-import org.example.web.beans.Product;
-import org.example.web.beans.brandProduct;
+import org.example.web.beans.*;
 import org.example.web.db.JDBIConnector;
 import org.jdbi.v3.core.Jdbi;
 
@@ -187,7 +185,7 @@ public class Dao {
     }
 
     public brandProduct getBrandProduct(String id) {
-        String query = "SELECT products.name, brands.name from products, brands WHERE products.idBrand = brands.id and products.id = ?";
+        String query = "SELECT products.name, brand.name FROM products, brand WHERE brand.id = products.idBrand and products.id = ?";
         try {
             conn = new JDBIConnector().getConnection();
             ps = conn.prepareStatement(query);
@@ -197,6 +195,84 @@ public class Dao {
                 return new brandProduct(rs.getString(1),
                         rs.getString(2));
             }
+
+
+        } catch (Exception e) {
+
+        }
+        return null;
+    }
+
+
+    public Product getProduct(String id) {
+        String query = "select * from products where id = ?";
+        try {
+            conn = new JDBIConnector().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, id);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new Product(rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getDouble(6),
+                        rs.getDouble(7),
+                        rs.getInt(8),
+                        rs.getInt(9)
+                );
+
+            }
+        } catch (Exception e) {
+
+        }
+        return null;
+    }
+    public ProductDetail getProductDetail(String id) {
+        String query = "select * from productdetails where idProduct = idProduct";
+        try {
+            conn = new JDBIConnector().getConnection();
+            ps = conn.prepareStatement(query);
+//            ps.setString(1, id);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new ProductDetail(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getString(9),
+                        rs.getInt(10),
+                        rs.getString(11),
+                        rs.getString(12),
+                        rs.getString(13)
+                );
+            }
+        } catch (Exception e) {
+
+        }
+
+
+        return null;
+    }
+
+    public Category getNameCategory(String id) {
+        String query = "SELECT name FROM categories";
+        try {
+            conn = new JDBIConnector().getConnection();
+            ps = conn.prepareStatement(query);
+//            ps.setString(1, id);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new Category(rs.getInt(1),
+                        rs.getString(2));
+            }
+
+
         } catch (Exception e) {
 
         }

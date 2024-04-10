@@ -105,7 +105,7 @@ body{
     border-radius: 10px;
     border: solid 1px black;
 }
-.fa-solid{
+#login1 .fa-solid{
     width: 30px;
     height: 30px;
     position: absolute;
