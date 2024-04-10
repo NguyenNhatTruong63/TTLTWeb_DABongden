@@ -41,7 +41,7 @@ public class login extends HttpServlet {
         response.getWriter().println("username: " + userName);
         response.getWriter().println("password: " + password);
 
-//        String userName = request.getParameter("username");
+//          String userName = request.getParameter("username");
 //        String password = request.getParameter("password");
 //        Dao dao = new Dao();
 //        Account a = dao.login(userName, password);
