@@ -29,7 +29,7 @@
 <jsp:include page="Layout/Header.jsp"/>
 <div id="session">
     <div class="container">
-        <form method="post" action="./signup">
+        <form method="post" action="signup">
             <div id="personal" class="">
                 <h1>SignUP</h1>
                 <div class="content">
@@ -42,7 +42,7 @@
                         </div>
                         <div class="user">
                             <i class="fa-solid fa-user"></i>
-                            <label for="name_login"></label><input type="text" name="name_login" id="name_login" placeholder="Tên đăng ký">
+                            <label for="name_login"></label><input type="text" name="username" id="name_login" placeholder="Tên đăng ký">
                         </div>
                         <div class="user">
                             <i class="fa-solid fa-key"></i>
@@ -50,14 +50,14 @@
                         </div>
                         <div class="user">
                             <i class="fa-solid fa-phone"></i>
-                            <label for="pass"></label><input type="text" name="number" id="phone" placeholder="Nhập số điện thoại" class="">
+                            <label for="pass"></label><input type="text" name="phoneNumber" id="phone" placeholder="Nhập số điện thoại" class="">
                         </div>
                         <div class="user">
                             <i class="fa-solid fa-envelope"></i>
                             <label for="email"></label><input type="email" name="email" id="email" placeholder="Nhập email" class="">
                         </div>
                         <div class="submit">
-                            <button class="submit1" type="submit" value="">Đăng ký</button>
+                            <button class="submit1" type="submit" name="submit" value="">Đăng ký</button>
                         </div>
                         <p>Nếu bạn đã có tài khoản vui lòng <a href="login.jsp" style="color: red">Đăng Nhập</a></p>
 <%--                        <div class="submit"><input type="submit" value="Đăng ký"></div>--%>

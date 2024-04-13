@@ -22,14 +22,14 @@
         } else {
             error = "";
         }
-        String userName = request.getParameter("username") != null ? request.getParameter("username") : "";
+        String username = request.getParameter("username") != null ? request.getParameter("username") : "";
     %>
 </head>
 <body>
 <jsp:include page="Layout/Header.jsp"/>
 <div id="session" class="">
     <div class="container">
-        <form action="./login" method="post">
+        <form action="login" method="post">
             <div id="personal" class="">
                 <h1>Login</h1>
                 <div class="content">
@@ -42,7 +42,7 @@
                         </div>
                         <div class="user">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="name_login" id="name_login" placeholder="Tên đăng nhập">
+                            <input type="text" name="username" id="name_login" placeholder="Tên đăng nhập" value="<%=username%>">
                         </div>
                         <div class="user">
                             <i class="fa-solid fa-key"></i>

@@ -50,6 +50,15 @@ public class CategoryServices {
         return categoryList;
 
     }
+
+//    public List<Product> getListProductByBrand(String brand) {
+//        return JDBIConnector.get().withHandle(handle -> {
+//            return handle.createQuery("SELECT * FROM  products JOIN categories ON categories.id = products.categoiesId WHERE categories.name = brand")
+//                    .bind("brand", brand)
+//                    .mapToBean(Product.class)
+//                    .list();
+//        });
+//    }
 //    public String nameCategory(String name) {
 //        return JDBIConnector.get().withHandle(handle -> {
 //            return handle.createQuery("SELECT name FROM categories where name = name")

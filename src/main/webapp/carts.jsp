@@ -55,30 +55,37 @@
                         %>
 
                         <ul class="product1">
-                            <li class="cart_product_image1">
-                                <p class="text_dicount"><%=product.getDiscount()%> <br>Giảm </p>
-                                <img class="cart_image1" src="<%=product.getImg()%>" alt="">
-                            </li>
                             <li class="text_cart">
-                                <h1 class="text_cart1"> <%=product.getName()%></h1>
-                                <p class="price_cart1">Giá: <del><%=currencyFormatter.format(product.getPrice())%></del> <%=currencyFormatter.format(product.salePrice())%></p>
-                                <span class="delete"><i class="fa-solid fa-trash"></i></span>
-                                <p class="delivery">Dự kiến giao ngày: sau 3 ngày</p>
-                                <div class="add_quantity">
-                                    <p class="quantity">Số Lượng</p>
-                                    <button id="minus" onclick="minus()">-</button>
-                                    <p id="numbera">0</p>
-                                    <button id="plus" onclick="plus()">+</button>
+                                <div class="cart_product_image1">
+                                    <a href="products.jsp?id_product=<%=product.getId()%>"><img class="cart_image1" src="<%=product.getImg()%>" alt="ảnh">
+                                        <p class="text_dicount"><%=product.getDiscount()%> <br>Giảm </p></a>
                                 </div>
-                                <button class="pay_cart"><a class="card" href="pay_page.jsp">Thanh Toán</a></button>
+                                <div class="cart_product_image2">
+                                    <h1 class="text_cart1"><%=product.getName()%></h1>
+                                    <p class="price_cart1"> Giá:
+                                        <del><%=currencyFormatter.format(product.getPrice())%> </del> <%=currencyFormatter.format(product.salePrice())%>
+                                        <button type="button" class="delete"><i class="fa-solid fa-trash"></i><a href="remove?id=<%=product.getId()%>"></a></button>
+                                    </p>
+                                    <div class="quantity">
+                                        <div class="product-quantity">Số lượng</div>
+                                        <div class="product-quantity-id">
+                                            <div class="product-quantity-decrease">-</div>
+                                            <div class="product-quantity-number">0</div>
+                                            <div class="product-quantity-increase">+</div>
+                                        </div>
+                                    </div>
+                                    <p class="delivery">Dự kiến giao ngày: sau 3 ngày</p>
+                                </div>
+                                <div class="button">
+                                    <button class="pay_cart" type="button"><a class="card" href="pay_page.jsp">Thanh Toán</a></button>
+                                </div>
+
                             </li>
                         </ul>
-                        <%
-                                }
-                            }
-                        %>
-<%--                        <button class="pay_cart"><a class="card" href="pay_page.jsp">Thanh Toán</a></button>--%>
+                        <%}%>
+
                     </div>
+                    <%}%>
                 </div>
             </div>
         </div>
@@ -87,26 +94,66 @@
 </div>
 
 </body>
+<%--<script>--%>
+<%--    function plus() {--%>
+<%--        let number = document.getElementById("numbera").innerHTML--%>
+<%--        if (document.getElementById("plus")) {--%>
+<%--            number++;--%>
+<%--            document.getElementById("numbera").innerHTML = number--%>
+<%--        }--%>
+
+<%--    }--%>
+
+<%--    function minus() {--%>
+<%--        let number = document.getElementById("numbera").innerHTML--%>
+<%--        if (document.getElementById("minus")) {--%>
+<%--            number--;--%>
+<%--            document.getElementById("numbera").innerHTML = number--%>
+<%--            if (number < 0) {--%>
+<%--                document.getElementById("numbera").innerHTML = 0;--%>
+<%--            }--%>
+<%--        }--%>
+
+<%--    }--%>
+
+<%--    function plus1() {--%>
+<%--        let number = document.getElementById("numberb").innerHTML--%>
+<%--        if (document.getElementById("plus1")) {--%>
+<%--            number++;--%>
+<%--            document.getElementById("numberb").innerHTML = number--%>
+<%--        }--%>
+
+<%--    }--%>
+
+<%--    function minus1() {--%>
+<%--        let number = document.getElementById("numberb").innerHTML--%>
+<%--        if (document.getElementById("minus1")) {--%>
+<%--            number--;--%>
+<%--            document.getElementById("numberb").innerHTML = number--%>
+<%--            if (number < 0) {--%>
+<%--                document.getElementById("numberb").innerHTML = 0;--%>
+<%--            }--%>
+<%--        }--%>
+
+<%--    }--%>
+<%--</script>--%>
 <script>
-    function plus1(){
-        let number = document.getElementById("numberb").innerHTML
-        if (document.getElementById("plus1")){
-            number ++;
-            document.getElementById("numberb").innerHTML = number
+    const decrease = document.querySelector(".product-quantity-decrease");
+    const increase = document.querySelector(".product-quantity-increase");
+    const count = document.querySelector(".product-quantity-number");
+    decrease.addEventListener("click", function (e) {
+        e.preventDefault();
+        let currentValue = parseInt(count.textContent);
+        if (currentValue > 0) {
+            count.textContent = currentValue - 1;
         }
+    });
 
-    }
-    function minus1(){
-        let number = document.getElementById("numberb").innerHTML
-        if (document.getElementById("minus1")){
-            number --;
-            document.getElementById("numberb").innerHTML = number
-            if(number < 0){
-                document.getElementById("numberb").innerHTML = 0;
-            }
-        }
-
-    }
+    increase.addEventListener("click", function (e) {
+        e.preventDefault();
+        let currentValue = parseInt(count.textContent);
+        count.textContent = currentValue + 1;
+    });
 </script>
 <%--<script src="JS/plus_minus.js"></script>--%>
 </html>

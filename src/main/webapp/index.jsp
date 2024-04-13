@@ -34,19 +34,19 @@
                 <div class="slideshow-container">
                     <div class="mySlides fade">
                         <div class="numbertext">1 / 3</div>
-                        <img src="https://img.freepik.com/free-photo/glowing-light-bulb-fuels-ideas-innovation-generated-by-ai_188544-15498.jpg?t=st=1711544827~exp=1711548427~hmac=7e94cbe592aed7caec24d870697e1bea64b13ae9cc51ba73133b9f849bf14004&w=1060" style="width:100%; height: 500px" alt="slide 1">
+                        <img src="https://lh5.googleusercontent.com/GBUP_-MmtFCRhZIgjgb0sB89g_lq8xlvX7AG4bfnfrZt7o39g5rE8wtKDyjnoWGMTAKzgLxY5qZ3zvqi4HECftAypzemNXDZoBz03c9rYhUWYdRrYzTGPiVY4UyN0eQDSnrmr9Djf_kWQhLTfOhz3woJfSc5c8ZyujAnFPdwUpRG7KqTNZqWbIeQzA" style="width:100%; height: 500px" alt="slide 1">
                         <div class="text">Tia Sáng Rực Rỡ </div>
                     </div>
 
                     <div class="mySlides fade">
                         <div class="numbertext">2 / 3</div>
-                        <img src="https://png.pngtree.com/thumb_back/fw800/background/20230718/pngtree-title-1-illuminated-light-bulb-shines-among-dim-incandescent-lamps-as-image_3910807.jpg" style="width:100%; height: 500px;" alt="slide 2">
+                        <img src="https://diennuockhanhtrung.com/wp-content/uploads/2021/05/bong-den-tiet-kiem-dien-1-1.jpg" style="width:100%; height: 500px;" alt="slide 2">
                         <div class="text">Góc Nhìn Chiếu Sáng</div>
                     </div>
 
                     <div class="mySlides fade">
                         <div class="numbertext">3 / 3</div>
-                        <img src="access/img/slide3.png" style="width:100%; height: 500px;" alt="slide 3">
+                        <img src="https://denledphilips.com/bong-den-led-philips-hutraco.png" style="width:100%; height: 500px;" alt="slide 3">
                         <div class="text">Chiếu Sáng Bền Vững</div>
                     </div>
                 </div>

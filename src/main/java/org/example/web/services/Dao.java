@@ -22,7 +22,7 @@ public class Dao {
     }
 
     public Account login(String user, String pass) {
-        String query = "select * from user where userName = ? and password = ?";
+        String query = "select * from user where username = ? and password = ?";
         try {
             conn = new JDBIConnector().getConnection();
             ps = conn.prepareStatement(query);
@@ -72,16 +72,16 @@ public class Dao {
         }
         return null;
     }
-    public void signup (String userName, String password, String repassword, String email, String phoneNumber){
+    public void signup (String username, String password, String email, String phoneNumber){
 //        String query = "insert into user VALUES (7, ?, ?, ?, ?, 0)";
-        String query = "insert into user VALUES (9, ?, ?, ?, 0, 0 )";
+        String query = "insert into user VALUES (7, ?, ?, ?, ?, 1)";
         try {
             conn = new JDBIConnector().getConnection();
             ps = conn.prepareStatement(query);
-            ps.setString(1, userName);
+            ps.setString(1, username);
             ps.setString(2, password);
             ps.setString(3, email);
-//                        ps.setString(4, phoneNumber);
+            ps.setString(4, phoneNumber);
 //            ps.setString(4, phoneNumber);
 //            ps.setString(6, idRole);
 //            ps.setString(4, phone);
@@ -230,11 +230,11 @@ public class Dao {
         return null;
     }
     public ProductDetail getProductDetail(String id) {
-        String query = "select * from productdetails where idProduct = idProduct";
+        String query = "select * from productdetails where idProduct = ?";
         try {
             conn = new JDBIConnector().getConnection();
             ps = conn.prepareStatement(query);
-//            ps.setString(1, id);
+            ps.setString(1, id);
             rs = ps.executeQuery();
             while (rs.next()) {
                 return new ProductDetail(rs.getInt(1),

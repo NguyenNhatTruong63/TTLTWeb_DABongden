@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="Layout/header.css">
     <link rel="stylesheet" href="Layout/footer.css">
     <link rel="stylesheet" href="access/css/pay.css">
-<%--    <link rel="stylesheet" href="access/css/tt.css">--%>
+    <%--    <link rel="stylesheet" href="access/css/tt.css">--%>
 </head>
 <body>
 <jsp:include page="Layout/Header.jsp"/>
@@ -28,7 +28,9 @@
     <div class="paymeny1">
         <div class="step1">
             <div class="pay1">
-                <span><img class="pay" src="https://img.freepik.com/premium-vector/3d-money-transfer-mobile-payment-financial-security-online-shopping-online-sending-money_808510-1509.jpg?w=826" alt=""></span>
+                <span><img class="pay"
+                           src="https://img.freepik.com/premium-vector/3d-money-transfer-mobile-payment-financial-security-online-shopping-online-sending-money_808510-1509.jpg?w=826"
+                           alt=""></span>
                 <p class="thanhtoan" style="text-align: center; font-weight: bolder; font-size: 25px">THANH TOÁN</p>
             </div>
             <h4>Bước 1: Chi tiết thanh toán </h4>
@@ -63,7 +65,7 @@
                 <div class="col-sm-10">
                     <select class="form-select form-select-sm mb-3 form-control"
                             id="district" aria-label=".form-select-sm" name="quanhuyen" required>
-                        <option value=""  selected>Chọn quận huyện</option>
+                        <option value="" selected>Chọn quận huyện</option>
                     </select>
                 </div>
             </div>
@@ -90,30 +92,35 @@
         <div class="step2">
             <h4>Bước 2: Vui lòng chọn phương thức thanh toán</h4>
             <div class="content_step2">
-                <div class="text_title_step2"><p>Vui lòng chọn phương thức vận chuyển thích hợp để sử dụng cho đơn đặt hàng này.</p></div>
+                <div class="text_title_step2"><p>Vui lòng chọn phương thức vận chuyển thích hợp để sử dụng cho đơn đặt
+                    hàng này.</p></div>
                 <div class="expense">
                     <p class="text_step2">Phí cố định</p>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="shipping_method" class="" value="0" checked ="checked"> Giao hàng tiết kiệm: 25.000đ
+                            <input type="radio" name="shipping_method" class="" value="0" checked="checked"> Giao hàng
+                            tiết kiệm: 25.000đ
                         </label>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="shipping_method"  class="viettelPost" value="1"> Viettel Post: 30.000đ
+                            <input type="radio" name="shipping_method" class="viettelPost" value="1"> Viettel Post:
+                            30.000đ
                         </label>
                     </div>
                     <div class="payment">
                         <p>Vui lòng chọn phương thức thanh toán để sử dụng cho đơn đặt hàng này.</p>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="payment_method" class="" value="Cod" checked ="checked"> Thanh toán khi nhận hàng
+                                <input type="radio" name="payment_method" class="" value="Cod" checked="checked"> Thanh
+                                toán khi nhận hàng
                             </label>
                         </div>
                     </div>
                     <div class="note_order">
                         <p class="text_note">Thêm ghi chú đơn hàng của bạn</p>
-                        <p><textarea name="comment" rows="8" class="form-control" placeholder="Nhập ghi chú"></textarea></p>
+                        <p><textarea name="comment" rows="8" class="form-control" placeholder="Nhập ghi chú"></textarea>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -121,7 +128,8 @@
             <div class="step3">
                 <h4>Bước 3: Xác nhận đơn hàng</h4>
                 <div class="info_cart">
-                    <%Carts cart = (Carts) session.getAttribute("cart");
+                    <%
+                        Carts cart = (Carts) session.getAttribute("cart");
                         if (cart == null)
                             cart = new Carts();
                         Map<Integer, CartsProduct> cartItems = cart.getData();
@@ -145,33 +153,36 @@
                         // Lấy giá trị số lượng sản phẩm từ request
                         String quantity = request.getParameter("quantity");
                     %>
-
-                    <div class="img_product">
-                        <img class="img_product1" src="<%=product.getImg()%>" alt="anh">
-                    </div>
-                    <div class="info_pay">
-                        <span><%=product.getName()%></span>
-                        <span class="number">x <%=product.getQuantity()%></span><br>
-                        <span>Giá:</span>
-                        <span class="price"><del><%=currencyFormatter.format(product.getPrice())%></del> <%=currencyFormatter.format(product.salePrice())%><br>
-                        <span class="total_price">Tổng giá sản phẩm:<span><%%></span> </span><br>
-                        <span class="text_cost">Phí giao hàng: <span>25.000đ</span> </span>
-                    </div>
+                    <ul class="step3_pay">
+                        <li class="payment_step3">
+                            <div class="img_product">
+                                <img class="img_product1" src="<%=product.getImg()%>" alt="anh">
+                            </div>
+                            <div class="info_pay">
+                                <span><%=product.getName()%></span>
+                                <span class="number">x <%=product.getQuantity()%></span><br>
+                                <span>Giá:</span>
+                                <span class="price"><del><%=currencyFormatter.format(product.getPrice())%></del>
+                                        <%=currencyFormatter.format(product.salePrice())%><br>
+                                <span class="total_price">Tổng giá sản phẩm:<span><%%></span> </span><br>
+                                <span class="text_cost">Phí giao hàng: <span>25.000đ</span> </span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
+                <%}%>
                 <div class="total">
                     <span class="l_total"> TỔNG THANH TOÁN:</span>
                     <span class="total_number">2000</span>
                 </div>
-                <%}%>
+                <div class="button">
+                    <button class="btn_dathang"><a href="#" onclick="openPopup()"> Đặt Hàng</a></button>
+                </div>
                 <%}%>
             </div>
-            <!--    <button class="btn_dathang"><a href="#" onclick="openPopup()"> Đặt Hàng</a></button>-->
-            <button class="btn_dathang"><a href="#" onclick="openPopup()"> Đặt Hàng</a></button>
-
         </div>
     </div>
 </div>
-
 
 
 <jsp:include page="Layout/Footer.jsp"/>
@@ -198,7 +209,7 @@
         citis.onchange = function () {
             district.length = 1;
             ward.length = 1;
-            if (this.value != "") {
+            if (this.value !== "") {
                 const result = data.filter(n => n.Name === this.value);
 
                 for (const k of result[0].Districts) {
@@ -209,7 +220,7 @@
         district.onchange = function () {
             ward.length = 1;
             const dataCity = data.filter((n) => n.Name === citis.value);
-            if (this.value != "") {
+            if (this.value !== "") {
                 const dataWards = dataCity[0].Districts.filter(n => n.Name === this.value)[0].Wards;
 
                 for (const w of dataWards) {

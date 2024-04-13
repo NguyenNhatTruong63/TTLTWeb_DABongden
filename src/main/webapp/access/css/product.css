@@ -60,26 +60,27 @@ body{
 }
 .product_content{
     width: auto;
-    height: 100px;
+    height: 150px;
     border-bottom: solid 1px black;
 }
 .product_content1{
     float: left;
     display: block;
-    width: 300px;
+    width: 400px;
     /*height: 100px;*/
     /*background:rebeccapurple;*/
 }
 .product_content2{
     float: right;
-    width: 300px;
-    margin-right: 100px;
+    width: 400px;
+    /*margin-right: 100px;*/
     /*background: chartreuse;*/
     /*margin-right: 300px;*/
     /*margin-left: 300px;*/
 }
 .product_content_foot{
     width: 800px;
+    float: left;
     /*margin-top: 120px;*/
     /*background: #4bac4d;*/
 }
@@ -100,9 +101,19 @@ body{
     height: 24px;
     width: 24px;
 }
-.button_cart{
-    width: 100px;
-    height: 40px;
+/*.button_cart{*/
+/*    width: 100px;*/
+/*    height: 40px;*/
+/*}*/
+.button_cart {
+    width: 147px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    border: solid;
+    color: white;
+    background-color: #FF0000;
+
 }
 .text_cart_detail{
     width: 200px;

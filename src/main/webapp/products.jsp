@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="Layout/header.css">
     <link rel="stylesheet" href="Layout/footer.css">
     <link rel="stylesheet" href="access/css/product.css">
+<%--    <link rel="stylesheet" href="access/css/index.css">--%>
+
 <%--    <link rel="stylesheet" href="access/css/products.css">--%>
 </head>
 <body>
@@ -44,14 +46,16 @@
         <%--                        <hr>--%>
         <div class="product_content">
           <div class="product_content1">
-            <p class="wattage">Công Suất: <%=productDetail.getWattage()%>; <span class="wattage_W"> Điện áp: <%=productDetail.getVoltage()%></span></p>
+            <p class="wattage">Công Suất: <%=productDetail.getWattage()%></p>
+            <p class="wattage_W"> Điện áp: <%=productDetail.getVoltage()%></p>
             <p class="voltage0">Màu ánh sáng: <%=productDetail.getLight_color()%></p><br>
             <p class="voltage0" style="margin-top: -20px">Mức tiêu thụ điện năng: <%=productDetail.getConsumption()%></p>
           </div>
           <div class="product_content2">
             <p class="luminous_flux">Quang Thông: <span class="luminous_flux"><%=productDetail.getLuminousFlux()%>lm; CRI: <%=productDetail.getCri()%></span></p>
-            <p class="longevity0">Tuổi Thọ: <%=productDetail.getLongevity()%> Giờ <span class="age">Ánh Sáng: <%=productDetail.getColorCover()%></span> </p>
-            <p class="longevity0">Vật liệu: <%=productDetail.getMaterial()%> <span class="age"> Kích thước: <%=productDetail.getSize()%></span></p>
+            <p class="longevity0">Tuổi Thọ: <%=productDetail.getLongevity()%> Giờ</p>
+            <p class="age"> Ánh Sáng: <%=productDetail.getColorCover()%></p>
+            <p class="longevity0">Vật liệu: <%=productDetail.getMaterial()%>|  <span class="age"> Kích thước: <%=productDetail.getSize()%></span></p>
           </div>
         </div>
 
@@ -63,7 +67,8 @@
             <button id="minus" onclick="minus()">-</button>
             <p id="numbera">0</p>
             <button id="plus" onclick="plus()">+</button>
-            <a href="carts.jsp"><input type="button" name="button" id="button_cart" value="Thêm vào giỏ hàng" class="text_cart_detail"></a>
+            <button class="button_cart" type="button"><a href="AddCartController?id=<%= product.getId()%>" onclick="openPopup()"> Thêm vào giỏ hàng</a></button>
+<%--            <a href="carts.jsp"><input type="button" name="button" id="button_cart" value="Thêm vào giỏ hàng" class="text_cart_detail"></a>--%>
           </div>
         </div>
 
@@ -73,7 +78,8 @@
     <div id="section_detail" class="">
       <div class="container">
         <div class="detail_infor1">
-          <div class="hv" style="border-top: solid 1px black; margin-top: 10px"></div>
+          <div class="hv" style="border-top: solid 1px black; margin-top: 40px"></div>
+          <h1 style="text-align: center; font-size: 16px">Sản phẩm đèn led <%=product.getName()%></h1>
 
           <!--                  <h2 class="text_title">Sản Phẩm Đèn Led ốp trần nổi Panasonic 18W</h2>-->
           <p class="text_infor">
