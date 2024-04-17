@@ -101,34 +101,35 @@ public class ProductByCategoryServices {
 
 
 //
-//    public static void main(String[] args) throws SQLException {
-////        List<Product> all = ProductByCategoryServices.getInstance().getListProductByCategory("3");
-//
-//        ProductByCategoryServices product = new ProductByCategoryServices();
-//        List<Product> products = ProductByCategoryServices.getInstance().getListProduct("1");
+    public static void main(String[] args) throws SQLException {
+//        List<Product> all = ProductByCategoryServices.getInstance().getListProductByCategory("3");
+
+        ProductByCategoryServices product = new ProductByCategoryServices();
+        List<Product> products = ProductByCategoryServices.getInstance().getListProduct("1");
+        System.out.println(products);
 //        System.out.println(getInstance().getAllProduct());
-////        System.out.println(getInstance().getAll());
-//
-//    }
+//        System.out.println(getInstance().getAll());
 
-
-
-    public static void main(String[] args) {
-        try {
-            JDBIConnector dao = new JDBIConnector();
-            List<Product> list = dao.getAllProduct();
-
-//      List<Brand> list = dao.getBrand();
-            if (!list.isEmpty()) {
-                for (Product product : list) {
-                    System.out.println(product);
-                }
-            } else {
-                System.out.println("Danh sách sản phẩm trống.");
-            }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
     }
+
+
+
+//    public static void main(String[] args) {
+//        try {
+//            JDBIConnector dao = new JDBIConnector();
+//            List<Product> list = dao.getAllProduct();
+//
+////      List<Brand> list = dao.getBrand();
+//            if (!list.isEmpty()) {
+//                for (Product product : list) {
+//                    System.out.println(product);
+//                }
+//            } else {
+//                System.out.println("Danh sách sản phẩm trống.");
+//            }
+//        } catch (Exception e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
 
 }

@@ -154,7 +154,7 @@
                         String quantity = request.getParameter("quantity");
                     %>
                     <ul class="step3_pay">
-                        <li class="payment_step3">
+                        <li class="payment_step3" style="display: flex; width: 420px; height: 120px; background-color: #999999; border-radius: 10px">
                             <div class="img_product">
                                 <img class="img_product1" src="<%=product.getImg()%>" alt="anh">
                             </div>
@@ -171,16 +171,20 @@
                     </ul>
                 </div>
                 <%}%>
-                <div class="total">
-                    <span class="l_total"> TỔNG THANH TOÁN:</span>
-                    <span class="total_number">2000</span>
-                </div>
-                <div class="button">
-                    <button class="btn_dathang"><a href="#" onclick="openPopup()"> Đặt Hàng</a></button>
-                </div>
                 <%}%>
+                <div class="purche1">
+                    <div class="total">
+                        <span class="l_total"> TỔNG THANH TOÁN:</span>
+                        <span class="total_number">2000</span>
+                    </div>
+                    <div class="button">
+                        <button class="btn_dathang"><a href="#" onclick="openPopup()"> Đặt Hàng</a></button>
+                    </div>
+                </div>
+                <%--            <%}%>--%>
             </div>
         </div>
+
     </div>
 </div>
 

@@ -28,41 +28,50 @@
         <div class="box_product">
             <div class="box_table">
                 <table class="table_product" border="0px" cellspacing="20px" cellpadding="1px">
+                    <% CategoryServices categoryServices = new CategoryServices(); %>
                     <%--      định dạng số tiền--%>
                     <%
                         Locale locale = new Locale("vi", "VN");
                         NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(locale);
                     %>
                     <%--      dựa vào mã danh mục để gọi sản phẩm--%>
-                        <% CategoryServices categoryServices = new CategoryServices(); %>
+
                     <% ProductByCategoryServices productByCategoryServices = new ProductByCategoryServices();%>
                     <%--lấy tên danh mục hiển thị h2--%>
                     <h2 class="h2title"
-                        style="text-align: center; color: red; margin-left: -120px "><%=categoryServices.nameCategory(request.getParameter("idCategory")) %>
+                        style="text-align: center; color: red; margin-left: -120px "><%=categoryServices.nameCategory(request.getParameter("id_caterory")) %>
                     </h2>
                     <%--  hiển thị danh sách sản phẩm--%>
-<%--                    <%for (Product product : productByCategoryServices.getListProductByCategory(request.getParameter("idCategory"))) { %>--%>
-                        <%JDBIConnector Dao = new JDBIConnector();%>
-                        <%List<Product> list = Dao.getAllCategory();%>
-                        <%for (Product product:list){%>
-                        <tr id="section_product" class="products" style="float: left">
-                            <td class="table_image1">
-                                <a href="productDetail.jsp?id_product=<%=product.getId() %>"><img class="image_sp1" src="<%=product.getImg()%>" alt="sp1">
-                                    <p class="text_dicount"><%=product.getDiscount()%> <br>Giảm </p></a>
-                                <p class="text_sp1"><%=product.getName()%></p>
-                                <div class="purch_price">
-                                    <p class="price_sp1"><del><%= currencyFormatter.format(product.getPrice())%></del> <%= currencyFormatter.format(product.salePrice()) %></p>
-                                    <button class="purche"><a href="AddCartController?id=<%= product.getId()%>" onclick="openPopup()"> Thêm vào giỏ hàng</a></button>
-                                    <div class="popup-wrapper" id="popup-wrapper">
-                                        <div class="popup">
-                                            <span class="close" onclick="closePopup()">&times;</span>
-                                            <img class="order_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8f2KuwLvTAb00OQQc2HnhMzfGatxp54czdA&usqp=CAU" alt="">
-                                            <p>Đã thêm vào giỏ hàng thành công</p>
-                                        </div>
+                    <%for (Product product : productByCategoryServices.getListProductByCategory(request.getParameter("id_caterory"))) { %>
+<%--                    <%JDBIConnector Dao = new JDBIConnector();%>--%>
+<%--                    <%List<Product> list = Dao.getAllCategory();%>--%>
+<%--                    <%for (Product product:list){%>--%>
+                    <tr id="section_product" class="products" style="float: left; ">
+                        <td class="table_image2" style="height: 300px; width: 250px; border: 1px solid black  ">
+                            <a href="productDetail.jsp?id_product=<%=product.getId() %>"><img class="image_sp2"
+                                                                                              src="<%= product.getImg() %>"
+                                                                                              width="270px"
+                                                                                              height="270px">
+                                <p class="text_dicount"><%=  (int) (product.getDiscount() * 100) %>% <br>Giảm </p></a>
+                            <p class="text_sp1"><%= product.getName() %>
+                            </p>
+                            <div class="purch_price">
+                                <p class="price_sp1">
+                                    <del><%= currencyFormatter.format(product.getPrice()) %>
+                                    </del>
+                                    <%= currencyFormatter.format(product.salePrice()) %>
+                                </p>
+                                <button class="purche"><a href="AddCartController?id=<%= product.getId()%>" onclick="openPopup()"> Thêm vào giỏ hàng</a></button>
+                                <div class="popup-wrapper" id="popup-wrapper1">
+                                    <div class="popup">
+                                        <span class="close" onclick="closePopup()">&times;</span>
+                                        <img class="order_image" src="assart/image/logo/order_tc.jpg">
+                                        <p>Đã thêm vào giỏ hàng thành công</p>
                                     </div>
                                 </div>
-                            </td>
-                        </tr>
+                            </div>
+                        </td>
+                    </tr>
                     <% } %>
                 </table>
             </div>

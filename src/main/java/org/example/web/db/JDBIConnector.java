@@ -92,7 +92,7 @@ public class JDBIConnector {
 
     public List<Product> getAllCategory() {
         List<Product> listc = new ArrayList<>();
-        String query = "SELECT * FROM products where idCatgory = 1";
+        String query = "SELECT * FROM products where idCatgory = ?";
         try {
             conn = new JDBIConnector().getConnection();
             ps = conn.prepareStatement(query);

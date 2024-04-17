@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="Layout/header.css">
     <link rel="stylesheet" href="Layout/footer.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
 <div id="navbar-top" class="">
@@ -30,7 +31,7 @@
             <div class="container">
                 <div id="cart1">
                     <div class="cart_product1">
-                        <a class=order_history" href="#"><p class="text_order"> Lịch sử đơn hàng</p></a>
+                        <a class=order_history" href="order-history.jsp"><p class="text_order"> Lịch sử đơn hàng</p></a>
                         <%
                             Carts cart = (Carts) session.getAttribute("cart");
                             if (cart == null)
@@ -42,6 +43,7 @@
                         <%
                             Locale locale = new Locale("vi", "VN");
                             NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(locale);%>
+
                         <%
                             if (cartItems.isEmpty()) {
                         %>
@@ -49,6 +51,7 @@
                         <%
                         } else {
 //                                    int totalPriceForAllProducts = 0;
+                            int id =1;
                             for (Map.Entry<Integer, CartsProduct> entry : cartItems.entrySet()) {
                                 CartsProduct cartProduct = entry.getValue();
                                 Product product = cartProduct.getProduct();
@@ -70,14 +73,15 @@
                                         <div class="product-quantity">Số lượng</div>
                                         <div class="product-quantity-id">
                                             <div class="product-quantity-decrease">-</div>
-                                            <div class="product-quantity-number">0</div>
+                                            <div class="product-quantity-number" id= <%=id++%>>1</div>
                                             <div class="product-quantity-increase">+</div>
                                         </div>
                                     </div>
                                     <p class="delivery">Dự kiến giao ngày: sau 3 ngày</p>
                                 </div>
                                 <div class="button">
-                                    <button class="pay_cart" type="button"><a class="card" href="pay_page.jsp">Thanh Toán</a></button>
+                                    <a class="card" href="pay_page.jsp"><button class="pay_cart" type="button">Thanh Toán </button></a>
+<%--                                    <button class="pay_cart" type="button"><a class="card" href="pay_page.jsp">Thanh Toán</a></button>--%>
                                 </div>
 
                             </li>
@@ -115,6 +119,7 @@
 <%--        }--%>
 
 <%--    }--%>
+<%--</script>--%>
 
 <%--    function plus1() {--%>
 <%--        let number = document.getElementById("numberb").innerHTML--%>
@@ -138,22 +143,31 @@
 <%--    }--%>
 <%--</script>--%>
 <script>
-    const decrease = document.querySelector(".product-quantity-decrease");
-    const increase = document.querySelector(".product-quantity-increase");
-    const count = document.querySelector(".product-quantity-number");
-    decrease.addEventListener("click", function (e) {
-        e.preventDefault();
-        let currentValue = parseInt(count.textContent);
-        if (currentValue > 0) {
-            count.textContent = currentValue - 1;
-        }
-    });
+    const decreases = document.querySelectorAll(".product-quantity-decrease");
+    const increases = document.querySelectorAll(".product-quantity-increase");
+    decreases.forEach((decrease,index)=>{
+        decrease.addEventListener("click", function (e) {
+            e.preventDefault();
+            const count = document.getElementById((index+1)+"");
+            console.log(count);
+            let currentValue = parseInt(count.textContent);
+            if (currentValue >1){
+                count.textContent = currentValue - 1;
+            }
+        });
+    })
 
-    increase.addEventListener("click", function (e) {
-        e.preventDefault();
-        let currentValue = parseInt(count.textContent);
-        count.textContent = currentValue + 1;
-    });
+
+    increases.forEach((increase,index)=>{
+        increase.addEventListener("click", function (e) {
+            e.preventDefault();
+            const count = document.getElementById((index+1)+"");
+            console.log(count);
+            let currentValue = parseInt(count.textContent);
+            count.textContent = currentValue + 1;
+        });
+    })
+
 </script>
 <%--<script src="JS/plus_minus.js"></script>--%>
 </html>

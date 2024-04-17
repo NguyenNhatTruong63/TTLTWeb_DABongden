@@ -51,15 +51,13 @@
                     <%for (Product product : productByBrandServices.getListProductByBrand(request.getParameter("id_namebrand"))) { %>
                     <tr id="section_product" class="products" style="float: left; ">
                         <td class="table_image2" style="height: 300px; width: 250px; border: 1px solid black  ">
-                            <a href="productDetail.jsp?id_product=<%=product.getId()%>"><img class="image_sp2" src="<%= product.getImg() %>"
+                            <a href="products.jsp?id_product=<%=product.getId()%>"><img class="image_sp2" src="<%= product.getImg() %>"
                                                                                              width="270px" height="270px">
                                 <p class="text_dicount"><%=  (int) (product.getDiscount() * 100) %>% <br>Giảm </p></a>
                             <p class="text_sp1"><%= product.getName() %> </p>
                             <div class="purch_price">
                                 <p class="price_sp1">
-                                    <del><%= currencyFormatter.format(product.getPrice()) %>
-                                    </del>
-                                    <%= currencyFormatter.format(product.salePrice()) %>
+                                    <del><%= currencyFormatter.format(product.getPrice()) %></del><%= currencyFormatter.format(product.salePrice()) %>
                                 </p>
                                 <button class="purche"><a href="AddCartController?id=<%= product.getId()%>" onclick="openPopup()"> Thêm vào giỏ hàng</a></button>
                                 <div class="popup-wrapper" id="popup-wrapper1">

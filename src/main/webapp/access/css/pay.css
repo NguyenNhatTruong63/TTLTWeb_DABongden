@@ -111,11 +111,11 @@ h4{
 }
 .info_cart{
     width: 450px;
-    /*height: auto;*/
-    margin-left: 20px;
-    border-radius: 10px;
-    display: block;
-    background: #E8ECEE;
+    height: auto;
+    /*margin-left: 20px;*/
+    /*border-radius: 10px;*/
+    /*display: block;*/
+    /*background: #E8ECEE;*/
 }
 .step3_pay{
     width: 400px;
@@ -123,12 +123,13 @@ h4{
     display: block;
 }
 .payment_step3{
-    display: inline-flex;
+    /*display: inline-flex;*/
+    /*display: flex;*/
 }
 .img_product{
     width: 100px;
     height: 100px;
-    margin-top: 10px;
+    margin: 10px;
     border: solid 1px black;
 }
 .img_product1{
