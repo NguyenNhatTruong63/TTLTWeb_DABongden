@@ -1,0 +1,157 @@
+body{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    font-family: Tahoma, serif;
+    color: black;
+}
+.container{
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+#login1{
+    width: 600px;
+    height: 500px;
+    margin-top: 50px;
+    /*margin-top: 20px;*/
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-image: url("https://img.freepik.com/free-photo/burning-garland-table_23-2147960028.jpg?t=st=1710247788~exp=1710251388~hmac=eca17980c2e901e79b1f758ec0050e0c8dfcaf41eab9167315a20f4d14fbf391&w=900");
+    /*background-image: url("https://dadco.com.vn/wp-content/uploads/2019/03/bong-den-soi-dot.jpg");*/
+}
+.title{
+    font-size: 30px;
+    margin-left: 200px;
+    padding-top: 50px;
+    font-weight: bolder;
+    color: white;
+}
+.title1{
+    font-size: 30px;
+    margin-left: 150px;
+    padding-top: 50px;
+    font-weight: bolder;
+    color: white;
+}
+#name_login{
+    width:300px;
+    height: 30px;
+    margin: 30px 0 20px 100px;
+    border-radius: 10px;
+    padding-left: 35px;
+    border: solid 1px black;
+}
+.fa-regular{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    margin-left: 110px;
+    margin-top: 37px;
+
+}
+.fa-envelope{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    margin-left: 110px;
+    margin-top: 10px;
+}
+#pass{
+    width: 300px;
+    height: 30px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    padding-left: 35px;
+    border-radius: 10px;
+    border: solid 1px black;
+}
+#pas{
+    width: 300px;
+    height: 30px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    padding-left: 35px;
+    border-radius: 10px;
+    border: solid 1px black;
+}
+#pass1{
+    width: 300px;
+    height: 30px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    padding-left: 35px;
+    border-radius: 10px;
+    border: solid 1px black;
+}
+#email{
+    width: 300px;
+    height: 30px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    padding-left: 35px;
+    border-radius: 10px;
+    border: solid 1px black;
+}
+#phone{
+    width: 300px;
+    height: 30px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    padding-left: 35px;
+    border-radius: 10px;
+    border: solid 1px black;
+}
+#login1 .fa-solid{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    margin-left: 110px;
+    margin-top: 10px;
+}
+.title_forget{
+    margin-left: 300px;
+    margin-top: -10px;
+}
+.society{
+    margin-top: -120px;
+    display: inline-flex;
+    position: absolute;
+
+    /*margin-right: 10px;*/
+}
+.society1{
+    margin-left: 190px;
+    padding-right: 10px;
+}
+.society2{
+    padding-right: 10px;
+}
+.submit input{
+    width: 130px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 200px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background-color: azure;
+    padding: 10px;
+    font-size: 20px;
+    color: #FF0000;
+    border: solid 1px white;
+    box-shadow: 5px 10px 18px white;
+}
+.submit a{
+    /*font-size: 20px;*/
+    font-weight: bolder;
+    padding-left: 10px;
+    color: red;
+    text-decoration: none;
+}
+.submit input:hover{
+    color: black;
+    background-color: #FF0000;
+}

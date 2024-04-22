@@ -92,7 +92,7 @@ public class JDBIConnector {
 
     public List<Product> getAllCategory() {
         List<Product> listc = new ArrayList<>();
-        String query = "SELECT * FROM products where idCatgory = 1";
+        String query = "SELECT * FROM products where idCatgory = ?";
         try {
             conn = new JDBIConnector().getConnection();
             ps = conn.prepareStatement(query);
@@ -185,11 +185,11 @@ public class JDBIConnector {
     public static void main(String[] args) {
         try {
             JDBIConnector dao = new JDBIConnector();
-//            List<Product> list = dao.getAllProduct();
-            List<Product> listc = dao.getAllCategory();
+            List<Product> list = dao.getAllProduct();
+//            List<Product> listc = dao.getAllCategory();
 //      List<Brand> list = dao.getBrand();
-            if (!listc.isEmpty()) {
-                for (Product product : listc) {
+            if (!list.isEmpty()) {
+                for (Product product : list) {
                     System.out.println(product);
                 }
             } else {

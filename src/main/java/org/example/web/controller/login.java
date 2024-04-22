@@ -1,11 +1,15 @@
 package org.example.web.controller;
 
+import org.example.web.Util.MaHoa;
 import org.example.web.beans.Account;
 import org.example.web.services.Dao;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet(name = "login", value = "/login")
@@ -17,51 +21,30 @@ public class login extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String userName = request.getParameter("username");
+        String username = request.getParameter("username");
         String password = request.getParameter("password");
 
         Dao dao = new Dao();
-        Account a = dao.login(userName, password);
-
-
-        if(userName.equals(" ") || password.equals(" ")){
+        Account account = dao.login(username, password);
+        if(username.equals(" ") || password.equals(" ")){
             request.setAttribute("error", "Vui lòng nhập đầy đủ thông tin");
             request.getRequestDispatcher("login.jsp").forward(request, response);
-        } else if(a == null) {
-            request.setAttribute("error", "Tên đăng nhập hoặc mật khẩu không chính xác");
+        }
+        else if(account == null) {
+            request.setAttribute("error", "Tên đăng nhập không chính xác");
             request.getRequestDispatcher("login.jsp").forward(request, response);
         }
+
         else {
+            password = String.valueOf(MaHoa.checkPassword(password, MaHoa.hashPassword(password)));
             HttpSession session = request.getSession();
-            session.setAttribute("account", a);
+            session.setAttribute("account", account);
             session.setAttribute("successMessage", "Đăng nhập thành công!");;
 //            request.getRequestDispatcher("index").forward(request, response);
             response.sendRedirect("index.jsp");
         }
-        response.getWriter().println("username: " + userName);
+        response.getWriter().println("username: " + username);
         response.getWriter().println("password: " + password);
 
-//          String userName = request.getParameter("username");
-//        String password = request.getParameter("password");
-//        Dao dao = new Dao();
-//        Account a = dao.login(userName, password);
-//
-//
-//        if(userName.equals("") || password.equals("")){
-//            request.setAttribute("error", "Vui lòng nhập đầy đủ thông tin");
-//            request.getRequestDispatcher("formdn.jsp").forward(request, response);
-//        } else if(a == null) {
-//            request.setAttribute("error", "Tên đăng nhập hoặc mật khẩu không chính xác");
-//            request.getRequestDispatcher("formdn.jsp").forward(request, response);
-//        }
-//        else {
-//            HttpSession session = request.getSession();
-//            session.setAttribute("account", a);
-//            session.setAttribute("successMessage", "Đăng nhập thành công!");;
-//            request.getRequestDispatcher("index.jsp").forward(request, response);
-////            response.sendRedirect("index.jsp");
-//        }
-//        response.getWriter().println("username: " + userName);
-//        response.getWriter().println("password: " + password);
     }
 }
