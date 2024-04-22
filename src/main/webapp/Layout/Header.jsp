@@ -31,14 +31,8 @@
                     <li class="dropdown1"><a href="#"><span>Thương Hiệu</span><i class="fa-solid fa-caret-down" style="color: white"></i></a>
                         <% BrandServices brandServices = new BrandServices();%>
                         <ul><% for (Brand brand : brandServices.getBrandList()) { %>
-                            <li class="dropdown"><a href="brand.jsp?id_brand=<%=brand.getId()%>"><span><%= brand.getName() %></span></a></li>
+                            <li class="dropdown"><a href="product_Brand.jsp?id_brand=<%=brand.getId()%>"><span><%= brand.getName() %></span></a></li>
                             <% } %>
-                            <li><a href="#">Rạng Đông</a></li>
-                            <li><a href="#">PHILIPS</a></li>
-                            <li><a href="#">OSRAM</a></li>
-                            <li><a href="#">Điện Quang</a></li>
-                            <li><a href="#">Duhal</a></li>
-                            <li><a href="#">Panasonic</a></li>
                         </ul>
                     </li>
 

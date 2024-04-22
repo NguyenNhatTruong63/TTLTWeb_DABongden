@@ -13,8 +13,7 @@ public class Product implements Serializable {
     private double quantity;
     private double status;
 
-    public Product() {
-    }
+
 
     public Product(int id, String idCategory, String idBrand, String name, String img, double price, double discount, double quantity, double status) {
         this.id = id;
@@ -26,6 +25,8 @@ public class Product implements Serializable {
         this.discount = discount;
         this.quantity = quantity;
         this.status = status;
+    }
+    public Product() {
     }
 
     public int getId() {
