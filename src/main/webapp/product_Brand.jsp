@@ -18,7 +18,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>brand</title>
+    <title>Led Tâm Quang</title>
     <link rel="stylesheet" href="access/css/index.css">
     <link rel="stylesheet" href="Layout/header.css">
     <link rel="stylesheet" href="Layout/footer.css">

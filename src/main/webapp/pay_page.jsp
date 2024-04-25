@@ -98,22 +98,19 @@
                     <p class="text_step2">Phí cố định</p>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="shipping_method" class="" value="0" checked="checked"> Giao hàng
-                            tiết kiệm: 25.000đ
+                            <input type="radio" name="shipping_method" class="" value="0" checked="checked"> Giao hàng tiết kiệm: 25.000đ
                         </label>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="shipping_method" class="viettelPost" value="1"> Viettel Post:
-                            30.000đ
+                            <input type="radio" name="shipping_method" class="viettelPost" value="1"> Viettel Post: 25.000đ
                         </label>
                     </div>
                     <div class="payment">
                         <p>Vui lòng chọn phương thức thanh toán để sử dụng cho đơn đặt hàng này.</p>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="payment_method" class="" value="Cod" checked="checked"> Thanh
-                                toán khi nhận hàng
+                                <input type="radio" name="payment_method" class="" value="Cod" checked="checked"> Thanh toán khi nhận hàng
                             </label>
                         </div>
                     </div>

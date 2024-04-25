@@ -60,7 +60,7 @@
         </div>
 
         <div class="product_content_foot">
-          <div class="hv" style="border-top: solid 1px black"></div>
+<%--          <div class="hv" style="border-top: solid 1px black"></div>--%>
           <p class="warranty_detail">Bảo hành chính hãng <span style="color: red"><%=productDetail.getWarranty()%> tháng</span></p>
           <p class="contact_detail"> Liên hệ với chúng tôi để biết thêm thông tin: <span class="phone">0245730926 - 0257190589</span></p>
           <div class="told">

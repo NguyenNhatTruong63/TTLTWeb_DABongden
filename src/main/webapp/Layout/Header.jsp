@@ -16,8 +16,13 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
 <div id="logo">
     <div class="logo1">
-        <img class="img-logo" src="https://img.freepik.com/premium-psd/3d-business-pack-creative-idea_505787-314.jpg?w=740" alt="">
-        <p class="sub-title">Led Tâm Quang</p>
+        <div>
+            <a href="index.jsp" style="text-decoration: none">
+                <img class="img-logo" src="https://img.freepik.com/premium-psd/3d-business-pack-creative-idea_505787-314.jpg?w=740" alt="">
+                <p class="sub-title" style="display: inline-block; color: black">Led Tâm Quang</p>
+            </a>
+        </div>
+
         <div id="search">
             <form action="./search" method="get">
                 <div><input class="search1" type="search" name="keyword" id="search-input" placeholder="Tìm kiếm sản phẩm"></div>
