@@ -38,8 +38,8 @@ body{
     position: absolute;
     font-size: 15px;
     text-align: center;
-    margin-left: -290px;
-    margin-top: -2px;
+    margin-left: -300px;
+    margin-top: 1px;
     /*margin-top: -10px;*/
     border-radius: 15%;
     color: white;
@@ -106,9 +106,15 @@ body{
 /*    height: 40px;*/
 /*}*/
 .button_cart {
+<<<<<<< HEAD
     width: 147px;
     height: 30px;
     margin: 18px;
+=======
+    width: 150px;
+    height: 30px;
+    margin: 18px 0 0 18px;
+>>>>>>> main
     border-radius: 10px;
     border: solid;
     color: white;
@@ -147,13 +153,13 @@ body{
     float: left;
     /*width: 400px;*/
 }
-/*!*.img{*!*/
-/*!*    float: right;*!*/
-/*!*    width: 200px;*!*/
-/*!*    height: 200px;*!*/
-/*!*    border-radius: 50%;*!*/
-/*!*    background: #FF0000;*!*/
-/*!*}*!*/
+/*.img{*/
+/*    float: right;*/
+/*    width: 200px;*/
+/*    height: 200px;*/
+/*    border-radius: 50%;*/
+/*    background: #FF0000;*/
+/*}*/
 .icon_detail1{
     float: right;
     margin-left: 300px;

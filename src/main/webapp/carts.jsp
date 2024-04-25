@@ -22,6 +22,15 @@
     <link rel="stylesheet" href="Layout/footer.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        function validateInput() {
+            var numberInput = document.getElementById("numberInput");
+
+            if (numberInput.value < 0) {
+                numberInput.value = 0;
+            }
+        }
+    </script>
 </head>
 <body>
 <div id="navbar-top" class="">
@@ -89,7 +98,10 @@
                             </li>
                         </ul>
                         <%}%>
-
+                        <div class="button">
+                            <%--                                    <a class="card" href="pay_page.jsp"><button class="pay_cart" type="button">Thanh Toán </button></a>--%>
+                            <button class="pay_cart" type="button"><a class="card" href="pay_page.jsp">Thanh Toán</a></button>
+                        </div>
                     </div>
                     <%}%>
                 </div>

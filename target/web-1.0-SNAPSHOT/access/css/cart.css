@@ -1,0 +1,150 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    color: black;
+    font-family: Arial, serif;
+}
+.container{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+#section_title{
+    margin-top: 55px;
+
+}
+
+#section_cart{
+    width: auto;
+    height: auto;
+    margin-top: 2px;
+    /*margin-top: 100px;*/
+    /*background-color: hsl(0, 0%, 90%);*/
+}
+
+#cart1{
+    background-color: rgb(230 230 230);
+}
+.text_order{
+    margin: 2px 80px;
+    font-size: 17px;
+    color: brown;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.product1{
+    width: 1000px;
+    height: 120px;
+    display: inline-flex;
+    margin-left: 80px;
+    background-color: white;
+}
+.cart_product_image1{
+    width: 100px;
+    margin-top: 30px;
+    margin-left: -50px;
+    height: 100px;
+    display: block;
+}
+.cart_image1{
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+
+.cart_product_image2{
+    width: 550px;
+    height: 120px;
+    margin-top: 20px;
+    padding-left: 10px;
+    display: block;
+}
+
+.text_cart1{
+    font-size: 18px;
+    color: black;
+}
+.price_cart1{
+    margin-top: -10px;
+
+}
+.product-quantity{
+    float: left;
+}
+
+
+
+.quantity{
+    width: 150px;
+    height: 30px;
+    margin-top: -10px;
+}
+.product-quantity-id{
+    float: right;
+    display: inline-flex;
+}
+.product-quantity-decrease{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border: solid 1px black;
+}
+.product-quantity-number{
+    margin: 2px 10px;
+}
+.product-quantity-increase{
+    width: 20px;
+    height: 20px;
+    border: solid 1px black;
+    text-align: center;
+}
+.button{
+    /*width: 100px;*/
+    /*height: 40px;*/
+    /*margin: 90px 0 0 100px;*/
+    /*margin: 150px 0 0 900px;*/
+    /*border-radius: 8px;*/
+    /*border: solid 1px rgb(230 230 230);*/
+    /*background-color: red;*/
+
+}
+.pay_cart{
+    width: 100px;
+    height: 40px;
+    /*position: absolute;*/
+    /*margin-top: 90px;*/
+    margin-left: 1000px;
+    border-radius: 8px;
+    border: solid 1px rgb(230 230 230);
+    background-color: red;
+
+}
+.pay_cart a{
+    text-decoration: none;
+    color: white;
+}
+
+.delete{
+    margin-left: 20px;
+    /*color: black;*/
+}
+
+.delivery{
+    margin-top: -2px;
+
+}
+.text_dicount{
+    width: 20px;
+    height: auto;
+    font-size: 7px;
+    text-align: center;
+    margin-left: 2px;
+    margin-top: -100px;
+    border-radius: 15%;
+    color: white;
+    background-color: red;
+}
+

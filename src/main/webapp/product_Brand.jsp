@@ -7,6 +7,9 @@
 <%@ page import="org.example.web.services.ProductByBrandServices" %>
 <%@ page import="org.example.web.services.Dao" %>
 <%@ page import="org.example.web.beans.Category" %><%--
+<%@ page import="org.example.web.beans.Product" %>
+<%@ page import="org.example.web.services.ProductByBrandServices" %>
+<%--
   Created by IntelliJ IDEA.
   User: DELL
   Date: 14/03/2024
@@ -19,6 +22,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Led Tâm Quang</title>
+    <title>brand</title>
     <link rel="stylesheet" href="access/css/index.css">
     <link rel="stylesheet" href="Layout/header.css">
     <link rel="stylesheet" href="Layout/footer.css">
@@ -44,6 +48,21 @@
                     </h2>
                     <%--  hiển thị danh sách sản phẩm--%>
                     <%for (Product product : productByBrandServices.getListProductByBrand(request.getParameter("id_brand"))) { %>
+                    <% BrandServices brandServices = new BrandServices(); %>
+                    <%--      định dạng số tiền--%>
+                    <%
+                        Locale locale = new Locale("vi", "VN");
+                        NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(locale);
+                    %>
+                    <%--      dựa vào mã danh mục để gọi sản phẩm--%>
+
+                    <% ProductByBrandServices productByBrandServices = new ProductByBrandServices();%>
+                    <%--lấy tên danh mục hiển thị h2--%>
+                    <h2 class="h2title"
+                        style="text-align: center; color: red; margin-left: -120px "><%=brandServices.nameBrand(request.getParameter("id_namebrand")) %>
+                    </h2>
+                    <%--  hiển thị danh sách sản phẩm--%>
+                    <%for (Product product : productByBrandServices.getListProductByBrand(request.getParameter("id_namebrand"))) { %>
                     <tr id="section_product" class="products" style="float: left">
                         <td class="table_image1">
                             <a href="products.jsp?id_product=<%=product.getId()%>"><img class="image_sp1" src="<%=product.getImg()%>" alt="sp1">

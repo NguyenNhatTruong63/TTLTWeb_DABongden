@@ -1,0 +1,103 @@
+body{
+    margin: auto;
+    font-size: 15px;
+    font-family: Tahoma, sans-serif;
+    color: black;
+
+}
+.container{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#foot {
+    width: auto;
+    height: 220px;
+    color: white;
+    background-color: lightseagreen;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: black;
+}
+
+
+.logo_flash_foot{
+    position: absolute;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-left: 40px;
+    margin-top: 50px;
+}
+.text_foot{
+    margin-left: 120px;
+    padding-top: 65px;
+    font-size: 22px;
+    font-weight: bolder;
+
+}
+.foot_contact{
+    width: 980px;
+    height: 220px;
+    float: right;
+    position: relative;
+    margin-top: -115px;
+    display: inline;
+}
+.foot_contact1{
+    width: auto;
+    float: left;
+}
+.text_contact{
+    font-size: 25px;
+    margin-top: 5px;
+
+}
+.text_contact_email{
+    margin-top: 5px;
+}
+.email_contact{
+    display: inline;
+    margin-left: 10px;
+}
+.text_contact_telephone{
+    margin-top: 5px;
+}
+.telephone_contact{
+    display: inline;
+    margin-left: 10px;
+}
+.foot_address{
+    width: 400px;
+    display: block;
+    float: right;
+    /*margin-right: 50px;*/
+}
+.social{
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.icon_foot{
+    padding-left: 10px;
+}
+.social_icon{
+    margin-top: 20px;
+    display: inline-flex;
+    transition: 0.4s;
+}
+.social_icon:hover{
+    transform: scale(1.1);
+}
+.icon_foot{
+    padding-top: 10px;
+}

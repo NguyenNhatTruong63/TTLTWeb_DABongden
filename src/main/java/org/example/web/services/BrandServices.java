@@ -1,5 +1,4 @@
 package org.example.web.services;
-
 import org.example.web.beans.Brand;
 import org.example.web.beans.Category;
 import org.example.web.db.JDBIConnector;
@@ -15,7 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BrandServices {
-
     private static Jdbi jdbi;
     Connection conn = null;
     PreparedStatement ps = null;
@@ -50,7 +48,6 @@ public class BrandServices {
 
     }
 
-
     public String nameBrand(String id) {
         return JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery("SELECT name FROM brand WHERE id = ?")
@@ -61,6 +58,13 @@ public class BrandServices {
         });
     }
 
+    public static void main(String[] args) throws SQLException {
+        BrandServices brandServices = new BrandServices();
+        System.out.println(brandServices.getBrandList());
+//        System.out.println(brandServices.nameBrand("1"));
+
+
+
 
 //    public static void main(String[] args) throws SQLException {
 //        BrandServices brandServices = new BrandServices();
@@ -68,5 +72,5 @@ public class BrandServices {
 //        System.out.println(brandServices.getBrandList());
 //        System.out.println(brandServices.nameBrand("1"));
 //
-//    }
+    }
 }

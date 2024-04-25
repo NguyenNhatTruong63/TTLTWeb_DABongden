@@ -22,7 +22,6 @@ public class ProductByBrandServices {
         return instance;
     }
 
-
     public List<Product> getListProductByBrand(String id) {
         List<Product> productList = new ArrayList<>();
         try (Handle handle = JDBIConnector.get().open()) {
@@ -39,13 +38,12 @@ public class ProductByBrandServices {
 
     }
 
-
-    public static void main(String[] args) throws SQLException {
-        List<Product> all = ProductByBrandServices.getInstance().getListProductByBrand("3");
-        ProductByBrandServices product = new ProductByBrandServices();
-
-        System.out.println(all);
-
-    }
+//    public static void main(String[] args) throws SQLException {
+//        List<Product> all = ProductByBrandServices.getInstance().getListProductByBrand("3");
+//        ProductByBrandServices product = new ProductByBrandServices();
+//
+//        System.out.println(all);
+//
+//    }
 
 }

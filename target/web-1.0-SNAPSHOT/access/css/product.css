@@ -1,0 +1,236 @@
+body{
+    width: auto;
+    margin: auto;
+    font-size: 15px;
+    color: black;
+    font-family: Tahoma, serif;
+}
+.container{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+#product_detail{
+    width: 1250px;
+    height: auto;
+}
+.detail_product{
+    width: 1250px;
+    height: 400px;
+}
+.product_alpha{
+    width: 300px;
+    height: 300px;
+    border: solid 2px #999999;
+    margin: 10px 30px;
+    /*padding-top: 10px;*/
+}
+.alpha_img{
+    width: 300px;
+    height: 300px;
+}
+.text_dicount{
+    width: 40px;
+    height: auto;
+    padding-left: 6px;
+    padding-top: 5px;
+    display: inline-flex;
+    position: absolute;
+    font-size: 15px;
+    text-align: center;
+    margin-left: -300px;
+    margin-top: 1px;
+    /*margin-top: -10px;*/
+    border-radius: 15%;
+    color: white;
+    background-color: red;
+}
+.product_omega{
+    float: right;
+    display: block;
+    /*width: 650px;*/
+    width: 870px;
+    height: auto;
+    margin-top: -300px;
+    margin-left: -20px;
+}
+.product_title{
+    display: block;
+    border-bottom: solid 1px black;
+}
+.product_content{
+    width: auto;
+    height: 150px;
+    border-bottom: solid 1px black;
+}
+.product_content1{
+    float: left;
+    display: block;
+    width: 400px;
+    /*height: 100px;*/
+    /*background:rebeccapurple;*/
+}
+.product_content2{
+    float: right;
+    width: 400px;
+    /*margin-right: 100px;*/
+    /*background: chartreuse;*/
+    /*margin-right: 300px;*/
+    /*margin-left: 300px;*/
+}
+.product_content_foot{
+    width: 800px;
+    float: left;
+    /*margin-top: 120px;*/
+    /*background: #4bac4d;*/
+}
+.told{
+    margin-top: -20px;
+    display: flex;
+}
+#minus {
+    margin: 21px 10px 0px 0px;
+    height: 24px;
+    width: 24px;
+}
+#numbera{
+    margin-top: 21px;
+}
+#plus{
+    margin: 21px 0px 0px 10px;
+    height: 24px;
+    width: 24px;
+}
+/*.button_cart{*/
+/*    width: 100px;*/
+/*    height: 40px;*/
+/*}*/
+.button_cart {
+    width: 150px;
+    height: 30px;
+    margin: 18px 0 0 18px;
+    border-radius: 10px;
+    border: solid;
+    color: white;
+    background-color: #FF0000;
+
+}
+.text_cart_detail{
+    width: 200px;
+    height: 30px;
+    margin: 20px 0px 0px 60px;
+    border-radius: 10px;
+    border: solid 2px #999999;
+    color: #E8ECEE;
+    background-color: #FF0000;
+}
+.text_title{
+    text-align: center;
+}
+.text_infor{
+    margin-left: 50px;
+
+}
+.detail_icon1{
+    display: flex;
+    margin-top: 10px;
+}
+.text_detail{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 40px;
+}
+.text_content_detail{
+    margin-left: 40px;
+}
+.longevity{
+    float: left;
+    /*width: 400px;*/
+}
+/*.img{*/
+/*    float: right;*/
+/*    width: 200px;*/
+/*    height: 200px;*/
+/*    border-radius: 50%;*/
+/*    background: #FF0000;*/
+/*}*/
+.icon_detail1{
+    float: right;
+    margin-left: 300px;
+}
+.detail_icon2{
+    display: flex;
+    margin-top: 20px;
+}
+.voltage{
+    float: left;
+}
+.icon_detail2{
+    float: right;
+    margin-left: 220px;
+
+}
+.detail_icon3{
+    display: flex;
+    margin-top: 20px;
+}
+.cri{
+    float: left;
+}
+.icon_detail3{
+    float: right;
+    margin-left: 360px;
+
+}
+.detail_icon4{
+    display: flex;
+    margin-top: 20px;
+}
+.environment{
+    float: left;
+}
+.icon_detail4{
+    float: right;
+    margin-left: 480px;
+
+}
+.detail_icon5{
+
+    display: flex;
+    margin-top: 20px;
+}
+.application{
+    float: left;
+}
+.icon_detail5{
+    float: right;
+    margin-left: 300px;
+    /*padding-left: 300px;*/
+}
+
+/*#section_title{*/
+/*  margin-top: -45px;*/
+/*}*/
+/*.text_policy{*/
+/*    float: left;*/
+/*    margin-top: 15px;*/
+/*    font-size: 16px;*/
+/*}*/
+/*.detail{*/
+/*    margin-left: 50px;*/
+/*    font-size: 20px;*/
+/*    color: black;*/
+
+/*}*/
+/*.feature{*/
+/*    margin: 10px 30px;*/
+/*    font-size: 16px;*/
+/*    color: black;*/
+/*    border: solid 2px black;*/
+
+/*}*/
+/*.parameters{*/
+/*    margin: 20px 30px;*/
+/*    font-size: 16px;*/
+/*    color: black;*/
+/*}*/

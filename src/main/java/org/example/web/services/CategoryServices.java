@@ -1,8 +1,6 @@
 package org.example.web.services;
 
 import org.example.web.beans.Category;
-import org.example.web.beans.Product;
-import org.example.web.beans.brandProduct;
 import org.example.web.db.JDBIConnector;
 import org.jdbi.v3.core.Handle;
 import org.jdbi.v3.core.Jdbi;
@@ -17,10 +15,6 @@ import java.util.List;
 
 public class CategoryServices {
     private static Jdbi jdbi;
-    Connection conn = null;
-    PreparedStatement ps = null;
-    ResultSet rs = null;
-
     public static Jdbi get() {
         if (jdbi == null) ;
         return jdbi;
@@ -50,6 +44,7 @@ public class CategoryServices {
         return categoryList;
 
     }
+<<<<<<< HEAD
 
 //    public List<Product> getListProductByBrand(String brand) {
 //        return JDBIConnector.get().withHandle(handle -> {
@@ -131,4 +126,26 @@ public class CategoryServices {
 //            throw new RuntimeException(e);
 //        }
 //    }
+=======
+
+
+    public String nameCategory(String id) {
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("SELECT name FROM categories WHERE id = ?")
+                    .bind(0, id)
+                    .mapTo(String.class)
+                    .findOne()
+                    .orElse(null);
+        });
+    }
+
+
+    public static void main(String[] args) throws SQLException {
+        CategoryServices categoryServices = new CategoryServices();
+        System.out.println(categoryServices.getCategoryList());
+//        System.out.println(categoryServices.nameCategory("3"));
+
+    }
+
+>>>>>>> main
 }

@@ -3,7 +3,7 @@ body{
     padding: 0;
     font-size: 18px;
     color: black;
-    font-family: Tahoma;
+    font-family: Arial, serif;
 }
 .container{
     width: auto;
@@ -102,12 +102,22 @@ body{
     text-align: center;
 }
 .button{
+<<<<<<< HEAD
     width: 100px;
     height: 40px;
     margin: 90px 0 0 100px;
     border-radius: 8px;
     border: solid 1px rgb(230 230 230);
     background-color: red;
+=======
+    /*width: 100px;*/
+    /*height: 40px;*/
+    /*margin: 90px 0 0 100px;*/
+    /*margin: 150px 0 0 900px;*/
+    /*border-radius: 8px;*/
+    /*border: solid 1px rgb(230 230 230);*/
+    /*background-color: red;*/
+>>>>>>> main
 
 }
 .pay_cart{
@@ -115,7 +125,11 @@ body{
     height: 40px;
     /*position: absolute;*/
     /*margin-top: 90px;*/
+<<<<<<< HEAD
     /*margin-left: 800px;*/
+=======
+    margin-left: 1000px;
+>>>>>>> main
     border-radius: 8px;
     border: solid 1px rgb(230 230 230);
     background-color: red;
@@ -128,7 +142,11 @@ body{
 
 .delete{
     margin-left: 20px;
+<<<<<<< HEAD
     color: black;
+=======
+    /*color: black;*/
+>>>>>>> main
 }
 
 .delivery{

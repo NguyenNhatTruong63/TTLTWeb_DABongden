@@ -51,6 +51,12 @@ public class ProductByCategoryServices {
 //                    .mapToBean(Product.class).list();
 //        });
 //    }
+    public List<Product> getListProduct(String id){
+        return JDBIConnector.get().withHandle(handle -> {
+            return handle.createQuery("select * from  products where idCatgory = ? ")
+                    .mapToBean(Product.class).list();
+        });
+    }
 
 //  public List<Product> getAll() {
 //    return JDBIConnector.get().withHandle(handle -> {
@@ -84,23 +90,16 @@ public class ProductByCategoryServices {
     }
 
 
-
-//    public static void main(String[] args) {
-//        try {
-//            JDBIConnector dao = new JDBIConnector();
-//            List<Product> list = dao.getAllProduct();
+//    public static void main(String[] args) throws SQLException {
+////        List<Product> all = ProductByCategoryServices.getInstance().getListProductByCategory("3");
 //
-////      List<Brand> list = dao.getBrand();
-//            if (!list.isEmpty()) {
-//                for (Product product : list) {
-//                    System.out.println(product);
-//                }
-//            } else {
-//                System.out.println("Danh sách sản phẩm trống.");
-//            }
-//        } catch (Exception e) {
-//            throw new RuntimeException(e);
-//        }
+//        ProductByCategoryServices product = new ProductByCategoryServices();
+//        List<Product> products = ProductByCategoryServices.getInstance().getListProduct("1");
+//        System.out.println(products);
+////        System.out.println(getInstance().getAllProduct());
+////        System.out.println(getInstance().getAll());
+//
 //    }
+
 
 }
