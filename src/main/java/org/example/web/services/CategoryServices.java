@@ -44,7 +44,7 @@ public class CategoryServices {
         return categoryList;
 
     }
-    
+
     public String nameCategory(String id) {
         return JDBIConnector.get().withHandle(handle -> {
             return handle.createQuery("SELECT name FROM categories WHERE id = ?")

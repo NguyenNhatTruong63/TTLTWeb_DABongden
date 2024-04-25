@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="Layout/header.css">
     <link rel="stylesheet" href="Layout/footer.css">
     <link rel="stylesheet" href="access/css/pay.css">
+    <%--    <link rel="stylesheet" href="access/css/tt.css">--%>
 </head>
 <%
     String error = (String) (request.getAttribute("error"));
@@ -37,69 +38,72 @@
     <div class="paymeny1">
         <div class="step1">
             <div class="pay1">
-                <span><img class="pay"
-                           src="https://img.freepik.com/premium-vector/3d-money-transfer-mobile-payment-financial-security-online-shopping-online-sending-money_808510-1509.jpg?w=826"
-                           alt=""></span>
+                <span><img class="pay" src="https://img.freepik.com/premium-vector/3d-money-transfer-mobile-payment-financial-security-online-shopping-online-sending-money_808510-1509.jpg?w=826" alt=""></span>
                 <p class="thanhtoan" style="text-align: center; font-weight: bolder; font-size: 25px">THANH TOÁN</p>
             </div>
             <h4>Bước 1: Chi tiết thanh toán </h4>
             <form action="./CheckoutVerifyController" id="formCheckoutInfomation" method="post">
                 <p style="color: red; margin-left: 140px; font-size: 10px"><%=error%></p>
-                <div class="form-group">
-                    <label class="control-label">Họ và tên</label>
-                    <input type="text" name="name" class="name1" placeholder="Họ và tên">
-                </div>
-                <div class="form-group">
-                    <label class="control-label"> Số Điện thoại </label>
-                    <input type="text" placeholder="Số điên thoại người nhận" name="phone" class="phone2">
-                </div>
-                <div class="form-group">
-                    <label class="control-label">Giới tính</label>
-                    <div class="sex">
-                        <select class="sex1" name="gioiTinh">
-                            <option value="nam"> Nam</option>
-                            <option value="nu"> Nữ</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Tỉnh/TP</label>
-                    <div class="col-sm-10">
-                        <select class="form-select form-select-sm mb-3 form-control"
-                                id="city" aria-label=".form-select-sm" name="tinhthanh" required>
-                            <option value="" selected>Chọn tỉnh thành</option>
-                        </select>
-                    </div>
-                </div>
+
                 <div class="form-group required">
-                    <label class="col-sm-2 control-label">Quận/Huyện</label>
-                    <div class="col-sm-10">
-                        <select class="form-select form-select-sm mb-3 form-control"
-                                id="district" aria-label=".form-select-sm" name="quanhuyen" required>
-                            <option value="" selected>Chọn quận huyện</option>
-                        </select>
+                    <div class="form-group">
+                        <label class="control-label">Họ và tên</label>
+                        <input type="text" name="name" class="name1" placeholder="Họ và tên">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label"> Số Điện thoại </label>
+                        <input type="text" placeholder="Số điên thoại người nhận" name="phone" class="phone2">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Giới tính</label>
+                        <div class="sex">
+                            <select class="sex1" name="gioiTinh">
+                                <option value="nam"> Nam</option>
+                                <option value="nu"> Nữ</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Tỉnh/TP</label>
+                        <div class="col-sm-10">
+                            <select class="form-select form-select-sm mb-3 form-control"
+                                    id="city" aria-label=".form-select-sm" name="tinhthanh" required>
+                                <option value="" selected>Chọn tỉnh thành</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Quận/Huyện</label>
+                        <div class="col-sm-10">
+                            <select class="form-select form-select-sm mb-3 form-control"
+                                    id="district" aria-label=".form-select-sm" name="quanhuyen" required>
+                                <option value="" selected>Chọn quận huyện</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label">Phường/Xã</label>
+                        <div class="col-sm-10">
+                            <select class="form-select form-select-sm form-control" id="ward"
+                                    aria-label=".form-select-sm" name="phuongxa" required>
+                                <option value="" selected>Chọn phường xã</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Địa chỉ cụ thể </label>
+                        <input type="text" name="address" class="address2" placeholder="Địa chỉ" >
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label"> Email</label>
+                        <input type="email" name="email" class="email2" placeholder="Email">
                     </div>
                 </div>
-                <div class="form-group required">
-                    <label class="col-sm-2 control-label">Phường/Xã</label>
-                    <div class="col-sm-10">
-                        <select class="form-select form-select-sm form-control" id="ward"
-                                aria-label=".form-select-sm" name="phuongxa" required>
-                            <option value="" selected>Chọn phường xã</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label">Địa chỉ cụ thể </label>
-                    <input type="text" name="address" class="address2" placeholder="Địa chỉ" >
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label"> Email</label>
-                    <input type="email" name="email" class="email2" placeholder="Email">
-                </div>
-
             </form>
         </div>
         <div class="step2">
@@ -123,8 +127,7 @@
                         <p>Vui lòng chọn phương thức thanh toán để sử dụng cho đơn đặt hàng này.</p>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="payment_method" class="" value="Cod" checked="checked"> Thanh
-                                toán khi nhận hàng
+                                <input type="radio" name="payment_method" class="" value="Cod" checked="checked"> Thanh toán khi nhận hàng
                             </label>
                         </div>
                     </div>
@@ -178,8 +181,8 @@
                                 <img class="img_product1" src="<%=product.getImg()%>" alt="anh">
                             </div>
                             <div class="info_pay">
-                                <span><%=product.getName()%></span>
-                                <span class="number">x <%=quantity%></span><br>
+                                <span class="name"><%=product.getName()%></span>
+                                <span class="number">x <%=product.getQuantity()%></span><br>
                                 <span>Giá:</span>
                                 <span class="price"><del><%=currencyFormatter.format(product.getPrice())%></del><%=currencyFormatter.format(product.salePrice())%>
                                     <button type="button" class="delete"><a href="remove?id=<%=product.getId()%>"><i style="color: black" class="fa-solid fa-trash"></i></a></button>
@@ -189,11 +192,10 @@
                             </div>
                         </li>
                     </ul>
-                    <%}%>
                 </div>
                 <%}%>
+                <%}%>
                 <div class="purche1">
-
                     <div class="total">
                         <% if (!cartItems.isEmpty()) {%>
                         <span class="l_total"> TỔNG THANH TOÁN:</span>

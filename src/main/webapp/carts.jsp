@@ -76,7 +76,7 @@
                                     <h1 class="text_cart1"><%=product.getName()%></h1>
                                     <p class="price_cart1"> Giá:
                                         <del><%=currencyFormatter.format(product.getPrice())%> </del> <%=currencyFormatter.format(product.salePrice())%>
-                                        <button type="button" class="delete"><i class="fa-solid fa-trash"></i><a href="remove?id=<%=product.getId()%>"></a></button>
+                                        <button type="button" class="delete"><a href="removeCart?id=<%=product.getId()%>"><i style="color: black" class="fa-solid fa-trash"></i></a></button>
                                     </p>
                                     <form action="" method="post">
                                         <div class="quantity">
@@ -90,18 +90,13 @@
                                     </form>
                                     <p class="delivery">Dự kiến giao ngày: sau 3 ngày</p>
                                 </div>
-                                <div class="button">
-                                    <a class="card" href="pay_page.jsp"><button class="pay_cart" type="button">Thanh Toán </button></a>
-<%--                                    <button class="pay_cart" type="button"><a class="card" href="pay_page.jsp">Thanh Toán</a></button>--%>
-                                </div>
-
                             </li>
                         </ul>
                         <%}%>
-                        <div class="button">
-                            <%--                                    <a class="card" href="pay_page.jsp"><button class="pay_cart" type="button">Thanh Toán </button></a>--%>
-                            <button class="pay_cart" type="button"><a class="card" href="pay_page.jsp">Thanh Toán</a></button>
-                        </div>
+
+                    </div>
+                    <div class="button">
+                        <button class="pay_cart" type="button"><a class="card" href="pay_page.jsp">Thanh Toán</a></button>
                     </div>
                     <%}%>
                 </div>

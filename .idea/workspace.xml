@@ -10,322 +10,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c27128a4-08b8-4c4e-8b11-ed5d4096f966" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/web/beans/Orders.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/CheckoutVerifyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/ForgetPassword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/GetQuantity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/Quantity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/Remove.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mail.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/Util/MaHoa.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/beans/Account.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/beans/Brand.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/beans/Category.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/beans/Order.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/beans/Orders.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/beans/Product.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/beans/ProductDetail.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/beans/brandProduct.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/carts/CartController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/carts/Carts.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/carts/CartsProduct.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/carts/RemoveCart.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/controller/AddCartController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/controller/CheckoutVerifyController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/controller/ForgetPassword.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/controller/GetQuantity.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/controller/ListProduct.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/controller/Pay.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/controller/Quantity.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/controller/Remove.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/controller/Signup.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/controller/login.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/controller/logout.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/controller/search.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/controller/upload_product.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/db/DBProperties.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/db/JDBIConnector.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/mail/Mail$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/mail/Mail.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/mail/MailProperties.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/services/BrandServices.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/services/CategoryServices.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/services/Dao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/services/ProductByBrandServices.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/web/services/ProductByCategoryServices.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_Pos.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_addProduct.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_addUser.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_order-manager.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_product-manager.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_product.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_upload_product.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_user_manager.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/dienQuang/buld/B12W.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/dienQuang/buld/B30W.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/dienQuang/buld/T20W.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/dienQuang/buld/T25W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/dienQuang/buld/T30W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/dienQuang/buld/T50W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/dienQuang/buld/T60W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/dienQuang/ledtuyp/T5_18W.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/dienQuang/ledtuyp/T8_22W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/dienQuang/ledtuyp/bannguyet36W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/dienQuang/ledtuyp/bannguyet40W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/duhal/blud/B12W.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/duhal/blud/B5W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/duhal/blud/B9W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/duhal/blud/T30W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/duhal/blud/T40W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/duhal/ledTuyp/T518W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/duhal/ledTuyp/T8_20W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/duhal/ledTuyp/bannguyet20W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/mpe/blud/B5W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/mpe/blud/B7W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/mpe/blud/T12W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/mpe/blud/T15W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/mpe/blud/T20W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/mpe/blud/T30W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/mpe/blud/T50W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/mpe/blud/T60W.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/mpe/blud/T80W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/mpe/blud/T9W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/mpe/ledtuyp/T5_18W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/mpe/ledtuyp/T5_25W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/mpe/ledtuyp/T8_10W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/mpe/ledtuyp/T8_22W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/mpe/ledtuyp/bannguyet30W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/panasonic/buld/T20w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/panasonic/buld/T30W.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/panasonic/buld/T50w.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/panasonic/buld/T60W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/panasonic/buld/buld11w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/panasonic/buld/buld15w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/panasonic/buld/buld20w.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/panasonic/buld/buld3w.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/panasonic/buld/buld7w.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/panasonic/buld/buld8w.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/panasonic/buld/buld9w.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/panasonic/tuyp/T5_22W.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/panasonic/tuyp/T8_22W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/panasonic/tuyp/bannguyet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/philips/buld/B12W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/philips/buld/B20W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/philips/buld/B6W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/philips/buld/B9W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/philips/buld/T22W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/philips/buld/T30W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/philips/buld/T40W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/philips/buld/T50W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/philips/ledtuyp/bannguyet30w.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/philips/ledtuyp/t5_9w.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/philips/ledtuyp/t8_16w.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/rangDong/buld/2-A45B-1W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/rangDong/buld/2-A45G-1W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/rangDong/buld/2-A55N4-5W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/rangDong/buld/2-A60N1-9W-H.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/rangDong/buld/2-A60N3-7W-H.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/rangDong/buld/2-A70N1-12W-H.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/rangDong/buld/2-A80N1-15W-H.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/rangDong/buld/2-TR100N1-30W-H.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/rangDong/buld/2-TR140-60W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/rangDong/buld/2-TR140N1-50W-H.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/rangDong/buld/2-TR80N1-20W-H.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/rangDong/buld/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/rangDong/buld/A120N1_30W_SS_6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/rangDong/buld/A45Y-1W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/rangDong/buld/IMG_3727.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/rangDong/buld/T- A45R-1W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/rangDong/ledtuyp/LED_TUBE_T8_60_10W_6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/rangDong/ledtuyp/T5_22W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/rangDong/ledtuyp/T8_22W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/rangDong/ledtuyp/bannguyet36W.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JQuery/jquery-2.1.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JQuery/jquery-ui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JQuery/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JQuery/jquery.cookie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JQuery/jquery.elevateZoom.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/jquery-3.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/plugins/bootstrap-datepicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/plugins/bootstrap-notify.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/plugins/chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/plugins/dataTables.bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/plugins/fullcalendar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/plugins/jquery-ui.custom.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/plugins/jquery.dataTables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/plugins/jquery.vmap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/plugins/jquery.vmap.sampledata.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/plugins/jquery.vmap.world.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/plugins/moment.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/plugins/pace.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/plugins/select2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/plugins/sweetalert.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/plus_minus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/slideShow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Layout/Footer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Layout/Header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Layout/footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Layout/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/META-INF/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/mail.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/Util/MaHoa.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/beans/Account.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/beans/Brand.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/beans/Category.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/beans/Order.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/beans/Orders.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/beans/Product.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/beans/ProductDetail.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/beans/brandProduct.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/carts/CartController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/carts/Carts.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/carts/CartsProduct.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/carts/RemoveCart.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/AddCartController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/CheckoutVerifyController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/ForgetPassword.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/GetQuantity.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/ListProduct.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/Pay.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/Quantity.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/Remove.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/Signup.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/login.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/logout.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/search.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/upload_product.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/db/DBProperties.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/db/JDBIConnector.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/mail/Mail$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/mail/Mail.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/mail/MailProperties.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/BrandServices.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/CategoryServices.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/Dao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/ProductByBrandServices.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/ProductByCategoryServices.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/caffeine-3.0.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/geantyref-1.3.13.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/jakarta.activation-2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/jakarta.annotation-api-2.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/jakarta.el-api-4.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/jakarta.enterprise.cdi-api-3.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/jakarta.inject-api-2.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/jakarta.interceptor-api-2.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/jakarta.mail-2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/jakarta.validation-api-3.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/jakarta.ws.rs-api-3.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/javax.servlet-api-4.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/jbcrypt-0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/jboss-classfilewriter-1.2.5.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/jboss-logging-3.4.3.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/jdbi3-core-3.34.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/jersey-cdi2-se-3.0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/jersey-client-3.0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/jersey-common-3.0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/jersey-container-servlet-3.0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/jersey-container-servlet-core-3.0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/jersey-server-3.0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/mysql-connector-j-8.0.33.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/osgi-resource-locator-1.0.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/protobuf-java-3.21.9.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-1.7.32.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/weld-api-4.0.SP1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/weld-core-impl-4.0.3.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/weld-environment-common-4.0.3.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/weld-probe-core-4.0.3.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/weld-se-core-4.0.3.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/lib/weld-spi-4.0.SP1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/cart.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/forgetpass.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/pay.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/personal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/imgLogo/cast.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/imgLogo/slide3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/carts.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/change_pass.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/forget.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/infoDelivery.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/order-history.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/pay_page.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/personal-information.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/policy.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/privacy-policy.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/product_Brand.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/product_Category.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/products.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/search.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/signup.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/upload_product.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wrapper/dists/gradle-8.5-bin/5t9huq95ubn472n8rpzujfbqh/gradle-8.5-bin.zip.lck" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wrapper/dists/gradle-8.5-bin/5t9huq95ubn472n8rpzujfbqh/gradle-8.5-bin.zip.part" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/Util/MaHoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/Util/MaHoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/beans/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/beans/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/carts/RemoveCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/carts/RemoveCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/controller/AddCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/AddCartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/controller/ListProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/ListProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/controller/Pay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/Pay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/controller/Signup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/Signup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/controller/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/controller/logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/logout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/controller/search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/search.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/controller/upload_product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/upload_product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/db/JDBIConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/db/JDBIConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/services/BrandServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/services/BrandServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/services/CategoryServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/services/CategoryServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/services/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/services/Dao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/services/ProductByBrandServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/services/ProductByBrandServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/services/ProductByCategoryServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/services/ProductByCategoryServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Layout/Header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Layout/Header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Layout/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Layout/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/access/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/access/css/cart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/access/css/pay1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/access/css/personal.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/access/css/personal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/access/css/product.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/access/css/product.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/access/css/products.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/product.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/access/css/tt.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/access/css/pay.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/access/css/pay.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/carts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/carts.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/forget.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/forget.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/pay_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pay_page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/personal-information.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/personal-information.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/productDetail.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/product_Brand.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/product_Brand.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/product_Category.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/product_Category.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/products.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/tt.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/Util/MaHoa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/Util/MaHoa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/beans/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/beans/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/services/BrandServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/services/BrandServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/services/CategoryServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/services/CategoryServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/services/ProductByBrandServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/services/ProductByBrandServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/services/ProductByCategoryServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/services/ProductByCategoryServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_Pos.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_Pos.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Layout/Header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Layout/Header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Layout/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Layout/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/Util/MaHoa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/Util/MaHoa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/beans/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/beans/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/BrandServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/BrandServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/CategoryServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/CategoryServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/ProductByBrandServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/ProductByBrandServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/ProductByCategoryServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/ProductByCategoryServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/pay.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/pay.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/product.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/product.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/carts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/carts.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/pay_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/pay_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/product_Brand.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/product_Brand.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/product_Category.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/product_Category.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/products.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -360,7 +81,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Tomcat Server.Tomcat 9.0.84.executor": "Run",
-    "git-widget-placeholder": "Merging truong",
+    "git-widget-placeholder": "truong",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/text/TTLTWeb_DABongden",
     "node.js.detected.package.eslint": "true",
@@ -533,8 +254,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BrandServices" />
         <item itemvalue="Application.ProductByBrandServices" />
+        <item itemvalue="Application.BrandServices" />
         <item itemvalue="Application.CategoryServices" />
         <item itemvalue="Application.ProductByCategoryServices" />
       </list>

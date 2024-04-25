@@ -73,13 +73,14 @@
                             </select>
                         </div>
                     </div>
-
-                    <label class="col-sm-2 control-label">Quận/Huyện</label>
-                    <div class="col-sm-10">
-                        <select class="form-select form-select-sm mb-3 form-control"
-                                id="district" aria-label=".form-select-sm" name="quanhuyen" required>
-                            <option value="" selected>Chọn quận huyện</option>
-                        </select>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Quận/Huyện</label>
+                        <div class="col-sm-10">
+                            <select class="form-select form-select-sm mb-3 form-control"
+                                    id="district" aria-label=".form-select-sm" name="quanhuyen" required>
+                                <option value="" selected>Chọn quận huyện</option>
+                            </select>
+                        </div>
                     </div>
 
 
@@ -127,8 +128,6 @@
                         <div class="radio">
                             <label>
                                 <input type="radio" name="payment_method" class="" value="Cod" checked="checked"> Thanh toán khi nhận hàng
-                                <input type="radio" name="payment_method" class="" value="Cod" checked="checked"> Thanh
-                                toán khi nhận hàng
                             </label>
                         </div>
                     </div>
@@ -182,13 +181,8 @@
                                 <img class="img_product1" src="<%=product.getImg()%>" alt="anh">
                             </div>
                             <div class="info_pay">
-
+                                <span class="name"><%=product.getName()%></span>
                                 <span class="number">x <%=product.getQuantity()%></span><br>
-                                <span>Giá:</span>
-                                <span class="price"><del><%=currencyFormatter.format(product.getPrice())%></del>
-                                        <%=currencyFormatter.format(product.salePrice())%><br>
-                                <span class="total_price">Tổng giá sản phẩm:<span><%%></span> </span><br>
-                                <span class="number">x <%=quantity%></span><br>
                                 <span>Giá:</span>
                                 <span class="price"><del><%=currencyFormatter.format(product.getPrice())%></del><%=currencyFormatter.format(product.salePrice())%>
                                     <button type="button" class="delete"><a href="remove?id=<%=product.getId()%>"><i style="color: black" class="fa-solid fa-trash"></i></a></button>

@@ -31,7 +31,6 @@
             }
         }
     </script>
-
 </head>
 <body>
 <div id="navbar-top" class="">
@@ -79,25 +78,25 @@
                                         <del><%=currencyFormatter.format(product.getPrice())%> </del> <%=currencyFormatter.format(product.salePrice())%>
                                         <button type="button" class="delete"><a href="removeCart?id=<%=product.getId()%>"><i style="color: black" class="fa-solid fa-trash"></i></a></button>
                                     </p>
-
-                                    <div class="quantity">
-                                        <div class="product-quantity">Số lượng</div>
-                                        <div class="product-quantity-id">
-                                            <div class="product-quantity-decrease">-</div>
-<%--                                            <input type="number" name="quantity" class="product-quantity-number" id= <%=id++%>>--%>
-                                            <div class="product-quantity-number" id= <%=id++%>>1</div>
-                                            <div class="product-quantity-increase">+</div>
+                                    <form action="" method="post">
+                                        <div class="quantity">
+                                            <div class="product-quantity">Số lượng</div>
+                                            <div class="product-quantity-id">
+                                                <div class="product-quantity-decrease">-</div>
+                                                <div class="product-quantity-number" id= <%=id++%>>1</div>
+                                                <div class="product-quantity-increase">+</div>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </form>
                                     <p class="delivery">Dự kiến giao ngày: sau 3 ngày</p>
                                 </div>
                             </li>
                         </ul>
                         <%}%>
-                        <div class="button">
-                            <%--                                    <a class="card" href="pay_page.jsp"><button class="pay_cart" type="button">Thanh Toán </button></a>--%>
-                            <button class="pay_cart" type="button"><a class="card" href="pay_page.jsp">Thanh Toán</a></button>
-                        </div>
+
+                    </div>
+                    <div class="button">
+                        <button class="pay_cart" type="button"><a class="card" href="pay_page.jsp">Thanh Toán</a></button>
                     </div>
                     <%}%>
                 </div>

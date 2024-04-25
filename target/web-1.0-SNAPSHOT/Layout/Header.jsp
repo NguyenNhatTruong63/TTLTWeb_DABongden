@@ -18,8 +18,9 @@
     <div class="logo1">
         <div>
             <a href="index.jsp" style="text-decoration: none">
-            <img class="img-logo" src="https://img.freepik.com/premium-psd/3d-business-pack-creative-idea_505787-314.jpg?w=740" alt="">
-            <p class="sub-title">Led Tâm Quang</p></a>
+                <img class="img-logo" src="https://img.freepik.com/premium-psd/3d-business-pack-creative-idea_505787-314.jpg?w=740" alt="">
+                <p class="sub-title" style="display: inline-block; color: black">Led Tâm Quang</p>
+            </a>
         </div>
 
         <div id="search">
@@ -35,7 +36,7 @@
                     <li class="dropdown1"><a href=""><span>Thương Hiệu</span><i class="fa-solid fa-caret-down" style="color: white"></i></a>
                         <% BrandServices brandServices = new BrandServices();%>
                         <ul><% for (Brand brand : brandServices.getBrandList()) { %>
-                            <li class="dropdown"><a href="product_Brand.jsp?id_namebrand=<%=brand.getId()%>"><span><%= brand.getName() %></span></a></li>
+                            <li class="dropdown"><a href="product_Brand.jsp?id_brand=<%=brand.getId()%>"><span><%= brand.getName() %></span></a></li>
                             <% } %>
                         </ul>
                     </li>

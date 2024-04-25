@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="access/css/product.css">
     <%--    <link rel="stylesheet" href="access/css/index.css">--%>
 
+    <%--    <link rel="stylesheet" href="access/css/products.css">--%>
+    <%--    <link rel="stylesheet" href="access/css/index.css">--%>
 </head>
 <body>
 <jsp:include page="Layout/Header.jsp"/>
@@ -46,7 +48,8 @@
                         </del>
                         <%=currencyFormatter.format(product.salePrice())%>
                     </p>
-                    <p class="firm">Hãng: <%=brandProduct.getNameBrand()%></p>
+                    <p class="firm">Hãng: <%=brandProduct.getNameBrand()%>
+                    </p>
                 </div>
                 <%--                        <hr>--%>
                 <div class="product_content">
@@ -74,17 +77,19 @@
                 </div>
 
                 <div class="product_content_foot">
-<%--                    <div class="hv" style="border-top: solid 1px black"></div>--%>
+                    <%--                    <div class="hv" style="border-top: solid 1px black"></div>--%>
                     <p class="warranty_detail">Bảo hành chính hãng <span
                             style="color: red"><%=productDetail.getWarranty()%> tháng</span></p>
-                    <p class="contact_detail"> Liên hệ với chúng tôi để biết thêm thông tin: <span class="phone">0245730926 - 0257190589</span>
+                    <p class="contact_detail"> Liên hệ với chúng tôi để biết thêm thông tin: <span
+                            class="phone">0245730926 - 0257190589</span>
                     </p>
                     <div class="told">
                         <button id="minus" onclick="minus()">-</button>
                         <p id="numbera">0</p>
                         <button id="plus" onclick="plus()">+</button>
-                        <button class="button_cart" type="button"><a href="AddCartController?id=<%= product.getId()%>"
-                                                                     onclick="openPopup()"> Thêm vào giỏ hàng</a>
+                        <button class="button_cart" type="button"><a
+                                href="AddCartController?id=<%= product.getId()%>"
+                                onclick="openPopup()"> Thêm vào giỏ hàng</a>
                         </button>
                         <%--            <a href="carts.jsp"><input type="button" name="button" id="button_cart" value="Thêm vào giỏ hàng" class="text_cart_detail"></a>--%>
                     </div>
@@ -102,11 +107,15 @@
 
                     <!--                  <h2 class="text_title">Sản Phẩm Đèn Led ốp trần nổi Panasonic 18W</h2>-->
                     <p class="text_infor">
-                        Mức độ hoàn thiện tỉ mỉ, Sử dụng vật liệu chất lượng cao, mang đến nét sang trọng, hiện đại.<br>
-                        Chỉ số truyền màu CRI cao, cho màu sắc gần với ánh sáng tự nhiên nhất, tối ưu cho mắt.<br>
-                        Công suất thấp sản sinh ra lượng quang thông ánh sáng lớn, rất tiết kiệm điện so với đèn thông
+                        Mức độ hoàn thiện tỉ mỉ, Sử dụng vật liệu chất lượng cao, mang đến nét sang trọng,
+                        hiện đại.<br>
+                        Chỉ số truyền màu CRI cao, cho màu sắc gần với ánh sáng tự nhiên nhất, tối ưu cho
+                        mắt.<br>
+                        Công suất thấp sản sinh ra lượng quang thông ánh sáng lớn, rất tiết kiệm điện so với
+                        đèn thông
                         thường.<br>
-                        Chíp led được sản xuất độc quyền công nghệ nhật bản, cho tuổi thọ cao, không gây ra những lỗi
+                        Chíp led được sản xuất độc quyền công nghệ nhật bản, cho tuổi thọ cao, không gây ra
+                        những lỗi
                         vặt như nháy đèn, chập chờ.<br>
                         Đèn ốp trần cao cấp số 1 về chất lượng ở Việt Nam.
                     </p>
@@ -117,7 +126,8 @@
                                 chế số lần bật/tắt<br>
                                 Cao gấp 2-3 lần so với đèn compact</p>
                         </div>
-                        <img class="icon_detail1" src="https://rangdong.com.vn/uploads/images/Icon/icon_Tuoithocao.png">
+                        <img class="icon_detail1"
+                             src="https://rangdong.com.vn/uploads/images/Icon/icon_Tuoithocao.png">
                     </div>
                     <div class="detail_icon2">
                         <div class="voltage">
@@ -141,13 +151,15 @@
                             <p class="text_content_detail"> Đáp ứng tiêu chuẩn chiếu sáng Việt Nam TCVN
                                 7114: 2008</p>
                         </div>
-                        <img class="icon_detail3" src="https://rangdong.com.vn/uploads/images/Icon/icon_tcvn.png">
+                        <img class="icon_detail3"
+                             src="https://rangdong.com.vn/uploads/images/Icon/icon_tcvn.png">
                     </div>
 
                     <div class="detail_icon4">
                         <div class="environment">
                             <p class="text_detail">Thân thiện môi trường</p>
-                            <p class="text_content_detail">Không chứa thủy ngân và hóa chất độc hại.<br> Không
+                            <p class="text_content_detail">Không chứa thủy ngân và hóa chất độc hại.<br>
+                                Không
                                 phát ra tia tử ngoại.<br> An toàn cho người sử dụng</p>
                         </div>
                         <img class="icon_detail4"
@@ -164,7 +176,8 @@
                             <p class="text_content_detail"> Chiếu sáng trung tâm thương mại, siêu thị: Sảnh,
                                 khu mua bán chung…</p>
                         </div>
-                        <img class="icon_detail5" src="https://rangdong.com.vn/uploads/images/Icon/icon_ungdung.png"
+                        <img class="icon_detail5"
+                             src="https://rangdong.com.vn/uploads/images/Icon/icon_ungdung.png"
                              alt="">
                     </div>
                 </div>

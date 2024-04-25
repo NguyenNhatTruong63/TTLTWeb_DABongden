@@ -43,6 +43,9 @@
                     </h2>
                     <%--  hiển thị danh sách sản phẩm--%>
                     <%for (Product product : productByCategoryServices.getListProductByCategory(request.getParameter("id_caterory"))) { %>
+<%--                    <%JDBIConnector Dao = new JDBIConnector();%>--%>
+<%--                    <%List<Product> list = Dao.getAllCategory();%>--%>
+<%--                    <%for (Product product:list){%>--%>
                     <tr id="section_product" class="products" style="float: left">
                         <td class="table_image1">
                             <a href="products.jsp?id_product=<%=product.getId()%>"><img class="image_sp1" src="<%=product.getImg()%>" alt="sp1">

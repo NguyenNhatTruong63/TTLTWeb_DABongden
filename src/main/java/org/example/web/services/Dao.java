@@ -74,11 +74,7 @@ public class Dao {
     }
     public void signup (String username, String password, String email, String phoneNumber){
 //        String query = "insert into user VALUES (7, ?, ?, ?, ?, 0)";
-<<<<<<< HEAD
-        String query = "insert into user VALUES (7, ?, ?, ?, ?, 1)";
-=======
         String query = "insert into user VALUES (8, ?, ?, ?, ?, 1)";
->>>>>>> main
         try {
             conn = new JDBIConnector().getConnection();
             ps = conn.prepareStatement(query);
