@@ -8,12 +8,12 @@ public class Account implements Serializable {
     private String password;
     private String phoneNumber;
     private String email;
-    private String idRole;
+    private int idRole;
 
     public Account() {
     }
 
-    public Account(String id, String userName, String password, String phoneNumber, String email, String idRole) {
+    public Account(String id, String userName, String password, String phoneNumber, String email, int idRole) {
         this.id = id;
         this.userName = userName;
         this.password = password;
@@ -21,11 +21,6 @@ public class Account implements Serializable {
         this.email = email;
         this.idRole = idRole;
     }
-
-    public static Object getInstance() {
-        return null;
-    }
-
 
     public String getId() {
         return id;
@@ -67,11 +62,11 @@ public class Account implements Serializable {
         this.email = email;
     }
 
-    public String getIdRole() {
+    public int getIdRole() {
         return idRole;
     }
 
-    public void setIdRole(String idRole) {
+    public void setIdRole(int idRole) {
         this.idRole = idRole;
     }
 
@@ -83,7 +78,7 @@ public class Account implements Serializable {
                 ", password='" + password + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", email='" + email + '\'' +
-                ", idRole='" + idRole + '\'' +
+                ", idRole=" + idRole +
                 '}';
     }
 }

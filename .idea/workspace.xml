@@ -10,41 +10,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c27128a4-08b8-4c4e-8b11-ed5d4096f966" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/services/CategoryServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/services/CategoryServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/beans/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/beans/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/controller/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/services/BrandServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/services/BrandServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/services/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/services/Dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/services/ProductByBrandServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/services/ProductByBrandServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin_index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Image/rangDong/ledtuyp/T5_22W.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Image/rangDong/ledtuyp/T5_22W.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Layout/Header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Layout/Header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Layout/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Layout/header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/access/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/access/css/cart.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/access/css/pay.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/access/css/pay.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/access/css/personal.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/access/css/personal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/access/css/product.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/access/css/product.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/carts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/carts.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/pay_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pay_page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/product_Brand.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/product_Brand.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/product_Category.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/product_Category.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/products.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/Util/MaHoa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/Util/MaHoa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/beans/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/beans/Product.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/services/BrandServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/services/BrandServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/services/CategoryServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/services/CategoryServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/services/ProductByBrandServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/services/ProductByBrandServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/services/ProductByCategoryServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/services/ProductByCategoryServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_Pos.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_Pos.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Layout/Header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Layout/Header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Layout/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Layout/header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/Util/MaHoa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/Util/MaHoa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/beans/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/beans/Product.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/BrandServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/BrandServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/CategoryServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/CategoryServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/ProductByBrandServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/ProductByBrandServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/ProductByCategoryServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/ProductByCategoryServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/cart.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/pay.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/pay.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/personal.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/personal.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/product.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/product.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/carts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/carts.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/pay_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/pay_page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/product_Brand.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/product_Brand.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/product_Category.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/product_Category.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/products.jsp" afterDir="false" />
     </list>
@@ -72,26 +66,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BrandServices.executor": "Run",
-    "Application.CategoryServices.executor": "Run",
-    "Application.ProductByBrandServices.executor": "Run",
-    "Application.ProductByCategoryServices.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Tomcat Server.Tomcat 9.0.84.executor": "Run",
-    "git-widget-placeholder": "truong",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/text/TTLTWeb_DABongden",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BrandServices.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CategoryServices.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ProductByBrandServices.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ProductByCategoryServices.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat 9.0.84.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;truong&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/text/TTLTWeb_DABongden&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Laptrinhweb\TTLTWeb_BD\src\main\java\org\example\web\" />
@@ -279,6 +273,9 @@
       <workItem from="1713761280586" duration="5320000" />
       <workItem from="1713769459086" duration="3002000" />
       <workItem from="1713784112728" duration="7655000" />
+      <workItem from="1714045217938" duration="1002000" />
+      <workItem from="1714061658404" duration="1948000" />
+      <workItem from="1714095108866" duration="13564000" />
     </task>
     <servers />
   </component>

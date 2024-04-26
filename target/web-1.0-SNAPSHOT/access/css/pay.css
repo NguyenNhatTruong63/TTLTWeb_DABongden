@@ -53,7 +53,7 @@ h4{
     width: 350px;
     height: 30px;
     margin-left: 40px;
-    /*display: inline-flex;*/
+    display: inline-flex;
     margin-top: 10px;
 }
 .control-label{
@@ -76,9 +76,8 @@ h4{
 #city{
     width: 250px;
     height: 25px;
-    margin-left: -1px;
     border-radius: 5px;
-    border: solid 1px black;
+    border:  solid 1px black;
 }
 #district{
     width: 250px;
@@ -89,9 +88,8 @@ h4{
 #ward{
     width: 250px;
     height: 25px;
-    margin-left: -1px;
     border-radius: 5px;
-    border: solid 1px black;
+    border:  solid 1px black;
 }
 .step2{
     width: 500px;
@@ -124,10 +122,14 @@ h4{
     height: 120px;
     display: block;
 }
-.payment_step3{
-    /*display: inline-flex;*/
-    /*display: flex;*/
-}
+/*.payment_step3{*/
+/*    width: 420px;*/
+/*    height: 120px;*/
+/*    display: flex;*/
+/*    background-color: #999999;*/
+/*    border-radius: 10px;*/
+/*    !*display: inline-flex;*!*/
+/*}*/
 .img_product{
     width: 100px;
     height: 100px;
@@ -138,21 +140,41 @@ h4{
     width: 100px;
     height: 100px;
 }
-.info_pay{
-    margin: 10px;
+/*.info_pay{*/
+/*    margin: 10px;*/
+/*}*/
+.price{
+    display: inline-flex;
+    margin: -20px 0;
+}
+.total_order{
+    height: auto;
+    float: right;
+    margin-bottom: 10px;
+
 }
 .total{
-    width: 200px;
-    float: right;
-    margin: 10px;
+    margin-top: -15px;
+    margin-right: 50px;
 }
-.btn_dathang{
-    float: right;
+/*.order{*/
+/*    float: right;*/
+/*    width: 100px;*/
+/*    height: 30px;*/
+/*    margin: 20px;*/
+/*    border: solid 1px black;*/
+/*    border-radius: 8px;*/
+/*    background: #FF0000;*/
+/*}*/
+.order{
     width: 100px;
-    height: 30px;
-    margin: 20px;
-    border: solid 1px black;
+    height: 40px;
     border-radius: 8px;
-    background: #FF0000;
+    border: none;
+    color: white;
+    background-color: red;
+}
+.order:hover{
+    color: black;
 }
 

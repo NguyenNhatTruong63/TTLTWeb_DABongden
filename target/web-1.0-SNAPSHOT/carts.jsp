@@ -78,12 +78,13 @@
                                         <del><%=currencyFormatter.format(product.getPrice())%> </del> <%=currencyFormatter.format(product.salePrice())%>
                                         <button type="button" class="delete"><a href="removeCart?id=<%=product.getId()%>"><i style="color: black" class="fa-solid fa-trash"></i></a></button>
                                     </p>
-                                    <form action="" method="post">
+                                    <form action="checkout" method="post">
                                         <div class="quantity">
                                             <div class="product-quantity">Số lượng</div>
                                             <div class="product-quantity-id">
                                                 <div class="product-quantity-decrease">-</div>
-                                                <div class="product-quantity-number" id= <%=id++%>>1</div>
+                                                <div class="product-quantity-number" id= <%=id++%>><%=cartProduct.getQuantity()%></div>
+<%--                                                <div class="product-quantity-number" id= <%=id++%>>1</div>--%>
                                                 <div class="product-quantity-increase">+</div>
                                             </div>
                                         </div>

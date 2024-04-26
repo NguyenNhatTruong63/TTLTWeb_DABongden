@@ -29,12 +29,8 @@
                                     aria-label="Hide Sidebar"></a>
     <!-- Navbar Right Menu-->
     <ul class="app-nav">
-
-
         <!-- User Menu-->
-        <li><a class="app-nav__item" href="Admin_index.jsp"><i class='bx bx-log-out bx-rotate-180'></i> </a>
-
-        </li>
+        <li><a class="app-nav__item" href="Admin_index.jsp"><i class='bx bx-log-out bx-rotate-180'></i> </a></li>
     </ul>
 </header>
 <!-- Sidebar menu-->
@@ -70,9 +66,7 @@
                     <tr>
                         <td>AL3947</td>
                         <td>Phạm Thị Ngọc</td>
-                        <td>
-                            19.770.000 đ
-                        </td>
+                        <td>19.770.000 đ</td>
                         <td><span class="badge bg-info">Chờ xử lý</span></td>
                     </tr>
                     <tr>
@@ -151,13 +145,6 @@
 
         </div>
     </div>
-    <%--    <!-- / col-12 -->--%>
-    <%--    </div>--%>
-    <%--    </div>--%>
-    <%--    <!--END left-->--%>
-    <%--    </div>--%>
-
-
     <div class="text-center" style="font-size: 13px">
         <p><b>Copyright
             <script type="text/javascript">

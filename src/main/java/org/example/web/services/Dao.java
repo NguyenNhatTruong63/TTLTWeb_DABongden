@@ -35,7 +35,7 @@ public class Dao {
                         rs.getString(3),
                         rs.getString(4),
                         rs.getString(5),
-                        rs.getString(6)
+                        rs.getInt(6)
                 );
             }
 
@@ -62,7 +62,7 @@ public class Dao {
                         rs.getString(3),
                         rs.getString(4),
                         rs.getString(5),
-                        rs.getString(6)
+                        rs.getInt(6)
                 );
             }
 
@@ -74,7 +74,7 @@ public class Dao {
     }
     public void signup (String username, String password, String email, String phoneNumber){
 //        String query = "insert into user VALUES (7, ?, ?, ?, ?, 0)";
-        String query = "insert into user VALUES (8, ?, ?, ?, ?, 1)";
+        String query = "insert into user VALUES (8, ?, ?, ?, ?, 2)";
         try {
             conn = new JDBIConnector().getConnection();
             ps = conn.prepareStatement(query);
@@ -105,7 +105,7 @@ public class Dao {
                         rs.getString(3),
                         rs.getString(4),
                         rs.getString(5),
-                        rs.getString(6)
+                        rs.getInt(6)
                 );
             }
 
@@ -130,7 +130,7 @@ public class Dao {
                         rs.getString(3),
                         rs.getString(4),
                         rs.getString(5),
-                        rs.getString(6)
+                        rs.getInt(6)
                 );
             }
 

@@ -14,14 +14,6 @@
     <link rel="stylesheet" href="Layout/header.css">
     <link rel="stylesheet" href="Layout/footer.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
-    <script>
-        function  openPopup(){
-            document.getElementById("popup-wrapper").style.display = "block";
-        }
-        function  closePopup(){
-            document.getElementById("popup-wrapper").style.display = "none";
-        }
-    </script>
 </head>
 
 <body>
@@ -100,5 +92,12 @@
 </div>
 </body>
 <script src="JS/slideShow.js"></script>
-
+<script>
+    function  openPopup(){
+        document.getElementById("popup-wrapper").style.display = "block";
+    }
+    function  closePopup(){
+        document.getElementById("popup-wrapper").style.display = "none";
+    }
+</script>
 </html>

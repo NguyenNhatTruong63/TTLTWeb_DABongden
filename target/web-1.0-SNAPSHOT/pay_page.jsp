@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="Layout/header.css">
     <link rel="stylesheet" href="Layout/footer.css">
     <link rel="stylesheet" href="access/css/pay.css">
-    <%--    <link rel="stylesheet" href="access/css/tt.css">--%>
 </head>
 <%
     String error = (String) (request.getAttribute("error"));
@@ -44,65 +43,59 @@
             <h4>Bước 1: Chi tiết thanh toán </h4>
             <form action="./CheckoutVerifyController" id="formCheckoutInfomation" method="post">
                 <p style="color: red; margin-left: 140px; font-size: 10px"><%=error%></p>
-
+                <div class="form-group">
+                    <label class="control-label">Họ và tên</label>
+                    <input type="text" name="name" class="name1" placeholder="Họ và tên">
+                </div>
+                <div class="form-group">
+                    <label class="control-label"> Số Điện thoại </label>
+                    <input type="text" placeholder="Số điên thoại người nhận" name="phone" class="phone2">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Giới tính</label>
+                    <div class="sex">
+                        <select class="sex1" name="gioiTinh">
+                            <option value="nam"> Nam</option>
+                            <option value="nu"> Nữ</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Tỉnh/TP</label>
+                    <div class="col-sm-10">
+                        <select class="form-select form-select-sm mb-3 form-control"
+                                id="city" aria-label=".form-select-sm" name="tinhthanh" required>
+                            <option value="" selected>Chọn tỉnh thành</option>
+                        </select>
+                    </div>
+                </div>
                 <div class="form-group required">
-                    <div class="form-group">
-                        <label class="control-label">Họ và tên</label>
-                        <input type="text" name="name" class="name1" placeholder="Họ và tên">
+                    <label class="col-sm-2 control-label">Quận/Huyện</label>
+                    <div class="col-sm-10">
+                        <select class="form-select form-select-sm mb-3 form-control"
+                                id="district" aria-label=".form-select-sm" name="quanhuyen" required>
+                            <option value="" selected>Chọn quận huyện</option>
+                        </select>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label"> Số Điện thoại </label>
-                        <input type="text" placeholder="Số điên thoại người nhận" name="phone" class="phone2">
+                </div>
+                <div class="form-group required">
+                    <label class="col-sm-2 control-label">Phường/Xã</label>
+                    <div class="col-sm-10">
+                        <select class="form-select form-select-sm form-control" id="ward"
+                                aria-label=".form-select-sm" name="phuongxa" required>
+                            <option value="" selected>Chọn phường xã</option>
+                        </select>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label">Giới tính</label>
-                        <div class="sex">
-                            <select class="sex1" name="gioiTinh">
-                                <option value="nam"> Nam</option>
-                                <option value="nu"> Nữ</option>
-                            </select>
-                        </div>
-                    </div>
+                </div>
 
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Tỉnh/TP</label>
-                        <div class="col-sm-10">
-                            <select class="form-select form-select-sm mb-3 form-control"
-                                    id="city" aria-label=".form-select-sm" name="tinhthanh" required>
-                                <option value="" selected>Chọn tỉnh thành</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Quận/Huyện</label>
-                        <div class="col-sm-10">
-                            <select class="form-select form-select-sm mb-3 form-control"
-                                    id="district" aria-label=".form-select-sm" name="quanhuyen" required>
-                                <option value="" selected>Chọn quận huyện</option>
-                            </select>
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label class="control-label">Địa chỉ cụ thể </label>
+                    <input type="text" name="address" class="address2" placeholder="Địa chỉ" >
+                </div>
 
-
-                    <div class="form-group required">
-                        <label class="col-sm-2 control-label">Phường/Xã</label>
-                        <div class="col-sm-10">
-                            <select class="form-select form-select-sm form-control" id="ward"
-                                    aria-label=".form-select-sm" name="phuongxa" required>
-                                <option value="" selected>Chọn phường xã</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label">Địa chỉ cụ thể </label>
-                        <input type="text" name="address" class="address2" placeholder="Địa chỉ" >
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label"> Email</label>
-                        <input type="email" name="email" class="email2" placeholder="Email">
-                    </div>
+                <div class="form-group">
+                    <label class="control-label"> Email</label>
+                    <input type="email" name="email" class="email2" placeholder="Email">
                 </div>
             </form>
         </div>
@@ -181,40 +174,37 @@
                                 <img class="img_product1" src="<%=product.getImg()%>" alt="anh">
                             </div>
                             <div class="info_pay">
-                                <span class="name"><%=product.getName()%></span>
-                                <span class="number">x <%=product.getQuantity()%></span><br>
-                                <span>Giá:</span>
-                                <span class="price"><del><%=currencyFormatter.format(product.getPrice())%></del><%=currencyFormatter.format(product.salePrice())%>
-                                    <button type="button" class="delete"><a href="remove?id=<%=product.getId()%>"><i style="color: black" class="fa-solid fa-trash"></i></a></button>
-                                    <br>
-                                <span class="total_price">Tổng giá sản phẩm:<span><%=product.salePrice() + quantity%></span> </span><br>
-                                <span class="text_cost">Phí giao hàng: <span>25.000đ</span> </span>
+                                <p class="name"><%=product.getName()%> x <%=cartProduct.getQuantity()%></p>
+                                <div class="price">
+                                    <div>
+                                        <p>Giá: <del><%=currencyFormatter.format(product.getPrice())%></del>  <%=currencyFormatter.format(product.salePrice())%></p>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="delete" style="margin: 15px 0 0 10px">
+                                            <a href="remove?id=<%=product.getId()%>"><i style="color: black" class="fa-solid fa-trash"></i></a></button>
+                                    </div>
+                                </div>
+                                <p>Tổng giá sản phẩm: <%=currencyFormatter.format((long) product.salePrice() * cartProduct.getQuantity())   %></p>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <%}%>
                 <%}%>
-                <div class="purche1">
+                <div class="total_order">
                     <div class="total">
-                        <% if (!cartItems.isEmpty()) {%>
-                        <span class="l_total"> TỔNG THANH TOÁN:</span>
-                        <%
-                            for (Map.Entry<Integer, CartsProduct> entry : cartItems.entrySet()) {
-                                CartsProduct cartProduct = entry.getValue();
-                                Product product = cartProduct.getProduct();
+                        <p>Phí giao hàng: 25.000đ</p>
+                        <%for (Map.Entry<Integer, CartsProduct> entry : cartItems.entrySet()) {
+                        CartsProduct cartProduct = entry.getValue();
+                        Product product = cartProduct.getProduct();
                         %>
-                        <span class="total_number"><%=product.getPrice()%></span>
+                        <p>Tổng thanh toán:<%=currencyFormatter.format((long) product.salePrice() * cartProduct.getQuantity() + 25000)%></p>
+                    <%}%>
                     </div>
-                    <% }
-                        } %>
-                    <div class="button">
-                      <button class="btn_dathang" type="submit" form="formCheckoutInfomation"> Đặt Hàng</button>
-
-<%--                        <button class="btn_dathang"><a href="#" onclick="openPopup()"> Đặt Hàng</a></button>--%>
+                    <div class="button_order">
+                        <button class="order" type="submit" form="formCheckoutInfomation"> Đặt Hàng</button>
                     </div>
                 </div>
-                <%--            <%}%>--%>
             </div>
         </div>
 

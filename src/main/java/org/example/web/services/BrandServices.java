@@ -15,9 +15,6 @@ import java.util.List;
 
 public class BrandServices {
     private static Jdbi jdbi;
-    Connection conn = null;
-    PreparedStatement ps = null;
-    ResultSet rs = null;
 
     public static Jdbi get() {
         if (jdbi == null) ;
@@ -63,14 +60,5 @@ public class BrandServices {
         System.out.println(brandServices.getBrandList());
 //        System.out.println(brandServices.nameBrand("1"));
 
-
-
-
-//    public static void main(String[] args) throws SQLException {
-//        BrandServices brandServices = new BrandServices();
-////        System.out.println(categoryServices.getCategoryList());
-//        System.out.println(brandServices.getBrandList());
-//        System.out.println(brandServices.nameBrand("1"));
-//
     }
 }

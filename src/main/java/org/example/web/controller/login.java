@@ -34,6 +34,11 @@ public class login extends HttpServlet {
             request.setAttribute("error", "Tên đăng nhập không chính xác");
             request.getRequestDispatcher("login.jsp").forward(request, response);
         }
+        else if(account.getIdRole() == 1) {
+            HttpSession session = request.getSession();
+            session.setAttribute("admin", account);
+            response.sendRedirect("Admin_index.jsp");
+        }
 
         else {
             password = String.valueOf(MaHoa.checkPassword(password, MaHoa.hashPassword(password)));

@@ -18,10 +18,6 @@
     <link rel="stylesheet" href="Layout/header.css">
     <link rel="stylesheet" href="Layout/footer.css">
     <link rel="stylesheet" href="access/css/product.css">
-    <%--    <link rel="stylesheet" href="access/css/index.css">--%>
-
-    <%--    <link rel="stylesheet" href="access/css/products.css">--%>
-    <%--    <link rel="stylesheet" href="access/css/index.css">--%>
 </head>
 <body>
 <jsp:include page="Layout/Header.jsp"/>

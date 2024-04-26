@@ -16,11 +16,13 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
 <div id="logo">
     <div class="logo1">
-        <div>
-            <a href="index.jsp" style="text-decoration: none">
-                <img class="img-logo" src="https://img.freepik.com/premium-psd/3d-business-pack-creative-idea_505787-314.jpg?w=740" alt="">
-                <p class="sub-title" style="display: inline-block; color: black">Led Tâm Quang</p>
-            </a>
+        <div class="img_name" style="display: contents">
+            <div class="image_logo" >
+                <a href="index.jsp"><img class="img-logo" src="https://img.freepik.com/premium-psd/3d-business-pack-creative-idea_505787-314.jpg?w=740" alt=""></a>
+            </div>
+            <div class="title_name">
+                <a href="index.jsp" style="text-decoration: none"><p class="sub-title">Led Tâm Quang</p></a>
+            </div>
         </div>
 
         <div id="search">
