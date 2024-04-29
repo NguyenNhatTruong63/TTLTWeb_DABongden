@@ -35,7 +35,8 @@ public class Dao {
                         rs.getString(3),
                         rs.getString(4),
                         rs.getString(5),
-                        rs.getInt(6)
+                        rs.getDate(6),
+                        rs.getInt(7)
                 );
             }
 
@@ -62,7 +63,8 @@ public class Dao {
                         rs.getString(3),
                         rs.getString(4),
                         rs.getString(5),
-                        rs.getInt(6)
+                        rs.getDate(6),
+                        rs.getInt(7)
                 );
             }
 
@@ -105,7 +107,8 @@ public class Dao {
                         rs.getString(3),
                         rs.getString(4),
                         rs.getString(5),
-                        rs.getInt(6)
+                        rs.getDate(6),
+                        rs.getInt(7)
                 );
             }
 
@@ -116,30 +119,31 @@ public class Dao {
         return null;
     }
 
-    public Account checkAccountExist(String user, String email) {
-        String query = "select * from user where userName = ? or email = ?";
-        try {
-            conn = new JDBIConnector().getConnection();
-            ps = conn.prepareStatement(query);
-            ps.setString(1, user);
-            ps.setString(2, email);
-            rs = ps.executeQuery();
-            while (rs.next()) {
-                return new Account(rs.getString(1),
-                        rs.getString(2),
-                        rs.getString(3),
-                        rs.getString(4),
-                        rs.getString(5),
-                        rs.getInt(6)
-                );
-            }
-
-
-        } catch (Exception e) {
-
-        }
-        return null;
-    }
+//    public Account checkAccountExist(String user, String email) {
+//        String query = "select * from user where userName = ? or email = ?";
+//        try {
+//            conn = new JDBIConnector().getConnection();
+//            ps = conn.prepareStatement(query);
+//            ps.setString(1, user);
+//            ps.setString(2, email);
+//            rs = ps.executeQuery();
+//            while (rs.next()) {
+//                return new Account(rs.getString(1),
+//                        rs.getString(2),
+//                        rs.getString(3),
+//                        rs.getString(4),
+//                        rs.getString(5),
+//                        rs.getDate(6),
+//                        rs.getInt(7)
+//                );
+//            }
+//
+//
+//        } catch (Exception e) {
+//
+//        }
+//        return null;
+//    }
     public List<Product> searchbyname(String search) {
         List<Product> list = new ArrayList<>();
         String query = "select * from products where name like ?";

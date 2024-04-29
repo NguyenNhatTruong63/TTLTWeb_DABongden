@@ -1,6 +1,8 @@
 package org.example.web.beans;
 
-public class Orders {
+import java.io.Serializable;
+
+public class Orders implements Serializable {
     private String id;
     private int id_user;
     private String fullname;

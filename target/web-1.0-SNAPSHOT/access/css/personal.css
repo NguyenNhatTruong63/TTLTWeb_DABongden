@@ -20,18 +20,16 @@ body{
 /*}*/
 #personal{
     width: 550px;
-    height: 350px;
+    /*height: 350px;*/
     margin-left: auto;
     margin-right: auto;
 }
 .content{
     width: 550px;
-    /*height: 260px;*/
-    /*height: 300px;*/
     height: auto;
     margin-top: -15px;
     display: inline-flex;
-    position: absolute;
+    /*position: absolute;*/
 }
 h1{
     text-align: center;
@@ -56,12 +54,45 @@ h1{
 .user input{
     width: 260px;
     height: 30px;
+    cursor: pointer;
     margin-top: 10px;
     margin-left: 20px;
     padding-left: 35px;
     border: solid 1px black;
     border-radius: 10px;
 }
+
+.button-facebook-google{
+    display: -webkit-box;
+}
+#facebook{
+    width: 100px;
+    height: 30px;
+    margin-left: 15px;
+    padding-left: 20px;
+    border-radius: 8px;
+    border: solid 1px black;
+}
+
+
+
+/*.g-signin2{*/
+/*    width: 100px;*/
+/*    height: 30px;*/
+/*    margin-left: 15px;*/
+/*    padding-left: 20px;*/
+/*    border-radius: 8px;*/
+/*    border: solid 1px black;*/
+/*}*/
+/*.user button {*/
+/*    width: 300px;*/
+/*    height: 30px;*/
+/*    margin-top: 10px;*/
+/*    margin-left: 20px;*/
+/*    padding-left: 35px;*/
+/*    border: solid 1px black;*/
+/*    border-radius: 10px;*/
+/*}*/
 .user .fa-solid{
     width: 30px;
     height: 30px;
@@ -70,15 +101,26 @@ h1{
     display: block;
     margin-top: 18px;
 }
+.fa-brands{
+    position: absolute;
+    margin: 7px 0 0 20px;
+
+}
+/*.user .fa-brands{*/
+/*    width: 30px;*/
+/*    height: 30px;*/
+/*    position: absolute;*/
+/*    margin-left: 30px;*/
+/*    display: block;*/
+/*    margin-top: 18px;*/
+/*}*/
 .submit1{
-    width: 100px;
+    width: 300px;
     height: 30px;
-    margin-left: 100px;
-    margin-top: 20px;
+    cursor: pointer;
+    margin: 10px 0 0 15px;
     border-radius: 10px;
     color: black;
-    /*color: #FF0000;*/
-    /*background-color: white;*/
     border: solid 1px black;
     box-shadow: 5px 10px 18px white;
 }
@@ -102,10 +144,7 @@ h1{
 /*    color: white;*/
 /*    background: #FF0000;*/
 /*}*/
-.title_forget{
-    float: right;
-    color: black;
-}
+
 
 
 

@@ -94,7 +94,6 @@
                             </li>
                         </ul>
                         <%}%>
-
                     </div>
                     <div class="button">
                         <button class="pay_cart" type="button"><a class="card" href="pay_page.jsp">Thanh Toán</a></button>

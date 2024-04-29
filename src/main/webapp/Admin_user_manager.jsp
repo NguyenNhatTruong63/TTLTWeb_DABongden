@@ -2,6 +2,7 @@
 <%--<%@ page import="com.curtainshop.services.UserService" %>--%>
 <%@ page import="java.util.List" %>
 <%@ page import="org.example.web.beans.Account" %>
+<%@ page import="org.example.web.beans.Order" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
@@ -93,17 +94,19 @@
                         </tr>
                         </thead>
                         <tbody>
+                        <% Account account = (Account) request.getAttribute("account");
+                            List<Order> list = (List<Order>) request.getAttribute("listorder"); %>
 
-                        <% List<Account> list = Account.getInstance().getAllUser(); %>
-                        <% for (Account user : list) { %>
+<%--                        <% List<Account> list = Account.getInstance().getAllUser(); %>--%>
+<%--                        <% for (Account user : list) { %>--%>
                         <tr>
-                            <td><%= user.getId() %></td>
-                            <td><%= user.getUserName() %></td>
-                            <td><%= user.getEmail() %></td>
-                            <td><%= user.getPhoneNumber() %></td>
+                            <td><%= account.getId() %></td>
+                            <td><%= account.getUserName() %></td>
+                            <td><%= account.getEmail() %></td>
+                            <td><%= account.getPhoneNumber() %></td>
                             <%--                            <td><%= user.getAddress() %></td>--%>
-                            <td><%= user.getUserName() %></td>
-                            <td><%= user.getIdRole()%></td>
+                            <td><%= account.getUserName() %></td>
+                            <td><%= account.getIdRole()%></td>
                             <td class="table-td-center"><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"
                                                                 onclick="myFunction(this)"><i class="fas fa-trash-alt"></i>
                             </button>
@@ -112,7 +115,7 @@
                                 </button>
                             </td>
                         </tr>
-                        <% }%>
+<%--                        <% }%>--%>
 
                         </tbody>
                     </table>

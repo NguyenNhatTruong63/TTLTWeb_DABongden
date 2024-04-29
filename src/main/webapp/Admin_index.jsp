@@ -1,3 +1,7 @@
+<%@ page import="java.util.List" %>
+<%@ page import="org.example.web.beans.Account" %>
+<%@ page import="org.example.web.beans.Orders" %>
+<%@ page import="org.example.web.beans.Product" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,6 +52,11 @@
     </ul>
 </aside>
 <main class="app-content">
+    <%
+        List<Account> accountList =(List<Account>) request.getAttribute("listaccount");
+        List<Orders> ordersList =(List<Orders>) request.getAttribute("listorder");
+        List<Product> productList =(List<Product>) request.getAttribute("listproduct");
+    %>
     <!-- col-12 -->
     <div class="col-md-12">
         <div class="tile">
@@ -63,36 +72,14 @@
                     </tr>
                     </thead>
                     <tbody>
+                    <%for (Orders orders: ordersList){%>
                     <tr>
-                        <td>AL3947</td>
-                        <td>Phạm Thị Ngọc</td>
-                        <td>19.770.000 đ</td>
+                        <td><%=orders.getId()%></td>
+                        <td><%=orders.getFullname()%></td>
+                        <td><%=orders.getPhoneNumber()%></td>
                         <td><span class="badge bg-info">Chờ xử lý</span></td>
                     </tr>
-                    <tr>
-                        <td>ER3835</td>
-                        <td>Nguyễn Thị Mỹ Yến</td>
-                        <td>
-                            16.770.000 đ
-                        </td>
-                        <td><span class="badge bg-warning">Đang vận chuyển</span></td>
-                    </tr>
-                    <tr>
-                        <td>MD0837</td>
-                        <td>Triệu Thanh Phú</td>
-                        <td>
-                            9.400.000 đ
-                        </td>
-                        <td><span class="badge bg-success">Đã hoàn thành</span></td>
-                    </tr>
-                    <tr>
-                        <td>MT9835</td>
-                        <td>Đặng Hoàng Phúc	</td>
-                        <td>
-                            40.650.000 đ
-                        </td>
-                        <td><span class="badge bg-danger">Đã hủy	</span></td>
-                    </tr>
+                    <%}%>
                     </tbody>
                 </table>
             </div>

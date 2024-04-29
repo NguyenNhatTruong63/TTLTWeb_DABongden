@@ -1,6 +1,7 @@
 package org.example.web.beans;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class Account implements Serializable {
     private String id;
@@ -8,17 +9,19 @@ public class Account implements Serializable {
     private String password;
     private String phoneNumber;
     private String email;
+    private Date date;
     private int idRole;
 
     public Account() {
     }
 
-    public Account(String id, String userName, String password, String phoneNumber, String email, int idRole) {
+    public Account(String id, String userName, String password, String phoneNumber, String email, Date date, int idRole) {
         this.id = id;
         this.userName = userName;
         this.password = password;
         this.phoneNumber = phoneNumber;
         this.email = email;
+        this.date = date;
         this.idRole = idRole;
     }
 
@@ -62,6 +65,14 @@ public class Account implements Serializable {
         this.email = email;
     }
 
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
     public int getIdRole() {
         return idRole;
     }
@@ -78,6 +89,7 @@ public class Account implements Serializable {
                 ", password='" + password + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", email='" + email + '\'' +
+                ", date=" + date +
                 ", idRole=" + idRole +
                 '}';
     }

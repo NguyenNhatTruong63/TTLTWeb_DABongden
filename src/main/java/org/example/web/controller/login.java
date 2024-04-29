@@ -2,6 +2,7 @@ package org.example.web.controller;
 
 import org.example.web.Util.MaHoa;
 import org.example.web.beans.Account;
+import org.example.web.carts.Carts;
 import org.example.web.services.Dao;
 
 import javax.servlet.ServletException;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Objects;
 
 @WebServlet(name = "login", value = "/login")
 public class login extends HttpServlet {
@@ -28,10 +30,13 @@ public class login extends HttpServlet {
         Account account = dao.login(username, password);
         if(username.equals(" ") || password.equals(" ")){
             request.setAttribute("error", "Vui lòng nhập đầy đủ thông tin");
+            request.getSession();
             request.getRequestDispatcher("login.jsp").forward(request, response);
+
         }
         else if(account == null) {
             request.setAttribute("error", "Tên đăng nhập không chính xác");
+            request.getSession();
             request.getRequestDispatcher("login.jsp").forward(request, response);
         }
         else if(account.getIdRole() == 1) {
@@ -44,7 +49,8 @@ public class login extends HttpServlet {
             password = String.valueOf(MaHoa.checkPassword(password, MaHoa.hashPassword(password)));
             HttpSession session = request.getSession();
             session.setAttribute("account", account);
-            session.setAttribute("successMessage", "Đăng nhập thành công!");;
+            session.setAttribute("successMessage", "Đăng nhập thành công!");
+            session.setAttribute("carts", new Carts());
 //            request.getRequestDispatcher("index").forward(request, response);
             response.sendRedirect("index.jsp");
         }

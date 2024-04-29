@@ -41,20 +41,21 @@
                 <p class="thanhtoan" style="text-align: center; font-weight: bolder; font-size: 25px">THANH TOÁN</p>
             </div>
             <h4>Bước 1: Chi tiết thanh toán </h4>
-            <form action="./CheckoutVerifyController" id="formCheckoutInfomation" method="post">
+            <form action="CheckoutVerifyController" id="formCheckoutInfomation" method="post">
                 <p style="color: red; margin-left: 140px; font-size: 10px"><%=error%></p>
                 <div class="form-group">
                     <label class="control-label">Họ và tên</label>
-                    <input type="text" name="name" class="name1" placeholder="Họ và tên">
+                    <input type="text" title="Họ và tên phải từ 15-25 ký tự" name="name" class="name1" placeholder="Họ và tên" minlength="15" maxlength="25">
                 </div>
                 <div class="form-group">
                     <label class="control-label"> Số Điện thoại </label>
-                    <input type="text" placeholder="Số điên thoại người nhận" name="phone" class="phone2">
+                    <input type="text" title="Số điện thoại 10 ký tự số" placeholder="Số điên thoại người nhận" name="phone"
+                           class="phone2"  pattern="[0-9]{10}" minlength="10" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                 </div>
                 <div class="form-group">
                     <label class="control-label">Giới tính</label>
                     <div class="sex">
-                        <select class="sex1" name="gioiTinh">
+                        <select class="sex1" aria-label=".form-select-sm" name="gioiTinh">
                             <option value="nam"> Nam</option>
                             <option value="nu"> Nữ</option>
                         </select>
@@ -90,20 +91,19 @@
 
                 <div class="form-group">
                     <label class="control-label">Địa chỉ cụ thể </label>
-                    <input type="text" name="address" class="address2" placeholder="Địa chỉ" >
+                    <input type="text" title="Số nhà, số hẻm, tên đường, tên chung cư...." name="address" class="address2" placeholder="Địa chỉ" >
                 </div>
 
                 <div class="form-group">
                     <label class="control-label"> Email</label>
-                    <input type="email" name="email" class="email2" placeholder="Email">
+                    <input type="email" title="Email phải có đuôi @gmail.com" name="email" class="email2" placeholder="Email">
                 </div>
             </form>
         </div>
         <div class="step2">
             <h4>Bước 2: Vui lòng chọn phương thức thanh toán</h4>
             <div class="content_step2">
-                <div class="text_title_step2"><p>Vui lòng chọn phương thức vận chuyển thích hợp để sử dụng cho đơn đặt
-                    hàng này.</p></div>
+                <div class="text_title_step2"><p>Vui lòng chọn phương thức vận chuyển thích hợp để sử dụng cho đơn đặt hàng này.</p></div>
                 <div class="expense">
                     <p class="text_step2">Phí cố định</p>
                     <div class="radio">
@@ -169,7 +169,7 @@
 <%--                            total= product.getPrice()*cart.getData().get(id);--%>
 <%--                    %>--%>
                     <ul class="step3_pay">
-                        <li class="payment_step3" style="display: flex; width: 420px; height: 120px; background-color: #999999; border-radius: 10px">
+                        <li class="payment_step3" style="display: flex; width: 450px; height: 120px; background-color: #999999; border-radius: 10px; margin-left: 60px">
                             <div class="img_product">
                                 <img class="img_product1" src="<%=product.getImg()%>" alt="anh">
                             </div>
@@ -190,21 +190,26 @@
                     </ul>
                 </div>
                 <%}%>
+                <p style="text-align: end; margin-right: 50px">Phí giao hàng: <%=currencyFormatter.format(25000)%></p>
                 <%}%>
                 <div class="total_order">
                     <div class="total">
-                        <p>Phí giao hàng: 25.000đ</p>
-                        <%for (Map.Entry<Integer, CartsProduct> entry : cartItems.entrySet()) {
-                        CartsProduct cartProduct = entry.getValue();
-                        Product product = cartProduct.getProduct();
+<%--                        <p style="margin-top: 5px; float: right">Phí giao hàng: <%=currencyFormatter.format(25000)%></p>--%>
+                        <%
+                            long totalPayment = 0;
+                            for (Map.Entry<Integer, CartsProduct> entry : cartItems.entrySet()) {
+                                CartsProduct cartProduct = entry.getValue();
+                                Product product = cartProduct.getProduct();
+                                totalPayment += (long) product.salePrice() * cartProduct.getQuantity() + 25000;
+                            }
                         %>
-                        <p>Tổng thanh toán:<%=currencyFormatter.format((long) product.salePrice() * cartProduct.getQuantity() + 25000)%></p>
-                    <%}%>
+                        <p>Tổng thanh toán: <%= currencyFormatter.format(totalPayment) %></p>
                     </div>
                     <div class="button_order">
                         <button class="order" type="submit" form="formCheckoutInfomation"> Đặt Hàng</button>
                     </div>
                 </div>
+
             </div>
         </div>
 

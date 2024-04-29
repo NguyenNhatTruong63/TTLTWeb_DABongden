@@ -65,7 +65,7 @@
 
                             <tr id="section_product" class="products" style="float: left">
                                 <td class="table_image1">
-                                    <a href="products.jsp?id_product=<%=product.getId()%>"><img class="image_sp1" src="<%=product.getImg()%>" alt="sp1">
+                                    <a href="products.jsp?id_product=<%=product.getId()%>"><img loading="lazy" class="image_sp1" src="<%=product.getImg()%>" alt="sp1">
                                         <p class="text_dicount"><%=product.getDiscount()%> <br>Giảm </p></a>
                                     <p class="text_sp1"><%=product.getName()%></p>
                                     <div class="purch_price">

@@ -48,6 +48,9 @@ public class JDBIConnector {
 
 
     }
+    public PreparedStatement getStatement(String query) throws Exception {
+        return getConnection().prepareStatement(query);
+    }
 
 //    public static Jdbi get() {
 //        if(jdbi == null);
@@ -199,5 +202,7 @@ public class JDBIConnector {
             throw new RuntimeException(e);
         }
     }
+
+
 
 }
