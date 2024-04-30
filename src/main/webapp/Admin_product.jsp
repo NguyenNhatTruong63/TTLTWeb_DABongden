@@ -21,45 +21,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
 
 </head>
-
 <body onload="time()" class="app sidebar-mini rtl">
-<!-- Navbar-->
-<header class="app-header">
-    <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar"
-                                    aria-label="Hide Sidebar"></a>
-    <!-- Navbar Right Menu-->
-    <ul class="app-nav">
-
-
-        <!-- User Menu-->
-        <li><a class="app-nav__item" href="Admin_index.jsp"><i class='bx bx-log-out bx-rotate-180'></i> </a>
-
-        </li>
-    </ul>
-</header>
-<!-- Sidebar menu-->
-<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
-<aside class="app-sidebar">
-    <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="images/avatar.png" width="50px"
-                                        alt="User Image">
-        <div>
-            <p class="app-sidebar__user-name"><b>Admin</b></p>
-            <p class="app-sidebar__user-designation">Chào mừng bạn trở lại</p>
-        </div>
-    </div>
-    <hr>
-    <ul class="app-menu">
-        <li><a class="app-menu__item haha" href="Admin_Pos.jsp"><i class='app-menu__icon bx bx-cart-alt'></i>
-            <span class="app-menu__label">POS Bán Hàng</span></a></li>
-        <li><a class="app-menu__item" href="Admin_user_manager.jsp"><i class='app-menu__icon bx bx-user-voice'></i><span
-                class="app-menu__label">Quản lý khách hàng</span></a></li>
-        <li><a class="app-menu__item" href="Admin_product-manager.jsp"><i
-                class='app-menu__icon bx bx-purchase-tag-alt'></i><span class="app-menu__label">Quản lý sản phẩm</span></a>
-        </li>
-        <li><a class="app-menu__item" href="Admin_order-manager.jsp"><i class='app-menu__icon bx bx-task'></i><span
-                class="app-menu__label">Quản lý đơn hàng</span></a></li>
-    </ul>
-</aside>
+<jsp:include page="Layout/Admin_Bar.jsp"/>
 <main class="app-content">
     <div class="app-title">
         <ul class="app-breadcrumb breadcrumb side">
@@ -73,8 +36,7 @@
                 <div class="tile-body">
                     <div class="row element-button">
                         <div class="col-sm-2">
-
-                            <a class="btn btn-add btn-sm" href="Admin_upload_product.jsp" title="Thêm"><i class="fas fa-plus"></i>
+                            <a class="btn btn-add btn-sm" href="Admin_add_product.jsp" title="Thêm"><i class="fas fa-plus"></i>
                                 Tạo mới sản phẩm</a>
                         </div>
                         <div class="col-sm-2">
@@ -97,7 +59,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
+                        <tr id="w3">
                             <td width="10"><input type="checkbox" name="check1" value="1"></td>
                             <td>71309005</td>
                             <td>Bóng Đèn Led Ốp Trần Panasonic 18W</td>
@@ -106,9 +68,7 @@
                             <td><span class="badge bg-success">Còn hàng</span></td>
                             <td>5.600.000 đ</td>
                             <td>Bòng Đèn Ốp Trần Led Tròn</td>
-                            <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"
-                                        onclick="myFunction(this)"><i class="fas fa-trash-alt"></i>
-                            </button>
+                            <td><button class="btn btn-primary btn-sm trash" type="button" id="myFunction" title="Xóa" onclick= "myFunction(this)"><i class="fas fa-trash-alt"></i></button>
                                 <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp" data-toggle="modal"
                                         data-target="#ModalUP"><i class="fas fa-edit"></i></button>
                             </td>
@@ -132,9 +92,9 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="form-group  col-md-12">
-          <span class="thong-tin-thanh-toan">
-            <h5>Chỉnh sửa thông tin sản phẩm cơ bản</h5>
-          </span>
+                        <span class="thong-tin-thanh-toan">
+                            <h5>Chỉnh sửa thông tin sản phẩm cơ bản</h5>
+                        </span>
                     </div>
                 </div>
                 <div class="row">
@@ -162,25 +122,9 @@
                         <label class="control-label">Giá bán</label>
                         <input class="form-control" type="text" value="5.600.000">
                     </div>
-<%--                    <div class="form-group col-md-6">--%>
-<%--                        <label for="exampleSelect1" class="control-label">Danh mục</label>--%>
-<%--                        <select class="form-control" id="exampleSelect1">--%>
-<%--                            <option>Bàn ăn</option>--%>
-<%--                            <option>Bàn thông minh</option>--%>
-<%--                            <option>Tủ</option>--%>
-<%--                            <option>Ghế gỗ</option>--%>
-<%--                            <option>Ghế sắt</option>--%>
-<%--                            <option>Giường người lớn</option>--%>
-<%--                            <option>Giường trẻ em</option>--%>
-<%--                            <option>Bàn trang điểm</option>--%>
-<%--                            <option>Giá đỡ</option>--%>
-<%--                        </select>--%>
-<%--                    </div>--%>
                 </div>
                 <BR>
-                <a href="#" style="    float: right;
-    font-weight: 600;
-    color: #ea0000;">Chỉnh sửa sản phẩm nâng cao</a>
+                <a href="#" style="float: right;font-weight: 600;color: #ea0000;">Chỉnh sửa sản phẩm nâng cao</a>
                 <BR>
                 <BR>
                 <button class="btn btn-save" type="button">Lưu lại</button>
@@ -200,6 +144,9 @@ MODAL
 <script src="JS/jquery-3.2.1.min.js"></script>
 <script src="JS/popper.min.js"></script>
 <script src="JS/bootstrap.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="src/jquery.table2excel.js"></script>
 <script src="JS/main.js"></script>
@@ -254,26 +201,30 @@ MODAL
     }
 </script>
 <script>
-    function deleteRow(r) {
-        var i = r.parentNode.parentNode.rowIndex;
-        document.getElementById("myTable").deleteRow(i);
-    }
-    jQuery(function () {
-        jQuery(".trash").click(function () {
-            swal({
-                title: "Cảnh báo",
-                text: "Bạn có chắc chắn là muốn xóa sản phẩm này?",
-                buttons: ["Hủy bỏ", "Đồng ý"],
-            })
-                .then((willDelete) => {
-                    if (willDelete) {
-                        swal("Đã xóa thành công.!", {
-
-                        });
-                    }
-                });
+    $(document).ready(function() {
+        $(".trash").click(function() {
+            // Lấy phần tử tr (dòng) chứa nút "Xóa" được nhấp
+            var row = $(this).closest("tr");
+            // Hiển thị thông báo xác nhận
+            Swal.fire({
+                title: 'Cảnh báo',
+                text: 'Bạn có chắc chắn muốn xóa sản phẩm này?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Đồng ý',
+                cancelButtonText: 'Hủy bỏ'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Nếu người dùng đồng ý, xóa dòng tương ứng và hiển thị thông báo xóa thành công
+                    row.remove();
+                    Swal.fire('Đã xóa thành công!', '', 'success');
+                }
+            });
         });
     });
+</script>
+
+<script>
     oTable = $('#sampleTable').dataTable();
     $('#all').click(function (e) {
         $('#sampleTable tbody :checkbox').prop('checked', $(this).is(':checked'));

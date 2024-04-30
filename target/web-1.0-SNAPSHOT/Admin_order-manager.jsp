@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Quản lý đơn hàng</title>
+    <title>Quản lý đơn hàng | Quản trị Admin</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,35 +23,9 @@
 
 </head>
 
-<body class="app sidebar-mini rtl">
+<body onload="time()" class="app sidebar-mini rtl">
 <!-- Navbar-->
-<header class="app-header" style="background-color: #585858">
-    <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar"
-                                    aria-label="Hide Sidebar"></a>
-    <!-- Navbar Right Menu-->
-    <ul class="app-nav">
-
-
-        <!-- User Menu-->
-        <li><a class="app-nav__item" href="Admin_index.jsp"><i class='bx bx-log-out bx-rotate-180'></i> </a>
-
-        </li>
-    </ul>
-</header>
-<!-- Sidebar menu-->
-<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
-<aside class="app-sidebar" style="background-color: #585858">
-    <hr>
-    <ul class="app-menu">
-        <li><a class="app-menu__item" href="Admin_user_manager.jsp"><i class='app-menu__icon bx bx-user-voice'></i><span
-                class="app-menu__label">Quản lý người dùng</span></a></li>
-        <li><a class="app-menu__item" href="Admin_product-manager.jsp"><i
-                class='app-menu__icon bx bx-purchase-tag-alt'></i><span class="app-menu__label">Quản lý sản phẩm</span></a>
-        </li>
-        <li><a class="app-menu__item" href="Admin_order-manager.jsp"><i class='app-menu__icon bx bx-task'></i><span
-                class="app-menu__label">Quản lý đơn hàng</span></a></li>
-    </ul>
-</aside>
+<jsp:include page="Layout/Admin_Bar.jsp"/>
 <main class="app-content">
     <div class="app-title">
         <ul class="app-breadcrumb breadcrumb side">
@@ -65,31 +39,8 @@
                 <div class="tile-body">
                     <div class="row element-button">
                         <div class="col-sm-2">
-
-                            <a class="btn btn-add btn-sm" href="products.html" title="Thêm"><i class="fas fa-plus"></i>
-                                Tạo mới đơn hàng</a>
+                            <a class="btn btn-add btn-sm" href="products.html" title="Thêm"><i class="fas fa-plus"></i>Tạo mới đơn hàng</a>
                         </div>
-                        <!--                <div class="col-sm-2">-->
-                        <!--                  <a class="btn btn-delete btn-sm nhap-tu-file" type="button" title="Nhập" onclick="myFunction(this)"><i-->
-                        <!--                      class="fas fa-file-upload"></i> Tải từ file</a>-->
-                        <!--                </div>-->
-
-                        <!--                <div class="col-sm-2">-->
-                        <!--                  <a class="btn btn-delete btn-sm print-file" type="button" title="In" onclick="myApp.printTable()"><i-->
-                        <!--                      class="fas fa-print"></i> In dữ liệu</a>-->
-                        <!--                </div>-->
-                        <!--                <div class="col-sm-2">-->
-                        <!--                  <a class="btn btn-delete btn-sm print-file js-textareacopybtn" type="button" title="Sao chép"><i-->
-                        <!--                      class="fas fa-copy"></i> Sao chép</a>-->
-                        <!--                </div>-->
-
-                        <!--                <div class="col-sm-2">-->
-                        <!--                  <a class="btn btn-excel btn-sm" href="" title="In"><i class="fas fa-file-excel"></i> Xuất Excel</a>-->
-                        <!--                </div>-->
-                        <!--                <div class="col-sm-2">-->
-                        <!--                  <a class="btn btn-delete btn-sm pdf-file" type="button" title="In" onclick="myFunction(this)"><i-->
-                        <!--                      class="fas fa-file-pdf"></i> Xuất PDF</a>-->
-                        <!--                </div>-->
                     </div>
                     <table class="table table-hover table-bordered" id="sampleTable">
                         <thead>
@@ -180,6 +131,8 @@
 <script src="JS/jquery-3.2.1.min.js"></script>
 <script src="JS/popper.min.js"></script>
 <script src="JS/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="jquery.table2excel.js"></script>
 <script src="JS/main.js"></script>
@@ -192,25 +145,24 @@
 <script type="text/javascript" src="JS/plugins/dataTables.bootstrap.min.js"></script>
 <script type="text/javascript">$('#sampleTable').DataTable();</script>
 <script>
-    function deleteRow(r) {
-        var i = r.parentNode.parentNode.rowIndex;
-        document.getElementById("myTable").deleteRow(i);
-    }
-    jQuery(function () {
-        jQuery(".trash").click(function () {
-            swal({
-                title: "Cảnh báo",
-
-                text: "Bạn có chắc chắn là muốn xóa đơn hàng này?",
-                buttons: ["Hủy bỏ", "Đồng ý"],
-            })
-                .then((willDelete) => {
-                    if (willDelete) {
-                        swal("Đã xóa thành công.!", {
-
-                        });
-                    }
-                });
+    $(document).ready(function() {
+        $(".trash").click(function() {
+            // Lấy phần tử tr (dòng) chứa nút "Xóa" được nhấp
+            var row = $(this).closest("tr");
+            // Hiển thị thông báo xác nhận
+            Swal.fire({
+                title: 'Cảnh báo',
+                text: 'Bạn có chắc chắn muốn xóa sản phẩm này?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Đồng ý',
+                cancelButtonText: 'Hủy bỏ',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    row.remove();
+                    Swal.fire('Đã xóa thành công!', '', 'success');
+                }
+            });
         });
     });
     oTable = $('#sampleTable').dataTable();

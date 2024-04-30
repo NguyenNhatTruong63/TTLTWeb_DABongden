@@ -10,56 +10,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c27128a4-08b8-4c4e-8b11-ed5d4096f966" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/web/Dao/AccountDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/AdminUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/Admin_index.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Admin_add_product.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Layout/Admin_Bar.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/google.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/beans/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/beans/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/beans/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/beans/Orders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/controller/ForgetPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/ForgetPassword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/controller/Signup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/Signup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/controller/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/db/JDBIConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/db/JDBIConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/services/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/services/Dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_addUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin_addUser.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_Pos.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin_addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_addUser.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin_css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin_index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_order-manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin_order-manager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_product-manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin_product-manager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin_product.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_user_manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin_user_manager.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/access/css/pay.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/access/css/pay.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/access/css/personal.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/access/css/personal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/carts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/carts.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/forget.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/forget.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pay_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pay_page.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/signup.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/beans/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/beans/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/beans/Orders.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/beans/Orders.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/controller/ForgetPassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/controller/ForgetPassword.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/controller/Signup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/controller/Signup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/controller/login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/controller/login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/db/JDBIConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/db/JDBIConnector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/services/Dao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/services/Dao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_addUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_addUser.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_Pos.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_addUser.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_order-manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_order-manager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_product-manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_product-manager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_product.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_user_manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_user_manager.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/beans/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/beans/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/beans/Orders.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/beans/Orders.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/ForgetPassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/ForgetPassword.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/Signup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/Signup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/db/JDBIConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/db/JDBIConnector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/Dao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/Dao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/pay.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/pay.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/personal.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/personal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/carts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/carts.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/forget.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/forget.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/pay_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/pay_page.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/signup.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,8 +45,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Jsp File" />
         <option value="Servlet" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -111,7 +85,7 @@
     "Tomcat Server.Tomcat 9.0.84.executor": "Run",
     "git-widget-placeholder": "truong",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/TMDT/TMDT",
+    "last_opened_file_path": "D:/Laptrinhweb/TTLTWeb_BD/src/main/webapp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -336,7 +310,11 @@
       <workItem from="1714277935964" duration="10191000" />
       <workItem from="1714307114340" duration="4503000" />
       <workItem from="1714311856049" duration="3842000" />
-      <workItem from="1714356717518" duration="3597000" />
+      <workItem from="1714356717518" duration="4568000" />
+      <workItem from="1714372070076" duration="678000" />
+      <workItem from="1714381301716" duration="609000" />
+      <workItem from="1714388985218" duration="6833000" />
+      <workItem from="1714462382684" duration="415000" />
     </task>
     <servers />
   </component>

@@ -10,12 +10,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-signin-client_id" content="588971069034-2223dffri7rruaqovf4n9vk5hnf6u28s.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="539519155624-pv4spfq9mfnv4uc5otfca6lipnaeg7s5.apps.googleusercontent.com">
     <title>Login</title>
     <link rel="stylesheet" href="Layout/header.css">
     <link rel="stylesheet" href="access/css/personal.css">
     <link rel="stylesheet" href="Layout/footer.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+
     <%
         String error = (String)(request.getAttribute("error"));
         if(error != null) {
@@ -79,7 +81,6 @@
 </div>
 <jsp:include page="Layout/Footer.jsp"/>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
 <script>
     function checkCaptcha(){
         var  form = document.getElementById("formlogin")
@@ -110,35 +111,44 @@
 </script>
 <script>
     function onSignIn(googleUser) {
-        // Lấy thông tin người dùng từ tài khoản Google
         var profile = googleUser.getBasicProfile();
-        var id_token = googleUser.getAuthResponse().id_token;
-
-        // Gửi yêu cầu đăng ký thành công qua AJAX
-        const xhr = new XMLHttpRequest();
-        xhr.open('POST', "signup"); // Thay thế '/signup' bằng URL của endpoint xử lý đăng ký trên máy chủ của bạn
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        xhr.onload = function() {
-            if (xhr.status === 200) {
-                // Đăng ký thành công, xử lý phản hồi
-                var response = JSON.parse(xhr.responseText);
-                if (response.success) {
-                    // Đăng ký thành công, thực hiện các hành động cần thiết
-                    console.log('Đăng ký thành công');
-                    window.location.href = 'index.jsp'; // Chuyển hướng đến trang đăng ký thành công
-                } else {
-                    // Đăng ký không thành công, xử lý lỗi
-                    console.error('Đăng ký không thành công:', response.error);
-                    document.getElementById('ero').textContent = response.error; // Hiển thị thông báo lỗi
-                }
-            } else {
-                // Xử lý lỗi từ máy chủ
-                console.error('Đã xảy ra lỗi khi gửi yêu cầu đăng ký:', xhr.statusText);
-            }
-        };
-        xhr.send('id_token=' + id_token); // Gửi mã thông tin của tài khoản Google đến máy chủ
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
     }
-
 </script>
+<%--<script>--%>
+<%--    function onSignIn(googleUser) {--%>
+<%--        // Lấy thông tin người dùng từ tài khoản Google--%>
+<%--        var profile = googleUser.getBasicProfile();--%>
+<%--        var id_token = googleUser.getAuthResponse().id_token;--%>
+
+<%--        // Gửi yêu cầu đăng ký thành công qua AJAX--%>
+<%--        const xhr = new XMLHttpRequest();--%>
+<%--        xhr.open('POST', "signup"); // Thay thế '/signup' bằng URL của endpoint xử lý đăng ký trên máy chủ của bạn--%>
+<%--        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');--%>
+<%--        xhr.onload = function() {--%>
+<%--            if (xhr.status === 200) {--%>
+<%--                // Đăng ký thành công, xử lý phản hồi--%>
+<%--                var response = JSON.parse(xhr.responseText);--%>
+<%--                if (response.success) {--%>
+<%--                    // Đăng ký thành công, thực hiện các hành động cần thiết--%>
+<%--                    console.log('Đăng ký thành công');--%>
+<%--                    window.location.href = 'index.jsp'; // Chuyển hướng đến trang đăng ký thành công--%>
+<%--                } else {--%>
+<%--                    // Đăng ký không thành công, xử lý lỗi--%>
+<%--                    console.error('Đăng ký không thành công:', response.error);--%>
+<%--                    document.getElementById('ero').textContent = response.error; // Hiển thị thông báo lỗi--%>
+<%--                }--%>
+<%--            } else {--%>
+<%--                // Xử lý lỗi từ máy chủ--%>
+<%--                console.error('Đã xảy ra lỗi khi gửi yêu cầu đăng ký:', xhr.statusText);--%>
+<%--            }--%>
+<%--        };--%>
+<%--        xhr.send('id_token=' + id_token); // Gửi mã thông tin của tài khoản Google đến máy chủ--%>
+<%--    }--%>
+
+<%--</script>--%>
 </body>
 </html>

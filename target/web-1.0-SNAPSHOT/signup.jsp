@@ -10,7 +10,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-signin-client_id" content="588971069034-2223dffri7rruaqovf4n9vk5hnf6u28s.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="741321757076-af1dvmipvpqdiskmguv3kbikvmlnr1b4.apps.googleusercontent.com">
     <title>Signup</title>
     <link rel="stylesheet" href="access/css/personal.css">
     <link rel="stylesheet" href="Layout/header.css">
