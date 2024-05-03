@@ -1,6 +1,7 @@
 package org.example.web.controller;
 
 import org.example.web.beans.Account;
+import org.example.web.services.Dao;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -13,17 +14,10 @@ import java.util.List;
 public class AdminUser extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        String username = request.getParameter("id");
-//        try {
-//            UserService user = new UserService();
-//            Account account = user.findAccount(username);
-//            System.out.println(account.getEnable());
-//            request.setAttribute("account", account);
-//            request.setAttribute("listorder", listorder);
-//            request.getRequestDispatcher("AdminUser.jsp").forward(request, response);
-//        } catch (SQLException | ClassNotFoundException e) {
-//            throw new RuntimeException(e);
-//        }
+        Dao dao = new Dao();
+        List<Account> accountList = dao.getAccountList();
+        request.setAttribute("accountList", accountList);
+        request.getRequestDispatcher("Admin_user_manager.jsp").forward(request, response);
     }
 
     @Override

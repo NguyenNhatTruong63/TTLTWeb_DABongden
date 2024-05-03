@@ -7,6 +7,7 @@ import org.jdbi.v3.core.Jdbi;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -272,7 +273,7 @@ public class Dao {
 //            ps.setString(1, id);
             rs = ps.executeQuery();
             while (rs.next()) {
-                return new Category(rs.getInt(1),
+                return new Category(rs.getString(1),
                         rs.getString(2));
             }
 
@@ -318,5 +319,80 @@ public class Dao {
 
         }
         return null;
+    }
+    public List<Account> getAccountList() {
+        List<Account> list = new ArrayList<>();
+        String query = "select * from user";
+        try {
+            conn = new JDBIConnector().getConnection();
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(new Account(
+                        rs.getString(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getDate(6),
+                        rs.getInt(7)
+                ));
+            }
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return list;
+    }
+    public List<Brand> getBrandList1() {
+        List<Brand> list = new ArrayList<>();
+        String query = "SELECT brand.id, brand.name FROM products, brand where products.idBrand= brand.id";
+        try {
+            conn = new JDBIConnector().getConnection();
+            ps = conn.prepareStatement(query);
+//            ps.setString(1, name);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(new Brand( rs.getString(1),
+                        rs.getString(2)));
+            }
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        } finally {
+            // Đóng tài nguyên ở đây
+        }
+        return list;
+    }
+
+
+    public List<Category> getCategoryList1() {
+        List<Category> list = new ArrayList<>();
+        String query = "SELECT categories.id, categories.name FROM products, categories where products.idCatgory= categories.id";
+        try {
+            conn = new JDBIConnector().getConnection();
+            ps = conn.prepareStatement(query);
+//            ps.setString(1, name);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(new Category( rs.getString(1),
+                        rs.getString(2)));
+            }
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        } finally {
+            // Đóng tài nguyên ở đây
+        }
+        return list;
     }
 }

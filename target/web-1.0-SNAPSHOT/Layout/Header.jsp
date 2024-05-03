@@ -75,8 +75,8 @@
                             <% } %>
 
                             <% if (session.getAttribute("account") == null) {%>
-                            <li><a href="login.jsp"> Đăng Nhập</a></li>
                             <li><a href="signup.jsp">Đăng Ký</a></li>
+                            <li><a href="login.jsp"> Đăng Nhập</a></li>
                             <% } %>
                             <% if (session.getAttribute("account") != null) { %>
                             <li><a href="logout">Đăng Xuất</a></li>
@@ -85,10 +85,9 @@
                         </ul>
                     </li>
 
-                    <li>
-                                <span class="notify"><i class="fa-regular fa-bell fa-beat-fade fa-sm"
-                                                        style="color: white"></i> </span>
-                    </li>
+<%--                    <li>--%>
+<%--                        <span class="notify"><i class="fa-regular fa-bell fa-beat-fade fa-sm" style="color: white"></i> </span>--%>
+<%--                    </li>--%>
                 </ul>
             </nav><!-- .navbar -->
         </div>

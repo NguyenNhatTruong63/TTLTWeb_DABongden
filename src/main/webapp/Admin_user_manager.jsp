@@ -3,6 +3,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="org.example.web.beans.Account" %>
 <%@ page import="org.example.web.beans.Order" %>
+<%@ page import="org.example.web.services.Dao" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
@@ -54,16 +55,25 @@
                         </tr>
                         </thead>
                         <tbody>
+                        <%Dao dao = new Dao();%>
+                        <%List<Account> accountList = dao.getAccountList();%>
+                        <%for(Account account : accountList) { %>
                         <tr>
-                            <td>MD0837</td>
-                            <td>Triệu Thanh Phú</td>
-                            <td>phu123@gmail.com</td>
-                            <td>0122374678</td>
-                            <td>TP.HCM</td>
-                            <td>1</td>
-                            <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"><i class="fas fa-trash-alt"></i> </button>
-                                <button class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i class="fa fa-edit"></i></button></td>
+                            <td><%=account.getId()%></td>
+                            <td><%=account.getUserName()%></td>
+                            <td><%=account.getEmail()%></td>
+                            <td><%=account.getPhoneNumber()%></td>
+                            <td><%=account.getUserName()%></td>
+                            <td><%=account.getIdRole()%></td>
+                            <td>
+                                <button class="btn btn-primary btn-sm trash" type="button" title="Xóa"><i
+                                        class="fas fa-trash-alt"></i></button>
+                                <button class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i
+                                        class="fa fa-edit"></i></button>
+                            </td>
+
                         </tr>
+                        <%}%>
                         </tbody>
                     </table>
                 </div>

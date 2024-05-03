@@ -1,6 +1,14 @@
 <%@ page import="java.util.List" %>
 <%@ page import="org.example.web.beans.Product" %>
 <%@ page import="org.example.web.services.ProductByCategoryServices" %>
+<%@ page import="java.util.Locale" %>
+<%@ page import="java.text.NumberFormat" %>
+<%@ page import="org.example.web.db.JDBIConnector" %>
+<%@ page import="org.example.web.services.Dao" %>
+<%@ page import="org.example.web.beans.ProductDetail" %>
+<%@ page import="org.example.web.beans.Brand" %>
+<%@ page import="org.example.web.beans.Category" %>
+<%@ page import="java.util.Collections" %>
 <%--<%@ page import="com.curtainshop.beans.Product" %>--%>
 <%--<%@ page import="com.curtainshop.database.JDBIConnector" %>--%>
 <%--<%@ page import="com.curtainshop.services.ProductService" %>--%>
@@ -64,75 +72,54 @@
                         </tr>
                         </thead>
                         <tbody>
+                        <%Locale locale = new Locale("vi", "VN");%>
+                        <%NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(locale);%>
+                        <%JDBIConnector jdbiConnector = new JDBIConnector();%>
+                        <%Dao dao = new Dao();%>
+                        <%List<Product> list = jdbiConnector.getAllProduct();%>
+                        <%List<ProductDetail> productDetailList = Collections.singletonList(dao.getProductDetail("1"));%>
+                        <%List<Brand> brandList = dao.getBrandList1();%>
+                        <%List<Category> categoryList = dao.getCategoryList1();%>
+                        <%for (Product product : list) {%>
+
                         <tr>
-                            <td>MD0837</td>
-                            <td>bongden</td>
-                            <td>50</td>
-                            <td>nhựa</td>
-                            <td>TP.HCM</td>
-                            <td>1</td>
-                            <td>20</td>
-                            <td>40</td>
-                            <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"><i class="fas fa-trash-alt"></i> </button>
-                                <button class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i class="fa fa-edit"></i></button></td>
+                            <td><%=product.getId()%></td>
+                            <td><img src="<%=product.getImg()%>" style="width: 100px; height: 100px" alt=""></td>
+                            <td><%=product.getName()%></td>
+                            <% String brandName = ""; %>
+                            <% for (Brand brand : brandList) { %>
+                            <% if (product.getIdBrand().equals(brand.getId())) { %>
+                            <% brandName = brand.getName(); %>
+                            <% } %>
+                            <% } %>
+                            <td><%= brandName %></td>
+
+                            <% String categoriesName = ""; %>
+                            <% for (Category category : categoryList) { %>
+                            <% if (product.getIdCategory().equals(category.getId())) { %>
+                            <% categoriesName = category.getName(); %>
+                            <% } %>
+                            <% } %>
+
+                            <td><%=categoriesName%></td>
+                            <td><%=currencyFormatter.format(product.salePrice())%></td>
+                            <td><%=productDetailList.getFirst().getMaterial()%></td>
+                            <td><%=product.getDiscount()%>%</td>
+                            <td><%=product.getQuantity()%></td>
+                            <td>
+                                <button class="btn btn-primary btn-sm trash" type="button" title="Xóa"><i
+                                        class="fas fa-trash-alt"></i></button>
+                                <button class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i
+                                        class="fa fa-edit"></i></button>
+                            </td>
                         </tr>
+                        <%}%>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
-
-
-<%--    <div class="row">--%>
-<%--        <div class="col-md-12">--%>
-<%--            <div class="tile">--%>
-<%--                <div class="tile-body">--%>
-<%--                    <div class="row element-button">--%>
-<%--                        <div class="col-sm-2">--%>
-<%--                            <a class="btn btn-add btn-sm" href="Admin_addProduct.jsp" title="Thêm"><i class="fas fa-plus"></i>Thêm sản phẩm</a>--%>
-<%--                        </div>--%>
-<%--                    </div>--%>
-<%--                    <table class="table table-hover table-bordered" id="sampleTable">--%>
-<%--                        <thead>--%>
-<%--                        <tr>--%>
-<%--                            <th>ID</th>--%>
-<%--                            <th>Tên sản phẩm</th>--%>
-<%--                            <th>Giá tiền</th>--%>
-<%--                            <th>Chất liệu</th>--%>
-<%--                            <th>Xuất xứ</th>--%>
-<%--                            <th>Loại</th>--%>
-<%--                            <th>Khuyến mãi</th>--%>
-<%--                            <th>Số lượng</th>--%>
-<%--                            <th>Chức năng</th>--%>
-<%--                        </tr>--%>
-<%--                        </thead>--%>
-<%--                        <tbody>--%>
-<%--                                                <tr>--%>
-<%--&lt;%&ndash;                                                    <td> <%= product.getId() %></td>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                                                    <td> <%= product.getName() %> </td>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                                                    <td> <%= product.getPrice() %> </td>&ndash;%&gt;--%>
-<%--                        &lt;%&ndash;                            <td> <%= product.getMaterial() %> </td>&ndash;%&gt;--%>
-<%--                        &lt;%&ndash;                            <td> <%= product.getOrigin() %> </td>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                        <td> <%= product.getIdCategory() %> </td>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                        <td> <%= product.getDiscount() %> %</td>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                        <td> <%= product.getQuantity() %> </td>&ndash;%&gt;--%>
-<%--                        <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"--%>
-<%--                                    onclick="myFunction(this)"><i class="fas fa-trash-alt"></i>--%>
-<%--                        </button>--%>
-<%--                            <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp" data-toggle="modal"--%>
-<%--                                    data-target="#ModalUP"><i class="fas fa-edit"></i></button>--%>
-<%--                        </td>--%>
-<%--                        </tr>--%>
-
-<%--&lt;%&ndash;                        <% }%>&ndash;%&gt;--%>
-
-<%--                        </tbody>--%>
-<%--                    </table>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--    </div>--%>
 </main>
 
 

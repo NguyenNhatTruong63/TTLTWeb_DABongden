@@ -10,31 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c27128a4-08b8-4c4e-8b11-ed5d4096f966" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Admin_add_product.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Layout/Admin_Bar.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/google.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_Pos.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin_addProduct.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_addUser.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/controller/AdminUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/AdminUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/services/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/services/Dao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin_css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin_index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_order-manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin_order-manager.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_product-manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin_product-manager.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin_product.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_user_manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin_user_manager.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/signup.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_Pos.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_addProduct.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_addUser.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_order-manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_order-manager.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_product-manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_product-manager.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_user_manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_user_manager.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Layout/Header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Layout/Header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/access/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/access/css/pay.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/access/css/pay.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/forget.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/forget.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Layout/Header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Layout/Header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/pay.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/pay.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/forget.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/forget.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,36 +61,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BrandServices.executor": "Run",
-    "Application.CategoryServices.executor": "Run",
-    "Application.Mail.executor": "Run",
-    "Application.ProductByBrandServices.executor": "Run",
-    "Application.ProductByCategoryServices.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat Server.Tomcat 9.0.84.executor": "Run",
-    "git-widget-placeholder": "truong",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Laptrinhweb/TTLTWeb_BD/src/main/webapp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BrandServices.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CategoryServices.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Mail.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ProductByBrandServices.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ProductByCategoryServices.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat 9.0.84.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;truong&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Laptrinhweb/TTLTWeb_BD/src/main/webapp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Laptrinhweb\TTLTWeb_BD\src\main\webapp" />
+      <recent name="D:\Laptrinhweb\TTLTWeb_BD\src\main\webapp\Layout" />
       <recent name="D:\Laptrinhweb\TTLTWeb_BD\src\main\java\org\example\web\" />
       <recent name="D:\Laptrinhweb\TTLTWeb_BD\src\main" />
-      <recent name="D:\Laptrinhweb\TTLTWeb_BD\src\main\webapp" />
       <recent name="D:\Laptrinhweb\TTLTWeb_BD\src\main\" />
-      <recent name="D:\Laptrinhweb\TTLTWeb_BD\src\main\webapp\" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example.web.controller" />
@@ -314,7 +303,11 @@
       <workItem from="1714372070076" duration="678000" />
       <workItem from="1714381301716" duration="609000" />
       <workItem from="1714388985218" duration="6833000" />
-      <workItem from="1714462382684" duration="415000" />
+      <workItem from="1714462382684" duration="650000" />
+      <workItem from="1714475835956" duration="486000" />
+      <workItem from="1714569658384" duration="1648000" />
+      <workItem from="1714644474453" duration="2278000" />
+      <workItem from="1714700311500" duration="301000" />
     </task>
     <servers />
   </component>

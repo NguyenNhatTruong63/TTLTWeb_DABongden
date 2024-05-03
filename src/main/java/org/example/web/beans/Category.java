@@ -1,10 +1,10 @@
 package org.example.web.beans;
 
 public class Category {
-    private int id;
+    private String id;
     private String name;
 
-    public Category(int id, String name) {
+    public Category(String id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -12,9 +12,9 @@ public class Category {
     public Category() {
     }
 
-    public int getId() {return id;}
+    public String getId() {return id;}
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

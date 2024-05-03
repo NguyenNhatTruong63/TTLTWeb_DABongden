@@ -35,6 +35,7 @@
                     <div class="image">
                         <img class="img" src="https://img.freepik.com/premium-photo/yellow-light-bulb_172429-638.jpg?w=360" alt="ảnh">
                     </div>
+
                     <div class="infor">
                         <div class="err">
                             <p class="error1"><%=error%></p>
@@ -46,21 +47,49 @@
                         <div class="user">
                             <i class="fa-solid fa-key"></i>
                             <input type="password" title="Mật khẩu 6-15 ký tự bao gồm chữ in hoa, chữ thường, số, và các ký tự đặc biệt" name="newPassword" id="pass" placeholder="Nhập mật khẩu" class="" minlength="6" maxlength="15">
+                            <i class="toggle-password fa-solid fa-eye-slash" style="position: relative;float: right;margin-top: -25px;margin-right: 20px; cursor: pointer" onclick="togglePasswordVisibility('pass')"></i>
                         </div>
                         <div class="user">
                             <i class="fa-solid fa-key"></i>
                             <input type="password" title="Mật khẩu vừa nhập ở trên" name="repassword" class="pass1" placeholder="Nhập lại mật khẩu mới" maxlength="15" minlength="6">
+                            <i class="toggle-password fa-solid fa-eye-slash" style="position: relative;float: right;margin-top: -25px;margin-right: 20px; cursor: pointer" onclick="togglePasswordVisibility('pass')"></i>
                         </div>
-
                         <div class="g-recaptcha" style="margin: 15px" data-sitekey="6Lc4rcgpAAAAACwsZRDq-vrt3Mh9VcE-Q-mKgpzS"></div>
                         <div style="color:red; margin: -15px 0 10px 15px" id="ero"></div>
                         <div class="submit">
-                            <button class="submit1" type="button" onclick="checkCaptcha()"  value="">Đăng nhập</button>
+                            <button class="submit1" type="button" onclick="checkCaptcha()"  value="">Đổi mật khẩu</button>
                         </div>
-<%--                        <div class="submit">--%>
-<%--                            <button class="submit1" type="submit" value="">Đổi mật khẩu</button>--%>
-<%--                        </div>--%>
                     </div>
+
+
+
+
+<%--                    <div class="infor">--%>
+<%--                        <div class="err">--%>
+<%--                            <p class="error1"><%=error%></p>--%>
+<%--                        </div>--%>
+<%--                        <div class="user">--%>
+<%--                            <i class="fa-solid fa-user"></i>--%>
+<%--                            <input type="text" title="Tên đăng nhập 10-20 ký tự" name="username" id="name_login" placeholder="Tên đăng nhập" value="<%=username%>" minlength="10" maxlength="20">--%>
+<%--                        </div>--%>
+<%--                        <div class="user">--%>
+<%--                            <i class="fa-solid fa-key"></i>--%>
+<%--                            <input type="password" title="Mật khẩu 6-15 ký tự bao gồm chữ in hoa, chữ thường, số, và các ký tự đặc biệt" name="newPassword" id="pass" placeholder="Nhập mật khẩu" class="" minlength="6" maxlength="15">--%>
+<%--                        </div>--%>
+<%--                        <div class="user">--%>
+<%--                            <i class="fa-solid fa-key"></i>--%>
+<%--                            <input type="password" title="Mật khẩu vừa nhập ở trên" name="repassword" class="pass1" placeholder="Nhập lại mật khẩu mới" maxlength="15" minlength="6">--%>
+<%--                        </div>--%>
+
+<%--                        <div class="g-recaptcha" style="margin: 15px" data-sitekey="6Lc4rcgpAAAAACwsZRDq-vrt3Mh9VcE-Q-mKgpzS"></div>--%>
+<%--                        <div style="color:red; margin: -15px 0 10px 15px" id="ero"></div>--%>
+<%--                        <div class="submit">--%>
+<%--                            <button class="submit1" type="button" onclick="checkCaptcha()"  value="">Đổi mật khẩu</button>--%>
+<%--                        </div>--%>
+<%--&lt;%&ndash;                        <div class="submit">&ndash;%&gt;--%>
+<%--&lt;%&ndash;                            <button class="submit1" type="submit" value="">Đổi mật khẩu</button>&ndash;%&gt;--%>
+<%--&lt;%&ndash;                        </div>&ndash;%&gt;--%>
+<%--                    </div>--%>
                 </div>
             </div>
         </form>
@@ -77,6 +106,22 @@
             form.submit();
         }else {
             error.textContent ="Vui lòng chọn recaptcha"
+        }
+    }
+</script>
+<script>
+    function togglePasswordVisibility(inputId) {
+        const passwordInput = document.getElementById(inputId);
+        const icon = document.querySelector('.toggle-password');
+
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            icon.classList.add('fa-eye');
+            icon.classList.remove('fa-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            icon.classList.add('fa-eye-slash');
+            icon.classList.remove('fa-eye');
         }
     }
 </script>
