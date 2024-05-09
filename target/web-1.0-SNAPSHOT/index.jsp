@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="Layout/header.css">
     <link rel="stylesheet" href="Layout/footer.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.14.4/jquery.min.js"></script>
 </head>
 
 <body>

@@ -1,3 +1,11 @@
+<%@ page import="org.example.web.carts.Carts" %>
+<%@ page import="org.example.web.carts.CartsProduct" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="org.example.web.services.OrderDao" %>
+<%@ page import="org.example.web.beans.Orders" %>
+<%@ page import="java.util.List" %>
+<%@ page import="org.example.web.services.OrderDel" %>
+<%@ page import="org.example.web.beans.Orderdetails" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +55,9 @@
                         <tr>
                             <th>ID đơn hàng</th>
                             <th>Khách hàng</th>
-                            <th>Đơn hàng</th>
+                            <th>Số điện thoại</th>
+                            <th>Địa chỉ</th>
+                            <th>Email</th>
                             <th>Số lượng</th>
                             <th>Tổng tiền</th>
                             <th>Tình trạng</th>
@@ -55,71 +65,96 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>MD0837</td>
-                            <td>Triệu Thanh Phú</td>
-                            <td>Đèn LED Âm Trần KingLED | Đèn LED KingLED Chính Hãng, Đèn Dây Tóc Điện Quang 60W</td>
-                            <td>2</td>
-                            <td>264.000 đ</td>
-                            <td><span class="badge bg-success">Hoàn thành</span></td>
-                            <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"><i class="fas fa-trash-alt"></i> </button>
-                                <button class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i class="fa fa-edit"></i></button></td>
-                        </tr>
-                        <tr>
 
-                            <td>MĐ8265</td>
-                            <td>Nguyễn Thị Ngọc Cẩm</td>
-                            <td>Bóng Đèn Led Bulb Rạng Đông Cảm Biến 7W</td>
-                            <td>1</td>
-                            <td>88.000 đ</td>
-                            <td><span class="badge bg-success">Hoàn thành</span></td>
-                            <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"><i class="fas fa-trash-alt"></i> </button>
-                                <button class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i class="fa fa-edit"></i></button></td>
-                        </tr>
-                        <tr>
+                        <%
+                            // Lấy giỏ hàng từ session
+                            Carts cart = (Carts) session.getAttribute("cart");
+                            if (cart == null)
+                                cart = new Carts();
+                            Map<Integer, CartsProduct> cartItems = cart.getData();
+                        %>
 
-                            <td>MT9835</td>
-                            <td>Đặng Hoàng Phúc</td>
-                            <td>Bóng Đèn LED Bulb Trụ Nhôm Đúc Led Osram 20W</td>
-                            <td>3 </td>
-                            <td>138.000 đ</td>
-                            <td><span class="badge bg-success">Hoàn thành</span></td>
-                            <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"><i class="fas fa-trash-alt"></i> </button>
-                                <button class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i class="fa fa-edit"></i></button></td>
-                        </tr>
-                        <tr>
+                        <%
+                            // Lấy danh sách đơn hàng từ DAO
+                            OrderDao dao = new OrderDao();
+                            List<Orders> orderList = dao.findAll();
+                        %>
+                        <%%>
+                        <%
+                            // Duyệt qua từng đơn hàng
+                            for (Orders order : orderList) {
+                                OrderDel orderDel = new OrderDel();
+                                Orderdetails orderdetails = orderDel.findByOrderId(order.getId());
+                        %>
 
-                            <td>ER3835</td>
-                            <td>Nguyễn Thị Mỹ Yến</td>
-                            <td>Bóng đèn Led Buld Trụ Rạng Đông</td>
-                            <td>1 </td>
-                            <td>98.000 đ</td>
-                            <td><span class="badge bg-info">Chờ thanh toán</span></td>
-                            <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"><i class="fas fa-trash-alt"></i> </button>
-                                <button class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i class="fa fa-edit"></i></button></td>
-                        </tr>
                         <tr>
-
-                            <td>AL3947</td>
-                            <td>Phạm Thị Ngọc</td>
-                            <td>Bóng Led Bulb Rạng Đông 20W</td>
-                            <td>2 </td>
-                            <td>128.000 đ</td>
-                            <td><span class="badge bg-warning">Đang giao hàng</span></td>
+                            <td><%=order.getId()%></td>
+                            <td><%=order.getFullname()%></td>
+                            <td><%=order.getPhoneNumber()%></td>
+                            <td><%=order.getAddress()%></td>
+                            <td><%=order.getEmail()%></td>
+                            <td><%=orderdetails.getQuantity()%></td>
+                            <td><%=orderdetails.getPrice()%></td>
+                            <td><span class="badge bg-success"><%=order.getStatus()%></span></td>
                             <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"><i class="fas fa-trash-alt"></i> </button>
                                 <button class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i class="fa fa-edit"></i></button></td>
                         </tr>
-                        <tr>
+                        <%}%>
+<%--                        <tr>--%>
 
-                            <td>QY8723</td>
-                            <td>Ngô Thái An</td>
-                            <td>Bóng đèn Led Ốp Trần Rạng Đông 12W</td>
-                            <td>1 </td>
-                            <td>105.000 đ</td>
-                            <td><span class="badge bg-danger">Đã hủy</span></td>
-                            <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"><i class="fas fa-trash-alt"></i> </button>
-                                <button class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i class="fa fa-edit"></i></button></td>
-                        </tr>
+<%--                            <td>MĐ8265</td>--%>
+<%--                            <td>Nguyễn Thị Ngọc Cẩm</td>--%>
+<%--                            <td>Bóng Đèn Led Bulb Rạng Đông Cảm Biến 7W</td>--%>
+<%--                            <td>1</td>--%>
+<%--                            <td>88.000 đ</td>--%>
+<%--                            <td><span class="badge bg-success">Hoàn thành</span></td>--%>
+<%--                            <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"><i class="fas fa-trash-alt"></i> </button>--%>
+<%--                                <button class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i class="fa fa-edit"></i></button></td>--%>
+<%--                        </tr>--%>
+<%--                        <tr>--%>
+
+<%--                            <td>MT9835</td>--%>
+<%--                            <td>Đặng Hoàng Phúc</td>--%>
+<%--                            <td>Bóng Đèn LED Bulb Trụ Nhôm Đúc Led Osram 20W</td>--%>
+<%--                            <td>3 </td>--%>
+<%--                            <td>138.000 đ</td>--%>
+<%--                            <td><span class="badge bg-success">Hoàn thành</span></td>--%>
+<%--                            <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"><i class="fas fa-trash-alt"></i> </button>--%>
+<%--                                <button class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i class="fa fa-edit"></i></button></td>--%>
+<%--                        </tr>--%>
+<%--                        <tr>--%>
+
+<%--                            <td>ER3835</td>--%>
+<%--                            <td>Nguyễn Thị Mỹ Yến</td>--%>
+<%--                            <td>Bóng đèn Led Buld Trụ Rạng Đông</td>--%>
+<%--                            <td>1 </td>--%>
+<%--                            <td>98.000 đ</td>--%>
+<%--                            <td><span class="badge bg-info">Chờ thanh toán</span></td>--%>
+<%--                            <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"><i class="fas fa-trash-alt"></i> </button>--%>
+<%--                                <button class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i class="fa fa-edit"></i></button></td>--%>
+<%--                        </tr>--%>
+<%--                        <tr>--%>
+
+<%--                            <td>AL3947</td>--%>
+<%--                            <td>Phạm Thị Ngọc</td>--%>
+<%--                            <td>Bóng Led Bulb Rạng Đông 20W</td>--%>
+<%--                            <td>2 </td>--%>
+<%--                            <td>128.000 đ</td>--%>
+<%--                            <td><span class="badge bg-warning">Đang giao hàng</span></td>--%>
+<%--                            <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"><i class="fas fa-trash-alt"></i> </button>--%>
+<%--                                <button class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i class="fa fa-edit"></i></button></td>--%>
+<%--                        </tr>--%>
+<%--                        <tr>--%>
+
+<%--                            <td>QY8723</td>--%>
+<%--                            <td>Ngô Thái An</td>--%>
+<%--                            <td>Bóng đèn Led Ốp Trần Rạng Đông 12W</td>--%>
+<%--                            <td>1 </td>--%>
+<%--                            <td>105.000 đ</td>--%>
+<%--                            <td><span class="badge bg-danger">Đã hủy</span></td>--%>
+<%--                            <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"><i class="fas fa-trash-alt"></i> </button>--%>
+<%--                                <button class="btn btn-primary btn-sm edit" type="button" title="Sửa"><i class="fa fa-edit"></i></button></td>--%>
+<%--                        </tr>--%>
                         </tbody>
                     </table>
                 </div>

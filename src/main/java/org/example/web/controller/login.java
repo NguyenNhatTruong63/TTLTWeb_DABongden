@@ -35,7 +35,7 @@ public class login extends HttpServlet {
 
         }
         else if(account == null) {
-            request.setAttribute("error", "Tên đăng nhập không chính xác");
+            request.setAttribute("error", "Mật khẩu không chính xác");
             request.getSession();
             request.getRequestDispatcher("login.jsp").forward(request, response);
         }

@@ -69,6 +69,9 @@
                         <ul class="product1">
                             <li class="text_cart">
                                 <div class="cart_product_image1">
+                                    <div style="margin: 30px 0 0 -20px">
+                                        <input type="checkbox" name="checkbox" value="" style="width: 20px; height: 20px" onclick="handleCheckboxClick()">
+                                    </div>
                                     <a href="products.jsp?id_product=<%=product.getId()%>"><img class="cart_image1" src="<%=product.getImg()%>" alt="ảnh">
                                         <p class="text_dicount"><%=product.getDiscount()%> <br>Giảm </p></a>
                                 </div>
@@ -83,7 +86,8 @@
                                             <div class="product-quantity">Số lượng</div>
                                             <div class="product-quantity-id">
                                                 <div class="product-quantity-decrease">-</div>
-                                                <div class="product-quantity-number" id= <%=id++%>><%=cartProduct.getQuantity()%></div>
+                                                <div class="product-quantity-number" id="<%=id++%>" onchange="handleQuantityChange(<%=product.getId()%>, this.innerText)"><%=cartProduct.getQuantity()%></div>
+<%--                                                <div class="product-quantity-number" id= <%=id++%>><%=cartProduct.getQuantity()%></div>--%>
 <%--                                                <div class="product-quantity-number" id= <%=id++%>>1</div>--%>
                                                 <div class="product-quantity-increase">+</div>
                                             </div>
@@ -96,7 +100,8 @@
                         <%}%>
                     </div>
                     <div class="button">
-                        <button class="pay_cart" type="button"><a class="card" href="pay_page.jsp">Thanh Toán</a></button>
+<%--                        <button class="pay_cart" type="button"><a class="card" href="pay_page.jsp">Thanh Toán</a></button>--%>
+                        <button class="pay_cart" type="button" onclick="handlePayment()">Thanh Toán</button>
                     </div>
                     <%}%>
                 </div>
@@ -105,6 +110,46 @@
         <jsp:include page="Layout/Footer.jsp"/>
     </div>
 </div>
+<script>
+    // Hàm xử lý khi số lượng sản phẩm thay đổi
+    function handleQuantityChange(productId, quantity) {
+        // Lưu số lượng sản phẩm vào local storage
+        var quantities = JSON.parse(localStorage.getItem("productQuantities")) || {};
+        quantities[productId] = quantity;
+        localStorage.setItem("productQuantities", JSON.stringify(quantities));
+    }
+
+    // Hàm xử lý khi chọn checkbox
+    function handleCheckboxClick() {
+        var checkboxes = document.getElementsByName("checkbox");
+        var selectedProducts = [];
+
+        for (var i = 0; i > checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                var productId = checkboxes[i].parentNode.querySelector('.product-quantity-number').id;
+                selectedProducts.push(productId);
+            }
+        }
+
+        // Lưu danh sách các sản phẩm đã chọn vào local storage
+        localStorage.setItem("selectedProducts", JSON.stringify(selectedProducts));
+    }
+
+    // Hàm xử lý khi nhấn nút thanh toán
+    function handlePayment() {
+        // Lấy danh sách các sản phẩm đã chọn từ local storage
+        var selectedProducts = JSON.parse(localStorage.getItem("selectedProducts"));
+
+        // Chuyển hướng người dùng đến trang thanh toán chỉ khi có ít nhất một sản phẩm được chọn
+        if (selectedProducts && selectedProducts.length > 0) {
+            window.location.href = "pay_page.jsp";
+        } else {
+            alert("Vui lòng chọn ít nhất một sản phẩm để thanh toán.");
+        }
+    }
+
+</script>
+
 
 </body>
 <%--<script>--%>

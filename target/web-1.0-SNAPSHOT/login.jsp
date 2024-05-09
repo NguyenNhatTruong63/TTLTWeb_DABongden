@@ -55,7 +55,7 @@
                         <div class="g-recaptcha" style="margin: 15px" data-sitekey="6Lc4rcgpAAAAACwsZRDq-vrt3Mh9VcE-Q-mKgpzS"></div>
                         <div style="color:red; margin: -15px 0 10px 15px" id="ero"></div>
                         <div class="submit">
-                            <button class="submit1" type="button" onclick="checkCaptcha()"  value="">Đăng nhập</button>
+                            <button class="submit1" type="submit" onclick="checkCaptcha()"  value="">Đăng nhập</button>
                         </div>
                         <p style="text-align: center">Hoặc đăng nhập với</p>
                         <div class="button-facebook-google">
@@ -152,3 +152,5 @@
 <%--</script>--%>
 </body>
 </html>
+
+

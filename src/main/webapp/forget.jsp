@@ -35,7 +35,6 @@
                     <div class="image">
                         <img class="img" src="https://img.freepik.com/premium-photo/yellow-light-bulb_172429-638.jpg?w=360" alt="ảnh">
                     </div>
-
                     <div class="infor">
                         <div class="err">
                             <p class="error1"><%=error%></p>
@@ -51,8 +50,8 @@
                         </div>
                         <div class="user">
                             <i class="fa-solid fa-key"></i>
-                            <input type="password" title="Mật khẩu vừa nhập ở trên" name="repassword" class="pass1" placeholder="Nhập lại mật khẩu mới" maxlength="15" minlength="6">
-                            <i class="toggle-password fa-solid fa-eye-slash" style="position: relative;float: right;margin-top: -25px;margin-right: 20px; cursor: pointer" onclick="togglePasswordVisibility('pass')"></i>
+                            <input type="password" title="Mật khẩu vừa nhập ở trên" name="repassword" id="pass1" placeholder="Nhập lại mật khẩu mới" maxlength="15" minlength="6">
+                            <i class="toggle-password1 fa-solid fa-eye-slash" style="position: relative;float: right;margin-top: -25px;margin-right: 20px; cursor: pointer" onclick="togglePasswordVisibility1('pass1')"></i>
                         </div>
                         <div class="g-recaptcha" style="margin: 15px" data-sitekey="6Lc4rcgpAAAAACwsZRDq-vrt3Mh9VcE-Q-mKgpzS"></div>
                         <div style="color:red; margin: -15px 0 10px 15px" id="ero"></div>
@@ -113,6 +112,20 @@
     function togglePasswordVisibility(inputId) {
         const passwordInput = document.getElementById(inputId);
         const icon = document.querySelector('.toggle-password');
+
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            icon.classList.add('fa-eye');
+            icon.classList.remove('fa-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            icon.classList.add('fa-eye-slash');
+            icon.classList.remove('fa-eye');
+        }
+    }
+    function togglePasswordVisibility1(inputId) {
+        const passwordInput = document.getElementById(inputId);
+        const icon = document.querySelector('.toggle-password1');
 
         if (passwordInput.type === 'password') {
             passwordInput.type = 'text';

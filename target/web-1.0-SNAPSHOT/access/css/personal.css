@@ -52,7 +52,7 @@ h1{
 
 }
 .user input{
-    width: 260px;
+    width: 300px;
     height: 30px;
     cursor: pointer;
     margin-top: 10px;
@@ -66,8 +66,8 @@ h1{
     display: -webkit-box;
 }
 #facebook{
-    width: 100px;
-    height: 30px;
+    width: 130px;
+    height: 40px;
     margin-left: 15px;
     padding-left: 20px;
     border-radius: 8px;

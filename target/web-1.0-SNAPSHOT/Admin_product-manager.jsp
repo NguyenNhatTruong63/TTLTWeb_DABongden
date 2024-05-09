@@ -61,11 +61,12 @@
                         <thead>
                         <tr>
                             <th>ID</th>
+                            <th>IMG</th>
                             <th>Tên sản phẩm</th>
+                            <th>Thương hiệu</th>
+                            <th>Danh mục</th>
                             <th>Giá tiền</th>
                             <th>Chất liệu</th>
-                            <th>Xuất xứ</th>
-                            <th>Loại</th>
                             <th>Khuyến mãi</th>
                             <th>Số lượng</th>
                             <th>Chức năng</th>
