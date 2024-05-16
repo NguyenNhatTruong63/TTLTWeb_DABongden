@@ -32,10 +32,10 @@ public class AccountDao {
                     rs.getString(3),
                     rs.getString(4),
                     rs.getString(5),
-                    rs.getDate(6),
+//                    rs.getDate(6),
                     rs.getInt(7));
 //            account.setEnable(rs.getInt("enabled"));
-            account.setDate(rs.getDate("date"));
+//            account.setDate(rs.getDate("date"));
             list.add(account);
         }
         return list;

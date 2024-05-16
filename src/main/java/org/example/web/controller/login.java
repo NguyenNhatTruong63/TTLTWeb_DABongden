@@ -28,15 +28,15 @@ public class login extends HttpServlet {
 
         Dao dao = new Dao();
         Account account = dao.login(username, password);
+
         if(username.equals(" ") || password.equals(" ")){
             request.setAttribute("error", "Vui lòng nhập đầy đủ thông tin");
-            request.getSession();
+//            request.getSession();
             request.getRequestDispatcher("login.jsp").forward(request, response);
 
         }
         else if(account == null) {
             request.setAttribute("error", "Mật khẩu không chính xác");
-            request.getSession();
             request.getRequestDispatcher("login.jsp").forward(request, response);
         }
         else if(account.getIdRole() == 1) {
@@ -46,7 +46,7 @@ public class login extends HttpServlet {
         }
 
         else {
-            password = String.valueOf(MaHoa.checkPassword(password, MaHoa.hashPassword(password)));
+//            password = String.valueOf(MaHoa.checkPassword(password, MaHoa.hashPassword(password)));
             HttpSession session = request.getSession();
             session.setAttribute("account", account);
             session.setAttribute("successMessage", "Đăng nhập thành công!");

@@ -19,7 +19,7 @@ public class Mail {
         prop.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
     }
 
-    public static boolean sendMail(String to, String subject, String mess) {
+    public static boolean sendMail(String to, String subject, String mess, String mess1) {
 
         Session session = Session.getInstance(prop, new Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication(){
@@ -45,6 +45,6 @@ public class Mail {
 
     public static void main(String[] args) {
         Mail mail = new Mail();
-        sendMail("truongnhatnguyen06@gmail.com", "TEST MAIL","Hello");
+        sendMail("truongnhatnguyen06@gmail.com", "TEST MAIL","Hello", "OTP");
     }
 }

@@ -55,7 +55,7 @@ public class CheckoutVerifyController extends HttpServlet {
             Orders orders = dao.order(account.getId(), fullname, address, phoneNumber, email);
 //            Orders order = dao.order(account.getId(), name, address, phone, email);
             request.setAttribute("error", "Thanh toán thành công");
-            request.getRequestDispatcher("pay_page.jsp").forward(request, response);
+            request.getRequestDispatcher("success_pay.jsp").forward(request, response);
 
 
         }

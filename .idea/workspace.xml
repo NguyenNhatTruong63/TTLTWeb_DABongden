@@ -10,32 +10,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c27128a4-08b8-4c4e-8b11-ed5d4096f966" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/web/beans/Orderdetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/web/services/OrderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/web/services/OrderDel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/web/beans/Warehoue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/SendMail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/web/services/Ulti.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/web/services/WarehoueDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Admin_Slide_Show.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Admin_warehoue-manager.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/access/css/order_history.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/data/B12W.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/success_pay.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/beans/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/beans/Orders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/Dao/AccountDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/Dao/AccountDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/beans/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/beans/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/controller/CheckoutVerifyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/CheckoutVerifyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/controller/Signup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/Signup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/controller/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_order-manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin_order-manager.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_product-manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin_product-manager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/controller/upload_product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/controller/upload_product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/mail/Mail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/mail/Mail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/services/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/services/Dao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin_add_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Admin_add_product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Image/dienQuang/buld/B12W.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Image/B12W.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Image/rangDong/ledtuyp/Cổng thông tin sinh viên - NLU.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/JS/slideShow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/JS/slideShow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Layout/Admin_Bar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Layout/Admin_Bar.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/access/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/access/css/cart.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/access/css/personal.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/access/css/personal.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/carts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/carts.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/change_pass.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/change_pass.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/forget.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/forget.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/order-history.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/order-history.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/upload_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/upload_product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/Dao/AccountDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/Dao/AccountDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/beans/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/beans/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/controller/CheckoutVerifyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/controller/CheckoutVerifyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/controller/Signup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/controller/Signup.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/controller/login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/controller/login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_product-manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_product-manager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/controller/upload_product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/controller/upload_product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/mail/Mail$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/mail/Mail$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/mail/Mail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/mail/Mail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/web/services/Dao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/web/services/Dao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_add_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Admin_add_product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/dienQuang/buld/B12W.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/Image/rangDong/ledtuyp/Cổng thông tin sinh viên - NLU.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/slideShow.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/JS/slideShow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/Dao/AccountDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/Dao/AccountDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/beans/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/beans/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/CheckoutVerifyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/CheckoutVerifyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/Signup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/Signup.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/upload_product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/controller/upload_product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/mail/Mail$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/mail/Mail$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/mail/Mail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/mail/Mail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/Dao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/WEB-INF/classes/org/example/web/services/Dao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/cart.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/personal.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/access/css/personal.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/carts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/carts.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/change_pass.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/change_pass.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/forget.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/forget.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/order-history.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/order-history.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/upload_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/web-1.0-SNAPSHOT/upload_product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wrapper/dists/gradle-8.5-bin/5t9huq95ubn472n8rpzujfbqh/gradle-8.5-bin.zip.part" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +81,7 @@
       <list>
         <option value="Class" />
         <option value="Servlet" />
+        <option value="CSS File" />
         <option value="Jsp File" />
       </list>
     </option>
@@ -73,40 +108,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BrandServices.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CategoryServices.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Mail.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ProductByBrandServices.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ProductByCategoryServices.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Tomcat Server.Tomcat 9.0.84.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/GK_Web/GK_Web&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BrandServices.executor": "Run",
+    "Application.CategoryServices.executor": "Run",
+    "Application.Dao.executor": "Run",
+    "Application.Mail.executor": "Run",
+    "Application.ProductByBrandServices.executor": "Run",
+    "Application.ProductByCategoryServices.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Tomcat Server.Tomcat 9.0.84.executor": "Run",
+    "git-widget-placeholder": "truong",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Laptrinhweb/TTLTWeb_BD/src/main/webapp",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Laptrinhweb\TTLTWeb_BD\src\main\webapp" />
+      <recent name="D:\Laptrinhweb\TTLTWeb_BD\src\main\webapp\data" />
       <recent name="D:\Laptrinhweb\TTLTWeb_BD\src\main\webapp\Layout" />
       <recent name="D:\Laptrinhweb\TTLTWeb_BD\src\main\java\org\example\web\" />
       <recent name="D:\Laptrinhweb\TTLTWeb_BD\src\main" />
-      <recent name="D:\Laptrinhweb\TTLTWeb_BD\src\main\" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Laptrinhweb\TTLTWeb_BD\src\main\webapp" />
+      <recent name="D:\Laptrinhweb\TTLTWeb_BD\src\main\webapp\Image" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.example.web.beans" />
       <recent name="org.example.web.services" />
+      <recent name="org.example.web.beans" />
       <recent name="org.example.web.controller" />
     </key>
   </component>
@@ -137,6 +178,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Dao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.web.services.Dao" />
+      <module name="web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.web.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Mail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.web.mail.Mail" />
       <module name="web" />
@@ -152,19 +206,6 @@
     </configuration>
     <configuration name="ProductByBrandServices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.web.services.ProductByBrandServices" />
-      <module name="web" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.web.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductByCategoryServices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.web.services.ProductByCategoryServices" />
       <module name="web" />
       <extension name="coverage">
         <pattern>
@@ -265,8 +306,8 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Dao" />
       <item itemvalue="Application.Mail" />
-      <item itemvalue="Application.ProductByCategoryServices" />
       <item itemvalue="Application.BrandServices" />
       <item itemvalue="Application.CategoryServices" />
       <item itemvalue="Application.ProductByBrandServices" />
@@ -274,11 +315,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Dao" />
         <item itemvalue="Application.Mail" />
         <item itemvalue="Application.ProductByBrandServices" />
         <item itemvalue="Application.BrandServices" />
         <item itemvalue="Application.CategoryServices" />
-        <item itemvalue="Application.ProductByCategoryServices" />
       </list>
     </recent_temporary>
   </component>
@@ -331,7 +372,17 @@
       <workItem from="1714963480633" duration="1324000" />
       <workItem from="1714979536954" duration="677000" />
       <workItem from="1715061866306" duration="1017000" />
-      <workItem from="1715255687532" duration="2194000" />
+      <workItem from="1715255687532" duration="3622000" />
+      <workItem from="1715267458881" duration="601000" />
+      <workItem from="1715300657458" duration="1274000" />
+      <workItem from="1715409690068" duration="471000" />
+      <workItem from="1715424699701" duration="5589000" />
+      <workItem from="1715576968747" duration="6907000" />
+      <workItem from="1715584923312" duration="457000" />
+      <workItem from="1715586016230" duration="748000" />
+      <workItem from="1715663494764" duration="10030000" />
+      <workItem from="1715687580371" duration="3838000" />
+      <workItem from="1715859842894" duration="3066000" />
     </task>
     <servers />
   </component>

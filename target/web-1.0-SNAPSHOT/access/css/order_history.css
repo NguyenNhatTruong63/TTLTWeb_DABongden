@@ -1,0 +1,70 @@
+body{
+    margin: auto;
+    font-size: 15px;
+    font-family: Tahoma, sans-serif;
+    color: black;
+
+}
+.container{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.app-content {
+    padding: 20px; /* Adjust as needed */
+}
+
+/* Style the clock */
+#clock {
+    float: right;
+    position: relative;
+    display: block;
+    margin-top: -23px;
+    margin-right: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+}
+.app-title{
+    width: 1000px;
+    height: 30px;
+    background: whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+
+
+/* Apply styles to the table */
+.table_product {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+/* Style the table header */
+.table_product th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Style the table data cells */
+.table_product td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Style alternate rows */
+.table_product tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+

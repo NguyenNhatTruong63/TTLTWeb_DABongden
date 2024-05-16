@@ -9,6 +9,7 @@ import org.example.web.Util.MaHoa;
 import org.example.web.beans.Account;
 import org.example.web.mail.Mail;
 import org.example.web.services.Dao;
+import org.example.web.services.Ulti;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,13 +33,15 @@ public class Signup extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        String email = request.getParameter("email");
         String phoneNumber = request.getParameter("phoneNumber");
+        String email = request.getParameter("email");
         String emailPattern = "^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
         String phonePattern = "^\\d{10}$";
         Mail mail = new Mail();
+        String OTP = Ulti.randomOTP();
         String subject = " Shop LED Tâm Quang";
-        String mess = "Bạn đã đăng ký tài khoản thành công!";
+        String mess = "Bạn đã đăng ký tài khoản thành công! ";
+        String mess1 = "Mã OTP của bạn là: " + OTP;
 
 
         Dao dao = new Dao();
@@ -62,13 +65,13 @@ public class Signup extends HttpServlet {
             request.getRequestDispatcher("signup.jsp").forward(request, response);
 //            response.sendRedirect("signup.jsp");
         } else {
-            password = MaHoa.hashPassword(password);
-            Date now = new Date();
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            SimpleDateFormat dateFormatSendMail = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
+//            password = MaHoa.hashPassword(password);
+//            Date now = new Date();
+//            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//            SimpleDateFormat dateFormatSendMail = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
 //            MaHoa.sendEmail(acountNew.getUsername(), privateKey, dateFormatSendMail.format(now));
             dao.signup(username, password, email, phoneNumber);
-            Mail.sendMail(email, subject, mess);
+            Mail.sendMail(email, subject, mess, mess1);
             request.setAttribute("error", "Đăng ký thành công");
             request.getRequestDispatcher("login.jsp").forward(request, response);
 

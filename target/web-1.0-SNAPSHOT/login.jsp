@@ -43,11 +43,11 @@
                         <div class="err">
                             <p class="error1"><%=error%></p>
                         </div>
-                        <div class="user">
+                        <div class="user12">
                             <i class="fa-solid fa-user"></i>
                             <input type="text" title="Tên đăng nhập 10-20 ký tự" name="username" id="name_login" placeholder="Tên đăng nhập" value="<%=username%>" minlength="10" maxlength="20">
                         </div>
-                        <div class="user">
+                        <div class="user12">
                             <i class="fa-solid fa-key"></i>
                             <input type="password" title="Mật khẩu 6-15 ký tự bao gồm chữ in hoa, chữ thường, số, và các ký tự đặc biệt" name="password" id="pass" placeholder="Nhập mật khẩu" class="" minlength="6" maxlength="15">
                             <i class="toggle-password fa-solid fa-eye-slash" style="position: relative;float: right;margin-top: -25px;margin-right: 20px; cursor: pointer" onclick="togglePasswordVisibility('pass')"></i>
@@ -59,7 +59,7 @@
                         </div>
                         <p style="text-align: center">Hoặc đăng nhập với</p>
                         <div class="button-facebook-google">
-                            <div class="button-facebook" style="margin-left: 50px">
+                            <div class="button-facebook" style="margin-left: 20px">
                                 <i class="fa-brands fa-facebook" style="color: blue"></i>
                                 <button type="button" name="button" id="facebook" class="" value="">Facebook</button>
                             </div>

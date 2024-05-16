@@ -15,6 +15,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cart</title>
     <link rel="stylesheet" href="access/css/index.css">
     <link rel="stylesheet" href="access/css/cart.css">
@@ -22,15 +23,16 @@
     <link rel="stylesheet" href="Layout/footer.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
-    <script>
-        function validateInput() {
-            var numberInput = document.getElementById("numberInput");
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<%--    <script>--%>
+<%--        function validateInput() {--%>
+<%--            var numberInput = document.getElementById("numberInput");--%>
 
-            if (numberInput.value < 0) {
-                numberInput.value = 0;
-            }
-        }
-    </script>
+<%--            if (numberInput.value < 0) {--%>
+<%--                numberInput.value = 0;--%>
+<%--            }--%>
+<%--        }--%>
+<%--    </script>--%>
 </head>
 <body>
 <div id="navbar-top" class="">
@@ -67,11 +69,15 @@
                         %>
 
                         <ul class="product1">
+                            <li>
+                                <div style="margin: 30px 0 0 -35px">
+                                    <label>
+                                        <input type="checkbox" name="checkbox" value="product1" style="width: 20px; height: 20px" onclick="handleCheckboxClick()">
+                                    </label>
+                                </div>
+                            </li>
                             <li class="text_cart">
                                 <div class="cart_product_image1">
-                                    <div style="margin: 30px 0 0 -20px">
-                                        <input type="checkbox" name="checkbox" value="" style="width: 20px; height: 20px" onclick="handleCheckboxClick()">
-                                    </div>
                                     <a href="products.jsp?id_product=<%=product.getId()%>"><img class="cart_image1" src="<%=product.getImg()%>" alt="ảnh">
                                         <p class="text_dicount"><%=product.getDiscount()%> <br>Giảm </p></a>
                                 </div>
@@ -101,101 +107,38 @@
                     </div>
                     <div class="button">
 <%--                        <button class="pay_cart" type="button"><a class="card" href="pay_page.jsp">Thanh Toán</a></button>--%>
-                        <button class="pay_cart" type="button" onclick="handlePayment()">Thanh Toán</button>
+<%--                        <button class="pay_cart" type="button" onclick="handlePayment()">Thanh Toán</button>--%>
+                        <button id="pay_cart" type="button">Thanh Toán</button>
                     </div>
                     <%}%>
+
+                    <script>
+                        $(document).ready(function(){
+                            // Xử lý khi nhấn nút thanh toán
+                            $('#pay_cart').click(function(){
+                                // Lọc ra các sản phẩm đã được chọn
+                                const checkedProducts = [];
+                                $('input[type="checkbox"]:checked').each(function() {
+                                    checkedProducts.push($(this).val());
+                                });
+
+                                // Kiểm tra xem có sản phẩm nào được chọn không
+                                if (checkedProducts.length > 0) {
+                                    // Chuyển hướng người dùng đến trang thanh toán và truyền danh sách các sản phẩm đã chọn
+                                    window.location.href = "pay_page.jsp?products=" + encodeURIComponent(JSON.stringify(checkedProducts));
+                                } else {
+                                    alert("Vui lòng chọn ít nhất một sản phẩm để thanh toán.");
+                                }
+                            });
+                        });
+                    </script>
                 </div>
             </div>
         </div>
         <jsp:include page="Layout/Footer.jsp"/>
     </div>
 </div>
-<script>
-    // Hàm xử lý khi số lượng sản phẩm thay đổi
-    function handleQuantityChange(productId, quantity) {
-        // Lưu số lượng sản phẩm vào local storage
-        var quantities = JSON.parse(localStorage.getItem("productQuantities")) || {};
-        quantities[productId] = quantity;
-        localStorage.setItem("productQuantities", JSON.stringify(quantities));
-    }
-
-    // Hàm xử lý khi chọn checkbox
-    function handleCheckboxClick() {
-        var checkboxes = document.getElementsByName("checkbox");
-        var selectedProducts = [];
-
-        for (var i = 0; i > checkboxes.length; i++) {
-            if (checkboxes[i].checked) {
-                var productId = checkboxes[i].parentNode.querySelector('.product-quantity-number').id;
-                selectedProducts.push(productId);
-            }
-        }
-
-        // Lưu danh sách các sản phẩm đã chọn vào local storage
-        localStorage.setItem("selectedProducts", JSON.stringify(selectedProducts));
-    }
-
-    // Hàm xử lý khi nhấn nút thanh toán
-    function handlePayment() {
-        // Lấy danh sách các sản phẩm đã chọn từ local storage
-        var selectedProducts = JSON.parse(localStorage.getItem("selectedProducts"));
-
-        // Chuyển hướng người dùng đến trang thanh toán chỉ khi có ít nhất một sản phẩm được chọn
-        if (selectedProducts && selectedProducts.length > 0) {
-            window.location.href = "pay_page.jsp";
-        } else {
-            alert("Vui lòng chọn ít nhất một sản phẩm để thanh toán.");
-        }
-    }
-
-</script>
-
-
 </body>
-<%--<script>--%>
-<%--    function plus() {--%>
-<%--        let number = document.getElementById("numbera").innerHTML--%>
-<%--        if (document.getElementById("plus")) {--%>
-<%--            number++;--%>
-<%--            document.getElementById("numbera").innerHTML = number--%>
-<%--        }--%>
-
-<%--    }--%>
-
-<%--    function minus() {--%>
-<%--        let number = document.getElementById("numbera").innerHTML--%>
-<%--        if (document.getElementById("minus")) {--%>
-<%--            number--;--%>
-<%--            document.getElementById("numbera").innerHTML = number--%>
-<%--            if (number < 0) {--%>
-<%--                document.getElementById("numbera").innerHTML = 0;--%>
-<%--            }--%>
-<%--        }--%>
-
-<%--    }--%>
-<%--</script>--%>
-
-<%--    function plus1() {--%>
-<%--        let number = document.getElementById("numberb").innerHTML--%>
-<%--        if (document.getElementById("plus1")) {--%>
-<%--            number++;--%>
-<%--            document.getElementById("numberb").innerHTML = number--%>
-<%--        }--%>
-
-<%--    }--%>
-
-<%--    function minus1() {--%>
-<%--        let number = document.getElementById("numberb").innerHTML--%>
-<%--        if (document.getElementById("minus1")) {--%>
-<%--            number--;--%>
-<%--            document.getElementById("numberb").innerHTML = number--%>
-<%--            if (number < 0) {--%>
-<%--                document.getElementById("numberb").innerHTML = 0;--%>
-<%--            }--%>
-<%--        }--%>
-
-<%--    }--%>
-<%--</script>--%>
 <script>
     const decreases = document.querySelectorAll(".product-quantity-decrease");
     const increases = document.querySelectorAll(".product-quantity-increase");
@@ -223,5 +166,45 @@
     })
 
 </script>
+<%--<script>--%>
+<%--    // Hàm xử lý khi số lượng sản phẩm thay đổi--%>
+<%--    function handleQuantityChange(productId, quantity) {--%>
+<%--        // Lưu số lượng sản phẩm vào local storage--%>
+<%--        var quantities = JSON.parse(localStorage.getItem("productQuantities")) || {};--%>
+<%--        quantities[productId] = quantity;--%>
+<%--        localStorage.setItem("productQuantities", JSON.stringify(quantities));--%>
+<%--    }--%>
+
+<%--    // Hàm xử lý khi chọn checkbox--%>
+<%--    function handleCheckboxClick() {--%>
+<%--        var checkboxes = document.getElementsByName("checkbox");--%>
+<%--        var selectedProducts = [];--%>
+
+<%--        for (var i = 0; i > checkboxes.length; i++) {--%>
+<%--            if (checkboxes[i].checked) {--%>
+<%--                var productId = checkboxes[i].parentNode.querySelector('.product-quantity-number').id;--%>
+<%--                selectedProducts.push(productId);--%>
+<%--            }--%>
+<%--        }--%>
+
+<%--        // Lưu danh sách các sản phẩm đã chọn vào local storage--%>
+<%--        localStorage.setItem("selectedProducts", JSON.stringify(selectedProducts));--%>
+<%--    }--%>
+
+<%--    // Hàm xử lý khi nhấn nút thanh toán--%>
+<%--    function handlePayment() {--%>
+<%--        // Lấy danh sách các sản phẩm đã chọn từ local storage--%>
+<%--        var selectedProducts = JSON.parse(localStorage.getItem("selectedProducts"));--%>
+
+<%--        // Chuyển hướng người dùng đến trang thanh toán chỉ khi có ít nhất một sản phẩm được chọn--%>
+<%--        if (selectedProducts && selectedProducts.length > 0) {--%>
+<%--            window.location.href = "pay_page.jsp";--%>
+<%--        } else {--%>
+<%--            alert("Vui lòng chọn ít nhất một sản phẩm để thanh toán.");--%>
+<%--        }--%>
+<%--    }--%>
+
+<%--</script>--%>
 <%--<script src="JS/plus_minus.js"></script>--%>
 </html>
+

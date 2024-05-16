@@ -43,12 +43,12 @@
                         <div class="user">
                             <i class="fa-solid fa-key"></i>
                             <input type="password" title="Mật khẩu 6-15 ký tự bao gồm chữ in hoa, chữ thường, số, và các ký tự đặc biệt" name="newPassword" id="pass" placeholder="Nhập mật khẩu cũ" class="" minlength="6" maxlength="15">
-                            <i class="toggle-password fa-solid fa-eye-slash" style="position: relative;float: right;margin-top: -25px;margin-right: 20px; cursor: pointer" onclick="togglePasswordVisibility('pass')"></i>
+                            <i class="toggle-password fa-solid fa-eye-slash" style="position: relative;float: right;margin-top: -25px;margin-right: 30px; cursor: pointer" onclick="togglePasswordVisibility('pass')"></i>
                         </div>
                         <div class="user">
                             <i class="fa-solid fa-key"></i>
                             <input type="password" title="Mật khẩu vừa nhập ở trên" name="repassword" id="pass1" placeholder="Nhập mật khẩu mới" maxlength="15" minlength="6">
-                            <i class="toggle-password1 fa-solid fa-eye-slash" style="position: relative;float: right;margin-top: -25px;margin-right: 20px; cursor: pointer" onclick="togglePasswordVisibility1('pass1')"></i>
+                            <i class="toggle-password1 fa-solid fa-eye-slash" style="position: relative;float: right;margin-top: -25px;margin-right: 30px; cursor: pointer" onclick="togglePasswordVisibility1('pass1')"></i>
                         </div>
                         <div class="g-recaptcha" style="margin: 15px" data-sitekey="6Lc4rcgpAAAAACwsZRDq-vrt3Mh9VcE-Q-mKgpzS"></div>
                         <div style="color:red; margin: -15px 0 10px 15px" id="ero"></div>

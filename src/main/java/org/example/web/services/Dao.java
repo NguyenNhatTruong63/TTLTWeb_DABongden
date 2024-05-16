@@ -23,7 +23,7 @@ public class Dao {
     }
 
     public Account login(String user, String pass) {
-        String query = "select * from user where username = ? and password = ?";
+        String query = "SELECT * FROM user WHERE username = ? AND password = ?";
         try {
             conn = new JDBIConnector().getConnection();
             ps = conn.prepareStatement(query);
@@ -36,13 +36,12 @@ public class Dao {
                         rs.getString(3),
                         rs.getString(4),
                         rs.getString(5),
-                        rs.getDate(6),
-                        rs.getInt(7)
+                        rs.getInt(6)
                 );
             }
 
 
-        } catch (Exception e) {
+        } catch (Exception ignored) {
 
         }
         return null;
@@ -64,7 +63,7 @@ public class Dao {
                         rs.getString(3),
                         rs.getString(4),
                         rs.getString(5),
-                        rs.getDate(6),
+//                        rs.getDate(6),
                         rs.getInt(7)
                 );
             }
@@ -75,26 +74,30 @@ public class Dao {
         }
         return null;
     }
-    public void signup (String username, String password, String email, String phoneNumber){
+    public void signup (String username, String password, String phoneNumber, String email){
 //        String query = "insert into user VALUES (7, ?, ?, ?, ?, 0)";
-        String query = "insert into user VALUES (8, ?, ?, ?, ?, 2)";
+//        String query = "insert into user VALUES (?, ?, ?, ?, ?, 2)";
+        String query = "INSERT INTO user VALUES (13, ?, ?, ?, ?, 2)";
         try {
             conn = new JDBIConnector().getConnection();
             ps = conn.prepareStatement(query);
             ps.setString(1, username);
             ps.setString(2, password);
-            ps.setString(3, email);
-            ps.setString(4, phoneNumber);
+            ps.setString(3, phoneNumber);
+            ps.setString(4, email);
 //            ps.setString(4, phoneNumber);
 //            ps.setString(6, idRole);
 //            ps.setString(4, phone);
 //            ps.setString(5, address);
             ps.executeUpdate();
             System.out.println("insert thÃ nh cÃ´ng");
-        } catch (Exception e) {
+        } catch (Exception ignored) {
 
         }
+        return;
     }
+
+
     public Account getAccount(String id) {
         String query = "select * from user where id = ? ";
         try {
@@ -108,7 +111,7 @@ public class Dao {
                         rs.getString(3),
                         rs.getString(4),
                         rs.getString(5),
-                        rs.getDate(6),
+//                        rs.getDate(6),
                         rs.getInt(7)
                 );
             }
@@ -119,6 +122,11 @@ public class Dao {
         }
         return null;
     }
+
+
+
+
+
 
 //    public Account checkAccountExist(String user, String email) {
 //        String query = "select * from user where userName = ? or email = ?";
@@ -322,7 +330,7 @@ public class Dao {
     }
     public List<Account> getAccountList() {
         List<Account> list = new ArrayList<>();
-        String query = "select * from user";
+        String query = "SELECT * FROM user";
         try {
             conn = new JDBIConnector().getConnection();
             ps = conn.prepareStatement(query);
@@ -334,14 +342,12 @@ public class Dao {
                         rs.getString(3),
                         rs.getString(4),
                         rs.getString(5),
-                        rs.getDate(6),
-                        rs.getInt(7)
+//                        rs.getDate(6),
+                        rs.getInt(6)
                 ));
             }
 
 
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -386,8 +392,6 @@ public class Dao {
             }
 
 
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
         } catch (Exception e) {
             throw new RuntimeException(e);
         } finally {
@@ -395,4 +399,26 @@ public class Dao {
         }
         return list;
     }
+
+    public void insertProduct(int id, String name, double price, double discount, double quantity, double status) {
+        String query = "INSERT INTO products VALUES(?,?,?,?,?,?,?,?,?)";
+        try {
+            conn = new JDBIConnector().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, id);
+            ps.setString(2, name);
+            ps.setDouble(3, price);
+            ps.setDouble(4, discount);
+            ps.setDouble(5, quantity);
+            ps.setDouble(6, status);
+            ps.executeUpdate();
+
+        } catch (Exception e){
+
+        }
+        return;
+
+    }
+
+
 }

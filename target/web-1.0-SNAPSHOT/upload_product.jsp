@@ -11,7 +11,7 @@
     <title>Upload Product</title>
 </head>
 <body>
-<form action="/uploadProduct" method="post" enctype="multipart/form-data">
+<form action="upload_product" method="post" enctype="multipart/form-data">
     <input type="number" name="id" placeholder="id"><br>
     <input type="text" name="productName" placeholder="tên sản phẩm"><br>
     <input type="text" name="productPrice" placeholder="giá bán sản phẩm"><br>
@@ -20,7 +20,7 @@
     <input type="text" name="detail" placeholder="mô tả sản phẩm"><br>
     <input type="number" name="quantity" placeholder="số lượng sản phẩm"><br>
     <input type="file" name="file" placeholder="product image" multiple><br>
-    <input type="submit" value="upload"><br>
+    <input type="submit" value="upload_product"><br>
 </form>
 </body>
 </html>

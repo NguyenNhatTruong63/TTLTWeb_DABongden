@@ -120,7 +120,7 @@ body{
     /*background-color: red;*/
 
 }
-.pay_cart{
+#pay_cart{
     width: 100px;
     height: 40px;
     /*position: absolute;*/
@@ -132,7 +132,7 @@ body{
     background-color: red;
 
 }
-.pay_cart a{
+#pay_cart a{
     text-decoration: none;
     color: white;
 }
